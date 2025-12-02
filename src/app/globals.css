@@ -1,0 +1,116 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Poppins:wght@700&display=swap');
+
+/* Tailwind base imports */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* CSS variables for fonts */
+:root {
+  --font-primary: 'Montserrat', sans-serif;
+  --font-heading: 'Poppins', sans-serif;
+  --font-logo: 'Dancing Script', cursive;
+
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+/* Base body styles */
+body {
+  font-family: var(--font-primary);
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Headings use heading font */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+/* Logo text */
+.logo-text {
+  font-family: var(--font-logo);
+}
+
+/* Optional animation example */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-scroll {
+  animation: scroll 20s linear infinite;
+}
+
+/* global.css */
+.swiper-pagination-bullet {
+  background-color: #facc15;
+  /* Tailwind yellow-400 */
+  opacity: 0.7;
+}
+
+.swiper-pagination-bullet-active {
+  opacity: 1;
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Google Reviews Height Fix - Ensure all review cards have same height */
+.trustindex-widget .ti-widget,
+.trustindex-widget .ti-widget-container {
+  width: 100% !important;
+}
+
+.trustindex-widget .ti-review-item,
+.trustindex-widget .ti-review,
+.trustindex-widget .ti-review-box {
+  height: 100% !important;
+  min-height: 320px !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.trustindex-widget .ti-review-content {
+  flex: 1 1 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+.trustindex-widget .ti-review-box {
+  height: 100% !important;
+  display: flex !important;
+  flex-direction: column !important;
+}
+
+/* Ensure grid items have equal heights */
+.trustindex-widget .ti-reviews-container,
+.trustindex-widget .ti-review-item-wrapper {
+  display: grid !important;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) !important;
+  gap: 20px !important;
+}
+
+.trustindex-widget .ti-review-item {
+  display: flex !important;
+  height: 100% !important;
+}
