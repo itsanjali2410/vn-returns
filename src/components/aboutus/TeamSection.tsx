@@ -158,35 +158,41 @@ export default function TeamSection() {
   ].sort((a, b) => (a.order || 0) - (b.order || 0));
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
-          The Local Guide Grid
-        </h2>
-        <p className="text-center text-lg text-gray-600 mb-12">
-          Meet our dedicated team of travel professionals
-        </p>
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-4 text-gray-900">
+            Meet Our Team
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            The Local Guide Grid - Our dedicated team of travel professionals committed to crafting your perfect journey
+          </p>
+        </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6 lg:gap-8">
           {teamMembers.map((member, index) => (
             <div
               key={index}
-              className="bg-white rounded-lg shadow-md hover:shadow-xl transition-shadow p-6 flex flex-col items-center"
+              className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 p-6 flex flex-col items-center transform hover:-translate-y-2 border border-gray-100 hover:border-[#198754]"
             >
-              {/* Circular Headshot */}
-              <div className="relative w-32 h-32 mb-4">
+              {/* Circular Headshot with border */}
+              <div className="relative w-28 h-28 sm:w-32 sm:h-32 mb-4 rounded-full overflow-hidden ring-4 ring-gray-100 group-hover:ring-[#ffc42d] transition-all duration-300">
                 <Image
                   src={member.image}
                   alt={member.name}
                   title={member.name}
                   fill
-                  className="object-cover rounded-full"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               {/* Name */}
-              <h3 className="font-bold text-black mb-1 text-center">{member.name}</h3>
+              <h3 className="font-bold text-gray-900 mb-1 text-center text-sm sm:text-base">
+                {member.name}
+              </h3>
               {/* Title */}
-              <p className="text-sm text-green-600 text-center">{member.title}</p>
+              <p className="text-xs sm:text-sm text-gray-600 text-center leading-tight">
+                {member.title}
+              </p>
             </div>
           ))}
         </div>
