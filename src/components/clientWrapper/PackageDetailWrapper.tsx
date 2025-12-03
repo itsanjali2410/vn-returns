@@ -48,6 +48,7 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
   // Transform detailed itinerary to component format
   const itineraryData = packageData.detailedItinerary?.map((item: any) => ({
     day: item.day,
+    title: item.title,
     activities: item.details || [],
   })) || [];
 
@@ -86,20 +87,14 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
             <p className="text-lg text-gray-700 font-medium">{packageData.option}</p>
           )}
 
-          {/* Summary Itinerary */}
-        {packageData.summaryItinerary && packageData.summaryItinerary.length > 0 && (
+          {/* Package Overview */}
           <div className="bg-gray-50 p-6 rounded-lg">
             <h2 className="text-xl font-semibold text-gray-900 mb-4">Package Overview</h2>
-            <ul className="space-y-2">
-              {packageData.summaryItinerary.map((item: string, index: number) => (
-                <li key={index} className="flex items-start text-gray-700">
-                  <span className="text-[#ffc42d] mr-2">•</span>
-                  <span>{item}</span>
-                </li>
-              ))}
-            </ul>
+            <p className="text-gray-700 leading-relaxed">
+              {packageData.description || 
+                `Experience an unforgettable journey through Vietnam with this carefully curated ${packageData.packageName} package. This comprehensive tour takes you through the most iconic destinations, offering a perfect blend of cultural immersion, natural beauty, and authentic experiences.`}
+            </p>
           </div>
-        )}
 
         {/* Itinerary */}
         {itineraryData.length > 0 && <Itinerary itinerary={itineraryData} />}
