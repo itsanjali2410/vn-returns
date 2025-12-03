@@ -82,9 +82,7 @@ export default function VietnamPackages() {
         <p className="text-center text-lg text-gray-600 mb-12">
           Handpicked Vietnam Journeys
         </p>
-        <p className="text-center text-base text-gray-500 mb-8">
-          Discover our curated selection of unforgettable travel experiences
-        </p>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {packages.map((pkg) => (
             <div

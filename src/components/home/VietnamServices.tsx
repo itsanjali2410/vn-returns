@@ -1,45 +1,108 @@
 'use client';
 
+import {
+  ClipboardList,
+  Users,
+  Car,
+  Hotel,
+  UtensilsCrossed,
+  Theater,
+  Plane,
+  Calendar,
+} from 'lucide-react';
+
 export default function VietnamServices() {
   const services = [
-    { name: 'Tour Planning', description: 'Custom itineraries with local expertise', icon: '📋' },
-    { name: 'Group Tours', description: 'Tailored for any group size', icon: '👥' },
+    {
+      name: 'Tour Planning',
+      description: 'Custom itineraries with local expertise',
+      icon: ClipboardList,
+      color: 'text-blue-600',
+      bgColor: 'bg-blue-50',
+    },
+    {
+      name: 'Group Tours',
+      description: 'Tailored for any group size',
+      icon: Users,
+      color: 'text-green-600',
+      bgColor: 'bg-green-50',
+    },
     {
       name: 'Transportation',
       description: 'Luxury vehicles & reliable transfers',
-      icon: '🚗',
+      icon: Car,
+      color: 'text-purple-600',
+      bgColor: 'bg-purple-50',
     },
-    { name: 'Accommodation', description: 'Hotels, resorts & homestays', icon: '🏨' },
-    { name: 'Culinary Tours', description: 'Food tours & cooking classes', icon: '🍜' },
+    {
+      name: 'Accommodation',
+      description: 'Hotels, resorts & homestays',
+      icon: Hotel,
+      color: 'text-orange-600',
+      bgColor: 'bg-orange-50',
+    },
+    {
+      name: 'Culinary Tours',
+      description: 'Food tours & cooking classes',
+      icon: UtensilsCrossed,
+      color: 'text-red-600',
+      bgColor: 'bg-red-50',
+    },
     {
       name: 'Cultural Experiences',
       description: 'Local communities & traditions',
-      icon: '🎭',
+      icon: Theater,
+      color: 'text-indigo-600',
+      bgColor: 'bg-indigo-50',
     },
-    { name: 'Flight Booking', description: 'Domestic & international flights', icon: '✈️' },
-    { name: 'Events', description: 'Corporate & special occasions', icon: '🎉' },
+    {
+      name: 'Flight Booking',
+      description: 'Domestic & international flights',
+      icon: Plane,
+      color: 'text-cyan-600',
+      bgColor: 'bg-cyan-50',
+    },
+    {
+      name: 'Events',
+      description: 'Corporate & special occasions',
+      icon: Calendar,
+      color: 'text-teal-600',
+      bgColor: 'bg-teal-50',
+    },
   ];
 
   return (
-    <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
-          Our Premium Services
-        </h2>
-        <p className="text-center text-lg text-gray-600 mb-12">
-          Comprehensive travel solutions that exceed expectations
-        </p>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="bg-gray-50 p-6 rounded-lg hover:shadow-lg transition-shadow text-center"
-            >
-              <div className="text-4xl mb-4">{service.icon}</div>
-              <h3 className="text-lg font-semibold mb-2 text-gray-900">{service.name}</h3>
-              <p className="text-sm text-gray-600">{service.description}</p>
-            </div>
-          ))}
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-center mb-4 text-gray-900">
+            Our Premium Services
+          </h2>
+          <p className="text-lg sm:text-xl text-gray-600 max-w-2xl mx-auto">
+            Comprehensive travel solutions that exceed expectations
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
+          {services.map((service, index) => {
+            const IconComponent = service.icon;
+            return (
+              <div
+                key={index}
+                className="group relative bg-white p-8 rounded-xl border border-gray-200 hover:border-[#198754] hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1"
+              >
+                <div className={`${service.bgColor} w-16 h-16 rounded-lg flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                  <IconComponent className={`${service.color} w-8 h-8`} strokeWidth={2} />
+                </div>
+                <h3 className="text-xl font-bold mb-3 text-gray-900 group-hover:text-[#198754] transition-colors">
+                  {service.name}
+                </h3>
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+                  {service.description}
+                </p>
+                <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-[#198754] to-[#ffc42d] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left"></div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>

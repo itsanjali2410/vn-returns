@@ -47,10 +47,8 @@ const Itinerary: React.FC<ItineraryProps> = ({ itinerary }) => {
             area-role="button"
           >
             <div className="flex flex-col items-start">
-              <span className="text-sm sm:text-base font-bold">{item.day}</span>
-              {item.title && (
-                <span className="text-xs sm:text-sm text-gray-600 font-normal mt-1">{item.title}</span>
-              )}
+              <span className="text-sm sm:text-base font-bold">{item.day}{item.title && ` - ${item.title}`}</span>
+              
             </div>
             {expanded === item.day ? (
               <ChevronUp className="text-[#ffc42d] w-4 h-4 sm:w-5 sm:h-5" />

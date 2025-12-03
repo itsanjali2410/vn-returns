@@ -66,9 +66,8 @@ export default function VietnamDestinations() {
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {destinations.map((destination, index) => (
-            <Link
+            <div
               key={index}
-              href={`/destinations/${destination.name.toLowerCase().replace(/\s+/g, '-')}`}
               className="group relative overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-all duration-300"
             >
               <div className="relative h-64">
@@ -90,7 +89,7 @@ export default function VietnamDestinations() {
                   <p className="text-sm text-gray-200">{destination.description}</p>
                 </div>
               </div>
-            </Link>
+            </div>
           ))}
         </div>
         <div className="text-center mt-12">

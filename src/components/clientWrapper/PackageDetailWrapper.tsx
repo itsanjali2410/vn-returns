@@ -68,8 +68,11 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
       <div className="flex flex-col lg:flex-row w-full gap-6 px-4 lg:px-6 lg:py-10 py-8 max-w-7xl mx-auto">
         {/* Left Section */}
         <div className="lg:w-2/3 w-full space-y-6">
-          {/* Single Package Image above headline */}
-          <div className="relative w-full h-[400px] md:h-[500px] rounded-lg overflow-hidden">
+          {/* Package Title */}
+          <h1 className="text-3xl md:text-4xl font-bold text-[#ffc42d]">{packageData.packageName}</h1>
+
+          {/* Package Image */}
+          <div className="relative w-full h-[300px] md:h-[350px] rounded-lg overflow-hidden">
             <Image
               src={packageImage}
               alt={packageData.packageName}
@@ -78,9 +81,6 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
               priority
             />
           </div>
-          
-          {/* Package Title */}
-          <h1 className="text-3xl md:text-4xl font-bold text-[#ffc42d]">{packageData.packageName}</h1>
 
           {/* Package Option */}
           {packageData.option && (

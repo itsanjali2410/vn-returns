@@ -1,60 +1,62 @@
 'use client';
 
 import React from 'react';
-import Image from 'next/image';
+import { Phone, Mail } from 'lucide-react';
+import { Headphones } from 'lucide-react';
 
 const NeedHelpCard: React.FC = () => {
   return (
-    <div
-      className="relative flex flex-col max-w-sm w-full bg-white
-      border border-gray-200 rounded-xl shadow-lg 
-      transition-all duration-200 hover:-translate-y-1 hover:shadow-2xl overflow-hidden"
-    >
-      {/* Header with image background */}
-      <div className="relative h-32 w-full">
-        <Image
-          src="/hanoi-9D8N/goldenbridge.png"
-          alt="Contact Support"
-          fill
-          className="object-cover"
-        />
-        <div className="absolute inset-0 bg-[#198754]/80"></div>
-        <div className="absolute inset-0 flex items-center justify-center">
-          <strong className="text-lg font-semibold text-white tracking-tight">
+    <div className="relative flex max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden">
+      {/* Golden vertical accent strip on the left */}
+      <div className="w-1 bg-[#ffc42d] flex-shrink-0"></div>
+      
+      {/* Main content area */}
+      <div className="flex-1 p-6">
+        {/* Header with icon and title */}
+        <div className="flex items-start gap-4 mb-6">
+          {/* Headset icon in golden square */}
+          <div className="w-12 h-12 bg-[#ffc42d] rounded-lg flex items-center justify-center flex-shrink-0">
+            <Headphones className="w-6 h-6 text-gray-900" strokeWidth={2} />
+          </div>
+          
+          {/* Title */}
+          <h3 className="text-xl font-bold text-gray-900 mt-1">
             Need Assistance?
-          </strong>
+          </h3>
         </div>
-      </div>
 
-      {/* Contact Information */}
-      <div className="p-6 flex flex-col gap-3">
-        <div className="flex items-center gap-3 text-gray-700">
-          <div className="w-8 h-8 rounded-full bg-[#ffc42d] flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold">📞</span>
-          </div>
-          <div>
-            <a href="tel:+840325765379" className="hover:text-[#198754] transition-colors font-medium">
-              +84 0325765379
+        {/* Contact Information */}
+        <div className="flex flex-col gap-4">
+          {/* Phone 1 */}
+          <div className="flex items-center gap-3">
+            <Phone className="w-5 h-5 text-[#ffc42d] flex-shrink-0" strokeWidth={2} />
+            <a 
+              href="tel:+840325765379" 
+              className="text-gray-900 hover:text-[#198754] transition-colors font-medium"
+            >
+              +840325765379
             </a>
           </div>
-        </div>
-        <div className="flex items-center gap-3 text-gray-700">
-          <div className="w-8 h-8 rounded-full bg-[#ffc42d] flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold">📞</span>
-          </div>
-          <div>
-            <a href="tel:+84987654321" className="hover:text-[#198754] transition-colors font-medium">
-              +84 987654321
+          
+          {/* Phone 2 */}
+          <div className="flex items-center gap-3">
+            <Phone className="w-5 h-5 text-[#ffc42d] flex-shrink-0" strokeWidth={2} />
+            <a 
+              href="tel:+84987654321" 
+              className="text-gray-900 hover:text-[#198754] transition-colors font-medium"
+            >
+              +84987654321
             </a>
           </div>
-        </div>
-        <div className="flex items-center gap-3 text-gray-700">
-          <div className="w-8 h-8 rounded-full bg-[#ffc42d] flex items-center justify-center flex-shrink-0">
-            <span className="text-white font-bold">✉</span>
-          </div>
-          <div>
-            <a href="mailto:sales@vndmc.com" className="hover:text-[#198754] transition-colors font-medium">
-              sales@vndmc.com
+          
+          {/* Email */}
+          <div className="flex items-center gap-3">
+            <Mail className="w-5 h-5 text-[#ffc42d] flex-shrink-0" strokeWidth={2} />
+            <a 
+              href="mailto:Info@tripstars.in" 
+              className="text-gray-900 hover:text-[#198754] transition-colors font-medium"
+            >
+              Info@tripstars.in
             </a>
           </div>
         </div>
