@@ -8,7 +8,7 @@ import Itinerary from '@/components/package/Itinerary';
 import InclusionsExclusions from '@/components/package/InclusionsExclusions';
 import TermsAndConditions from '@/components/package/TermsAndConditions';
 import TripFormModal from '../modals/TripFormModal';
-import { Calendar, MapPin, ChevronDown, Plane, Building2, Bus, Hotel, UtensilsCrossed, CheckCircle2 } from 'lucide-react';
+import { Calendar, MapPin, ChevronDown, ChevronUp, Plane, Building2, Bus, Hotel, UtensilsCrossed, CheckCircle2 } from 'lucide-react';
 
 interface PackageDetailWrapperProps {
   packageData: any;
@@ -28,6 +28,7 @@ function getPackageImage(packageId: string): string {
 export default function PackageDetailWrapper({ packageData }: PackageDetailWrapperProps) {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [selectedPackageName, setSelectedPackageName] = useState('');
+  const [showItinerary, setShowItinerary] = useState(false);
 
   const handleOpenModal = (packageName: string = '') => {
     setSelectedPackageName(packageName);
@@ -37,6 +38,10 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
   const handleCloseModal = () => {
     setIsModalOpen(false);
     setSelectedPackageName('');
+  };
+
+  const toggleItinerary = () => {
+    setShowItinerary(!showItinerary);
   };
 
   useEffect(() => {
@@ -140,13 +145,17 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
                 </div>
               </div>
               {itineraryData.length > 0 && (
-                <a
-                  href="#itinerary"
+                <button
+                  onClick={toggleItinerary}
                   className="inline-flex items-center gap-2 text-[#ffc42d] font-semibold hover:text-[#e6b028] transition-colors self-start sm:self-center"
                 >
-                  See Itinerary
-                  <ChevronDown className="w-4 h-4" strokeWidth={2} />
-                </a>
+                  {showItinerary ? 'Hide Itinerary' : 'See Itinerary'}
+                  {showItinerary ? (
+                    <ChevronUp className="w-4 h-4" strokeWidth={2} />
+                  ) : (
+                    <ChevronDown className="w-4 h-4" strokeWidth={2} />
+                  )}
+                </button>
               )}
             </div>
           </div>
@@ -216,7 +225,7 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
           </div>
 
         {/* Itinerary */}
-        {itineraryData.length > 0 && <Itinerary itinerary={itineraryData} />}
+        {itineraryData.length > 0 && showItinerary && <Itinerary itinerary={itineraryData} />}
 
         {/* Pricing Table */}
         {packageData.pricing && packageData.pricing.length > 0 && (
