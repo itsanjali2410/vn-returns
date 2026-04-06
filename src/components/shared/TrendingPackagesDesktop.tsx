@@ -2,7 +2,6 @@
 
 import React, { useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Grid } from 'swiper/modules';
 import 'swiper/css';
@@ -91,29 +90,30 @@ const TrendingPackagesDesktop: React.FC<Props> = ({ packages, openFormModal, bas
             <SwiperSlide key={index}>
               <article
                 onClick={() => handleCardClick(card)}
-                className="relative cursor-pointer bg-white rounded-xl shadow-lg overflow-hidden transition-transform "
+                className="cursor-pointer rounded-xl shadow-lg overflow-hidden transition-transform bg-white"
               >
-                <div className="absolute top-2 right-2 bg-yellow-400 text-black font-bold px-3 py-1 rounded text-sm z-10">
-                  {card.pricing}
+                <div className="relative w-full">
+                  <img
+                    src={card.image}
+                    alt={card.title}
+                    title={card.title}
+                    className="w-full h-auto"
+                    loading="lazy"
+                  />
+                  <div className="absolute top-2 right-2 bg-yellow-400 text-black font-bold px-3 py-1.5 rounded-full shadow-md text-sm z-10">
+                    {card.pricing}
+                  </div>
                 </div>
-                <Image
-                  src={card.image}
-                  alt={card.title}
-                  title={card.title}
-                  width={348}
-                  height={320}
-                  className="w-full h-[350px] object-cover"
-                />
-                <div className="absolute bottom-8 left-0 w-full px-4 py-3 bg-gradient-to-t from-black/90 via-black/70 to-transparent text-white">
-                  <h3 className="text-lg font-semibold mb-2">{card.title}</h3>
-                  <div className="flex justify-between gap-6 flex-wrap">
+                <div className="p-3 sm:p-4">
+                  <h3 className="text-base font-semibold text-gray-900 mb-2 line-clamp-2">{card.title}</h3>
+                  <div className="flex flex-wrap gap-4 mb-3">
                     {card.info.map((item, i) => (
-                      <div key={i} className="flex items-center text-xs gap-1">
+                      <div key={i} className="flex items-center text-xs text-gray-600 gap-1">
                         <span
-                          className="inline-block h-[18px] w-[18px] bg-contain bg-no-repeat brightness-0 invert"
+                          className="inline-block h-4 w-4 bg-contain bg-no-repeat"
                           style={{ backgroundImage: `url(${item.icon})` }}
                         />
-                        <span>{item.text}</span>
+                        <span className="font-medium">{item.text}</span>
                       </div>
                     ))}
                   </div>
@@ -123,7 +123,7 @@ const TrendingPackagesDesktop: React.FC<Props> = ({ packages, openFormModal, bas
                     e.stopPropagation();
                     openFormModal(card.title);
                   }}
-                  className="absolute bottom-0 left-0 right-0 w-full bg-yellow-400 text-black font-semibold py-2 text-sm rounded-b-xl hover:bg-yellow-300 transition-all flex items-center justify-center gap-2 shadow-md"
+                  className="w-full bg-yellow-400 text-black font-semibold py-2 text-sm hover:bg-yellow-300 transition-all flex items-center justify-center gap-2"
                 >
                   Inquire Now
                 </button>

@@ -6,7 +6,7 @@ import TrendingPackages from '@/components/shared/TrendingPackages';
 import PackageFeatures from '@/components/shared/PackageFeatures';
 import VideoTestimonials from '@/components/home/VideoTestimonials';
 import VideoThumbnail from '@/components/home/VideoThumbnail';
-import WhyTripstars from '@/components/home/WhyTripstars';
+import WhyVietnamDMC from '@/components/home/WhyTripstars';
 import TravelStyle from '@/components/shared/TravelStyle';
 import GoogleReviewsWidget from '@/components/shared/GoogleReviewsWidget';
 import TripFormModal from '@/components/modals/TripFormModal';
@@ -71,7 +71,7 @@ export default function CategoryPageClientWrapper({
 
       <VideoTestimonials />
       <VideoThumbnail />
-      <WhyTripstars />
+      <WhyVietnamDMC />
       <TravelStyle />
       <GoogleReviewsWidget />
 

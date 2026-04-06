@@ -156,7 +156,7 @@ const TripForm: React.FC<TripFormProps> = ({
                 title="Close Trip Form"
                 className="
     text-gray-400 hover:text-white 
-    text-4xl sm:text-5xl 
+    text-3xl sm:text-4xl
     font-extrabold 
     focus:outline-none focus:ring-2 focus:ring-yellow-400 
     transition-all duration-150 ease-in-out

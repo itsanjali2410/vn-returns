@@ -6,7 +6,7 @@ import { Headphones } from 'lucide-react';
 
 const NeedHelpCard: React.FC = () => {
   return (
-    <div className="relative flex max-w-sm w-full bg-white rounded-xl shadow-lg overflow-hidden">
+    <div className="relative flex w-full bg-white rounded-xl shadow-lg overflow-hidden">
       {/* Golden vertical accent strip on the left */}
       <div className="w-1 bg-[#ffc42d] flex-shrink-0"></div>
       
@@ -38,25 +38,16 @@ const NeedHelpCard: React.FC = () => {
             </a>
           </div>
           
-          {/* Phone 2 */}
-          <div className="flex items-center gap-3">
-            <Phone className="w-5 h-5 text-[#ffc42d] flex-shrink-0" strokeWidth={2} />
-            <a 
-              href="tel:+84987654321" 
-              className="text-gray-900 hover:text-[#198754] transition-colors font-medium"
-            >
-              +84987654321
-            </a>
-          </div>
+         
           
           {/* Email */}
           <div className="flex items-center gap-3">
             <Mail className="w-5 h-5 text-[#ffc42d] flex-shrink-0" strokeWidth={2} />
-            <a 
-              href="mailto:Info@tripstars.in" 
+            <a
+              href="mailto:sales@vndmc.com"
               className="text-gray-900 hover:text-[#198754] transition-colors font-medium"
             >
-              Info@tripstars.in
+              sales@vndmc.com
             </a>
           </div>
         </div>

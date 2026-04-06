@@ -1,7 +1,6 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import Image from 'next/image';
 import PriceCard from '@/components/package/PriceCard';
 import HelpCard from '@/components/package/HelpCard';
 import Itinerary from '@/components/package/Itinerary';
@@ -17,12 +16,12 @@ interface PackageDetailWrapperProps {
 // Map package IDs to images
 function getPackageImage(packageId: string): string {
   const imageMap: { [key: string]: string } = {
-    'ha-noi-da-nang-phu-quoc-9d8n': '/hanoi-9D8N/halongbay.jpg',
-    'PhuQuoc4 _Night _Standard _Package': '/hanoi-9D8N/thom-island.jpg',
-    'Vietnam_Standard_Package_6N7D _with _DayCruise': '/hanoi-9D8N/boat-ride.jpg',
-    'Vietnam - 7N8D - Standard Package': '/hanoi-9D8N/danang.jpg',
+    'ha-noi-da-nang-phu-quoc-9d8n': '/package/Hanoi_Danang_Phuquoc.webp',
+    'phu-quoc-4-night-standard': '/package/Phuqoc_Standard_Package.webp',
+    'vietnam-6n7d-day-cruise': '/package/Vietnam_Standard_Package_daycruise.webp',
+    'vietnam-7n8d-standard': '/package/Vietnam_Standard_Package.webp',
   };
-  return imageMap[packageId] || '/hanoi-9D8N/halongbay.jpg';
+  return imageMap[packageId] || '/package/Vietnam_Standard_Package.webp';
 }
 
 export default function PackageDetailWrapper({ packageData }: PackageDetailWrapperProps) {
@@ -119,13 +118,11 @@ export default function PackageDetailWrapper({ packageData }: PackageDetailWrapp
           <h1 className="text-3xl md:text-4xl font-bold text-[#ffc42d]">{packageData.packageName}</h1>
 
           {/* Package Image */}
-          <div className="relative w-full h-[300px] md:h-[350px] rounded-lg overflow-hidden">
-            <Image
+          <div className="w-full rounded-lg overflow-hidden">
+            <img
               src={packageImage}
               alt={packageData.packageName}
-              fill
-              className="object-cover"
-              priority
+              className="w-full h-auto rounded-lg"
             />
           </div>
 

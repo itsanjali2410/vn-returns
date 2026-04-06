@@ -1,8 +1,6 @@
 'use client';
 
-import Image from 'next/image';
 import { useRef } from 'react';
-import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -12,37 +10,31 @@ import Link from 'next/link'; // ✅ Correct import
 type Destination = {
   name: string;
   imgUrl: string;
+  slug: string;
 };
 
 const popularDestinationsData: Destination[] = [
-  { name: 'Dubai', imgUrl: '/PopularDestination/Dubai.webp' },
-  { name: 'Thailand', imgUrl: '/PopularDestination/Thailand.webp' },
-  { name: 'Singapore', imgUrl: '/PopularDestination/Singapore.webp' },
-  { name: 'Malaysia', imgUrl: '/PopularDestination/Malaysia.webp' },
-  { name: 'Bali', imgUrl: '/PopularDestination/Bali.webp' },
-  { name: 'Hong Kong', imgUrl: '/PopularDestination/Hong kong.webp' },
-  { name: 'Europe', imgUrl: '/PopularDestination/Europe.webp' },
-  { name: 'Vietnam', imgUrl: '/PopularDestination/Vietnam.webp' },
-  { name: 'Australia', imgUrl: '/PopularDestination/Australia.webp' },
+  { name: 'Hanoi', imgUrl: '/popular_cities/Hanoi.jpg', slug: 'hanoi' },
+  { name: 'Ha Long Bay', imgUrl: '/popular_cities/Halong Bay.jpg', slug: 'ha-long-bay' },
+  { name: 'Da Nang', imgUrl: '/popular_cities/Da Nang.jpg', slug: 'da-nang' },
+  { name: 'Hoi An', imgUrl: '/popular_cities/Hoi An.jpg', slug: 'hoi-an' },
+  { name: 'Phu Quoc', imgUrl: '/popular_cities/Phu Quoc.jpg', slug: 'phu-quoc' },
+  { name: 'Ho Chi Minh City', imgUrl: '/popular_cities/Ho Chi Minh City.jpg', slug: 'ho-chi-minh-city' },
+  { name: 'Ninh Binh', imgUrl: '/destinations/Ninh_Binh.webp', slug: 'ninh-binh' },
+  { name: 'Mekong Delta', imgUrl: '/destinations/Mekong_Delta.webp', slug: 'mekong-delta' },
 ];
 
 export default function PopularDestinations() {
   const prevRef = useRef<HTMLButtonElement | null>(null);
   const nextRef = useRef<HTMLButtonElement | null>(null);
-  const router = useRouter();
-
-  const handleClick = (destination: string) => {
-    router.push(`/${destination.toLowerCase()}`);
-  };
-
   return (
-    <div className="px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40">
+    <div className="px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6">
       {/* Section Title */}
-      <div className="flex justify-between items-center mt-8 pb-4">
+      <div className="flex justify-between items-center mb-3 sm:mb-6">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase">
           Popular{' '}
-          <span className="font-cursive bg-gradient-to-r from-yellow-400/90 to-yellow-600 bg-clip-text text-transparent">
-            Destinations
+          <span className="font-cursive bg-gradient-to-r from-[#ffc42d]/90 to-[#e6b028] bg-clip-text text-transparent">
+            Cities
           </span>
         </h2>
       </div>
@@ -51,14 +43,14 @@ export default function PopularDestinations() {
       <div className="w-full">
         <Swiper
           modules={[Navigation]}
-          spaceBetween={16}
-          slidesPerView={2} // ✅ show two thumbnails on mobile
+          spaceBetween={10}
+          slidesPerView={1.5}
           breakpoints={{
-            480: { slidesPerView: 2.5 },
-            640: { slidesPerView: 3 },
-            768: { slidesPerView: 3.5 },
-            1024: { slidesPerView: 4 },
-            1280: { slidesPerView: 5 },
+            480: { slidesPerView: 2, spaceBetween: 12 },
+            640: { slidesPerView: 2.5, spaceBetween: 14 },
+            768: { slidesPerView: 3, spaceBetween: 16 },
+            1024: { slidesPerView: 3.5, spaceBetween: 16 },
+            1280: { slidesPerView: 4 },
           }}
           navigation={{ prevEl: prevRef.current, nextEl: nextRef.current }}
           onInit={(swiper) => {
@@ -73,21 +65,22 @@ export default function PopularDestinations() {
           {popularDestinationsData.map((item, index) => (
             <SwiperSlide key={index}>
               <Link
-                href={`/international/${item.name.toLowerCase()}`}
-                className="cursor-pointer rounded-md overflow-hidden shadow-lg"
+                href={`/cities/${item.slug}`}
+                className="cursor-pointer"
                 title={item.name}
               >
-                {/* Responsive Image */}
-                <div className="relative w-full h-[142px] sm:h-[180px] md:h-[220px] lg:h-[260px] xl:h-[280px]">
-                  <Image
+                <div className="relative rounded-md overflow-hidden shadow-lg">
+                  <img
                     src={item.imgUrl}
                     alt={item.name}
                     title={item.name}
-                    fill
-                    className="rounded-md object-cover"
-                    sizes="(max-width: 480px) 174px, (max-width: 768px) 220px, (max-width: 1024px) 260px, 300px"
-                    priority={index === 0}
+                    loading={index === 0 ? 'eager' : 'lazy'}
+                    className="w-full h-auto rounded-md"
                   />
+                  {/* City Name on image */}
+                  <div className="absolute bottom-0 left-0 w-full px-3 py-2 bg-gradient-to-t from-black/60 to-transparent rounded-b-md">
+                    <p className="text-sm sm:text-base font-semibold text-white drop-shadow-md">{item.name}</p>
+                  </div>
                 </div>
               </Link>
             </SwiperSlide>

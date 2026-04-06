@@ -3,10 +3,8 @@
 import { useRef, useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation } from 'swiper/modules';
-import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
-// Swiper styles
 import 'swiper/css';
 import 'swiper/css/navigation';
 
@@ -17,7 +15,7 @@ interface PackageOverviewProps {
     slug: string;
     image: string;
     pricing: string;
-    info: { icon: string; text: string }[];
+    info: { icon: string; text?: string }[];
   }[];
 }
 
@@ -27,62 +25,44 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
   const nextRef = useRef<HTMLButtonElement>(null);
 
   const handleCardClick = (slug: string) => {
-    const destination = slug.toLowerCase();
-    router.push(`${destination}`);
+    router.push(slug.toLowerCase());
   };
 
-  // ✅ Memoize the Swiper slides to prevent unnecessary re-renders
   const memoizedSlides = useMemo(
     () =>
       cards.map((card, index) => (
         <SwiperSlide key={`package-card-${index}`}>
           <div
-            className="relative flex-1 h-[360px] rounded-lg overflow-hidden shadow-md bg-white cursor-pointer max-[768px]:h-[300]"
+            className="relative rounded-xl overflow-hidden shadow-sm cursor-pointer group"
             onClick={() => handleCardClick(card.slug)}
           >
-            {/* Pricing Tag */}
-            <div className="absolute top-4 right-2 bg-yellow-400 text-black font-bold px-2 py-2 rounded z-10 text-sm max-[768px]:text-xs max-[400px]:text-[0.7rem]">
-              {card.pricing}
-            </div>
-
-            {/* Card Image */}
-            <Image
+            {/* Full image - no crop */}
+            <img
               src={card.image}
               alt={card.title}
               title={card.title}
-              width={190}
-              height={360}
-              className="w-full h-[360px] object-cover"
+              className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
             />
 
-            {/* Overlay */}
-            <div className="absolute bottom-0 left-0 w-full p-5 bg-[linear-gradient(rgba(0,0,0,0)_1%,rgb(0,0,0)_76.21%)] text-white max-[768px]:p-3">
-              <div className="font-bold text-lg max-[768px]:text-lg mb-2">{card.title}</div>
-              <div className="flex flex-wrap justify-between mb-2">
+            {/* Price badge */}
+            <div className="absolute top-3 right-3 bg-[#ffc42d] text-gray-900 font-bold px-3 py-1 rounded-full text-xs sm:text-sm shadow-md z-10">
+              {card.pricing}
+            </div>
+
+            {/* Text overlay on image */}
+            <div className="absolute bottom-0 left-0 w-full p-3 sm:p-4 bg-gradient-to-t from-black/75 via-black/40 to-transparent rounded-b-xl">
+              <h3 className="font-bold text-sm sm:text-base text-white mb-1 drop-shadow-md line-clamp-2">
+                {card.title}
+              </h3>
+              <div className="flex flex-wrap gap-2 sm:gap-3">
                 {card.info.map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="flex items-center text-[0.8rem] max-[768px]:text-[0.8rem] gap-1"
-                  >
+                  <div key={idx} className="flex items-center text-[10px] sm:text-xs text-white/90 gap-1">
                     <span
-                      className="inline-block w-5 h-5 bg-no-repeat bg-contain transform rotate-[-90deg]"
-                      style={{
-                        backgroundImage: `url(${item.icon})`,
-                        filter: 'brightness(0) invert(1)',
-                      }}
+                      className="inline-block w-3.5 h-3.5 sm:w-4 sm:h-4 bg-no-repeat bg-contain brightness-0 invert"
+                      style={{ backgroundImage: `url(${item.icon})` }}
                     />
-                    {item.text === 'Flight' ? (
-                      <div className="flex flex-col items-start leading-[1.1]">
-                        <span className="text-[0.8rem] max-[768px]:text-[0.8rem]">with</span>
-                        <span className="text-[0.8rem] font-bold max-[768px]:text-[0.7rem]">
-                          Flight
-                        </span>
-                      </div>
-                    ) : (
-                      <span>
-                        <strong>{item.text}</strong>
-                      </span>
-                    )}
+                    {item.text && <span className="font-medium">{item.text}</span>}
                   </div>
                 ))}
               </div>
@@ -90,16 +70,14 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
           </div>
         </SwiperSlide>
       )),
-    [cards] // ✅ Recompute only if cards change
+    [cards]
   );
 
-  // ✅ Split title once and memoize
   const [firstWord, secondWord] = useMemo(() => title.split(' '), [title]);
 
   return (
-    <div className="relative overflow-hidden max-[1340px]:px-[5rem] max-[1080px]:px-[3rem] max-[768px]:px-[1rem] mb-5 px-4 sm:px-6 md:px-10 lg:px-20 xl:px-40">
-      {/* Section Title */}
-      <div className="flex justify-between items-center lg:py-4 sm:py-2">
+    <div className="relative overflow-hidden px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6">
+      <div className="flex justify-between items-center mb-3 sm:mb-6">
         <h2 className="flex flex-row items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase gap-x-2">
           <span>{firstWord}</span>
           <span className="font-cursive bg-gradient-to-r from-yellow-400/90 to-yellow-600 bg-clip-text text-transparent">
@@ -108,7 +86,6 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
         </h2>
       </div>
 
-      {/* Swiper Carousel */}
       <Swiper
         className="trending-offers-slider"
         modules={[Navigation]}
@@ -116,13 +93,14 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
           prevEl: prevRef.current,
           nextEl: nextRef.current,
         }}
-        spaceBetween={10}
-        slidesPerView={4}
+        spaceBetween={12}
+        slidesPerView={1.3}
         breakpoints={{
-          1080: { slidesPerView: 4 },
-          768: { slidesPerView: 4 },
-          400: { slidesPerView: 2 },
-          300: { slidesPerView: 2 },
+          480: { slidesPerView: 1.8, spaceBetween: 12 },
+          640: { slidesPerView: 2.2, spaceBetween: 14 },
+          768: { slidesPerView: 2.8, spaceBetween: 16 },
+          1024: { slidesPerView: 3.2, spaceBetween: 16 },
+          1280: { slidesPerView: 3.5, spaceBetween: 16 },
         }}
       >
         {memoizedSlides}

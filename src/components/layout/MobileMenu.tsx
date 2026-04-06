@@ -1,15 +1,21 @@
 'use client';
 
 import Link from 'next/link';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import { VIETNAM_CITIES } from '@/constant';
 
 export const MobileMenu = ({
   pathname,
   isMobileMenuOpen,
   setIsMobileMenuOpen,
+  openSubmenu,
+  toggleSubmenu,
 }: {
   pathname: string;
   isMobileMenuOpen: boolean;
   setIsMobileMenuOpen: (open: boolean) => void;
+  openSubmenu: string | null;
+  toggleSubmenu: (key: string) => void;
 }) => {
   const isActive = (href: string) =>
     pathname === href ? 'text-[#ffc42d] font-semibold' : 'text-white';
@@ -30,22 +36,37 @@ export const MobileMenu = ({
       </Link>
 
       <Link
-        href="/about"
-        className={`block transition ${isActive('/about')} py-5 px-8 border-b border-white/10`}
+        href="/about-us"
+        className={`block transition ${isActive('/about-us')} py-5 px-8 border-b border-white/10`}
         onClick={() => setIsMobileMenuOpen(false)}
-        title="About"
+        title="About Us"
       >
-        About
+        About Us
       </Link>
 
-      <Link
-        href="/services"
-        className={`block transition ${isActive('/services')} py-5 px-8 border-b border-white/10`}
-        onClick={() => setIsMobileMenuOpen(false)}
-        title="Services"
-      >
-        Services
-      </Link>
+      {/* Cities Accordion */}
+      <div className="border-b border-white/10">
+        <button
+          onClick={() => toggleSubmenu('cities')}
+          className="flex justify-between items-center w-full py-5 px-8 text-white hover:text-[#ffc42d] transition"
+        >
+          Cities {openSubmenu === 'cities' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+        </button>
+        {openSubmenu === 'cities' && (
+          <div className="bg-gray-900 px-8 pb-4">
+            {VIETNAM_CITIES.map((city) => (
+              <Link
+                key={city.slug}
+                href={`/cities/${city.slug}`}
+                className="block text-gray-300 py-2 hover:text-[#ffc42d] text-sm transition"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                {city.title}
+              </Link>
+            ))}
+          </div>
+        )}
+      </div>
 
       <Link
         href="/packages"

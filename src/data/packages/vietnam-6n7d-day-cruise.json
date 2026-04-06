@@ -1,0 +1,187 @@
+{
+  "id": "vietnam-6n7d-day-cruise",
+  "agent": "Vietnam DMC",
+  "packageName": "6N7D – Vietnam Standard Package with Day Cruise",
+  "option": "Group Touring · Breakfast Plan",
+  "travelWindow": "Available year-round",
+  "note": "USD rate per person",
+  "paxGroups": ["4 pax"],
+  "pricing": [
+    { "tier": "3-star Package", "prices": ["368 USD"] },
+    { "tier": "4-star Package", "prices": ["446 USD"] }
+  ],
+  "airportTransfer": ["Private 7-seat car without guide"],
+  "summaryItinerary": [
+    "Day 1: Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
+    "Day 2: Ha Noi – Ha Long Bay Day Cruise (Breakfast + Local Lunch)",
+    "Day 3: Ha Noi Departure – Da Nang Arrival – Join Group Afternoon Tour to Marble Mountain – Hoi An Ancient Town (Breakfast)",
+    "Day 4: Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge (Breakfast)",
+    "Day 5: Da Nang Departure – Ho Chi Minh Arrival – Join Group Afternoon Tour to Cu Chi Tunnels (Breakfast)",
+    "Day 6: Ho Chi Minh – Join Group Day Tour to Mekong Delta (Breakfast)",
+    "Day 7: Ho Chi Minh Departure (Breakfast)"
+  ],
+  "detailedItinerary": [
+    {
+      "day": "Day 1",
+      "title": "Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
+      "details": [
+        "Arrive in Ha Noi, our driver will take you to hotel for baggage storage",
+        "13:30: Visit Tran Quoc Pagoda located on Golden Fish Island in West Lake.",
+        "14:30: Continue to visit Temple of Literature – the first university of Vietnam",
+        "15:30: Keep going to visit Hoa Lo Prison to learn about Vietnam's colonial history",
+        "16:30: Our bus will take you back to the hotel for check-in.",
+        "Free leisure and overnight in Ha Noi City"
+      ]
+    },
+    {
+      "day": "Day 2",
+      "title": "Ha Noi – Ha Long Bay Day Cruise (Breakfast + Lunch)",
+      "details": [
+        "Have breakfast at hotel",
+        "Full day cruise experience in Ha Long Bay with lunch included"
+      ]
+    },
+    {
+      "day": "Day 3",
+      "title": "Ha Noi Departure – Da Nang Arrival – Join Group Afternoon Tour to Marble Mountain – Hoi An Ancient Town (Breakfast)",
+      "details": [
+        "Have breakfast at hotel and do hotel check-out",
+        "Our driver will take you to the Noi Bai International Airport as your departure flight to Da Nang City",
+        "Arrive in Da Nang City, our driver will take you to hotel for baggage storage",
+        "Do hotel check-in at 14:00 PM",
+        "15:15 - 15:45: Our driver and guide pick you up from your hotel",
+        "Visit Ngu Hanh Son (Marble Mountain)",
+        "18:00: Depart to Hoi An Ancient Town.",
+        "Visit Hoi An Ancient Town, with Japanese Bridge and colorful lanterns",
+        "21:00 Drop off at your hotel.",
+        "Overnight in Da Nang"
+      ]
+    },
+    {
+      "day": "Day 4",
+      "title": "Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge (Breakfast)",
+      "details": [
+        "Have breakfast at hotel",
+        "07:30 - 08:30: Our guide and driver will pick you up from your hotel, depart for Ba Na Hill",
+        "09:00: Arrive in Ba Na, experience the cable system and beautiful sights",
+        "Visit Golden Bridge, French Village, Linh Ung Pagoda, and Fantasy Park",
+        "17:00 -17:30: Drop off at your hotel.",
+        "Free leisure and overnight in Da Nang City"
+      ]
+    },
+    {
+      "day": "Day 5",
+      "title": "Da Nang Departure – Ho Chi Minh Arrival – Join Group Cu Chi Tunnels Afternoon Tour (Breakfast)",
+      "details": [
+        "Have breakfast at hotel and do hotel check-out",
+        "Our driver will take you directly to the Da Nang International Airport as your departure flight to Ho Chi Minh City",
+        "Arrive in Ho Chi Minh City, our driver will take you to hotel for baggage storage",
+        "12:30 – 13:00: Pick up at your hotel and depart to Cu Chi Tunnels",
+        "Explore the remaining area and tunnel systems",
+        "19:30: Return to hotel in Saigon for check-in",
+        "Free leisure and overnight in Ho Chi Minh City"
+      ]
+    },
+    {
+      "day": "Day 6",
+      "title": "Ho Chi Minh – Join Group Day Tour to Mekong Delta (Breakfast)",
+      "details": [
+        "Have breakfast at hotel",
+        "7:30 – 8:00: Leaving Ho Chi Minh City and start your trip to depart for My Tho",
+        "Visit Vinh Trang pagoda and cruise down the river",
+        "Stop over at Unicorn Island, go walking around country lane",
+        "Visit the fruit plantation and local businesses",
+        "17:30: Return to Ho Chi Minh City",
+        "Free leisure and overnight in Ho Chi Minh City"
+      ]
+    },
+    {
+      "day": "Day 7",
+      "title": "Ho Chi Minh Departure (Breakfast)",
+      "details": [
+        "Have breakfast at hotel",
+        "Do hotel check-out before 12:00 PM",
+        "Our driver will take you directly to the Tan Son Nhat International Airport as your departure flight",
+        "TOUR ENDS. Thank you for booking with us!"
+      ]
+    }
+  ],
+  "includes": [
+    "Roundtrip airport transfer by private 7-seat car without guide",
+    "Roundtrip transport Ha Noi - Ha Long by Shuttle Bus without guide",
+    "Meals mentioned in Itinerary: 7 Breakfast + 1 Lunch",
+    "06 nights accommodation at standard room in hotel",
+    "Entrance fee mentioned in Itinerary",
+    "Ba Na Hills Cable Car",
+    "Mekong Boating",
+    "Water in tours: 1 bottle of 500ml/person/day tour",
+    "Tours and Transfer are on Sharing Basic with good condition coach and local guide speaking English"
+  ],
+  "excludes": [
+    "Domestic Flight",
+    "International Flights",
+    "Wax Museum, Wine Cellar Debay, Alpine Coaster Entrance Ticket and Games with coins in Ba Na Hills",
+    "Drink on Cruise, during Meals and Surcharge for Beverages brought on Cruise",
+    "Cu Chi Tunnel Gun Shooting",
+    "Hoi An Lantern Boating",
+    "Vietnam Single Entry e-VISA (Normal Process)",
+    "Other meals and services than mentioned",
+    "Laundry, telephone calls and expenditure of a personal nature",
+    "Tips for group tour (Optional)",
+    "Travel insurance (Compulsory)",
+    "Early check-in and late check-out at all hotels",
+    "Unforeseen expenses in the event of tour cancellation due to force majeure situations"
+  ],
+  "hotelPackages": [
+    {
+      "tier": "3-star Package",
+      "hotels": [
+        { "city": "Ha Noi", "property": "Bonne Nuit Hanoi Hotel (3-star)", "room": "2 Deluxe Double Room" },
+        { "city": "Ha Long Bay", "property": "Amethyst Day Cruise (5-star)", "room": "N/A" },
+        { "city": "Da Nang", "property": "ANFADA Da Nang Hotel (3-star)", "room": "2 Deluxe Double Room" },
+        { "city": "Ho Chi Minh", "property": "Cap Town Hotel (3-star)", "room": "2 Deluxe Double Room" }
+      ]
+    },
+    {
+      "tier": "4-star Package",
+      "hotels": [
+        { "city": "Ha Noi", "property": "Grand Cititel Hanoi Hotel (4-star)", "room": "2 Deluxe Double Room" },
+        { "city": "Ha Long Bay", "property": "Amethyst Day Cruise (5-star)", "room": "N/A" },
+        { "city": "Da Nang", "property": "Yarra Ocean Suites Da Nang Hotel (4-star)", "room": "2 Yarra Partial Ocean View Double Room" },
+        { "city": "Ho Chi Minh", "property": "Alagon Saigon Hotel & Spa (4-star)", "room": "2 Premier Deluxe Double Room" }
+      ]
+    }
+  ],
+  "policy": {
+    "notes": [
+      "Hotels are subject to availability. Check-in time: 14:00 PM and Check-out time: 12:00 PM",
+      "Flight fares are subject to change",
+      "Validity of the passport should be a minimum of 6 months from the intended return date",
+      "Please print out the E Visa for smooth immigration process",
+      "We are not responsible for your lateness for the Joint in Tour",
+      "Meals inclusive during Joint in Tour will be served in local restaurant",
+      "Children from 10 years old are considered adults",
+      "Any transportation outside of the scheduled times may incur additional charges"
+    ],
+    "childrenPolicy": [],
+    "validity": "Rates are subject to availability and confirmation at time of booking.",
+    "deposit": [
+      "1st payment: 50% on total group booking upon confirmation",
+      "2nd payment: the remaining balance 50% will be paid 10 days before the arrival"
+    ],
+    "cancellation": [
+      "Flights and VISA fee is non-refundable",
+      "Cancellation made within:",
+      "7 days prior to departure date: 100% of reservation cost (after deduction of flights and VISA fee)",
+      "8-14 days prior to departure date: 50% of reservation cost (after deduction of flights and VISA fee)",
+      "15-29 days prior to departure date: 25% of reservation cost (after deduction of flights and VISA fee)",
+      "30 or more days prior to departure date: 10% of reservation (after deduction of flights and VISA fee)"
+    ],
+    "terms": [
+      "Any overstay expenses due to delay or change or cancellation in flight will be on the guests own",
+      "The passengers must ensure on their own that they have a valid passport and other required documents",
+      "We do not accept any responsibility if the passenger cannot travel because of a passport or visa issue"
+    ],
+    "paymentMethods": []
+  }
+}

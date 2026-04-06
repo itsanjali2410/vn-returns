@@ -1,0 +1,207 @@
+{
+  "id": "vietnam-7n8d-standard",
+  "agent": "Vietnam DMC",
+  "packageName": "7N8D – Vietnam Standard Package",
+  "option": "Group Touring · Breakfast Plan",
+  "travelWindow": "Available year-round",
+  "note": "USD rate per person",
+  "paxGroups": ["2 pax"],
+  "pricing": [
+    { "tier": "3-star Package", "prices": ["405 USD"] },
+    { "tier": "4-star Package", "prices": ["462 USD"] }
+  ],
+  "airportTransfer": ["Private 16-seat car without guide"],
+  "summaryItinerary": [
+    "Day 1: Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
+    "Day 2: Ha Noi – Ha Long Bay Overnight Cruise (Breakfast + Local Lunch + Local Dinner)",
+    "Day 3: Ha Long back to Ha Noi – Ha Noi Departure – Da Nang Arrival – Free Leisure (Breakfast + Local Brunch)",
+    "Day 4: Da Nang – Join Group Afternoon Tour to Son Tra Peninsula – Marble Mountain – Hoi An Ancient Town (Breakfast)",
+    "Day 5: Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge (Breakfast)",
+    "Day 6: Da Nang Departure – Ho Chi Minh Arrival – Join Group Afternoon Tour to Cu Chi Tunnels (Breakfast)",
+    "Day 7: Ho Chi Minh – Join Group Day Tour to Mekong Delta (Breakfast)",
+    "Day 8: Ho Chi Minh Departure (Breakfast)"
+  ],
+  "detailedItinerary": [
+    {
+      "day": "Day 1",
+      "title": "Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
+      "details": [
+        "Arrive in Ha Noi, our driver will take you to hotel for baggage storage",
+        "13:30: Visit Tran Quoc Pagoda located on Golden Fish Island in West Lake",
+        "14:30: Continue to visit Temple of Literature – the first university of Vietnam",
+        "15:30: Keep going to visit Hoa Lo Prison to learn about Vietnam's history",
+        "16:30: Our bus will take you back to the hotel for check-in.",
+        "Free leisure and overnight in Ha Noi City"
+      ]
+    },
+    {
+      "day": "Day 2",
+      "title": "Ha Noi – Ha Long Bay with 01 Night in Cruise (Breakfast + Lunch + Dinner)",
+      "details": [
+        "Have breakfast at hotel and do hotel check-out",
+        "08:00: Pick up from Hotel in Hanoi and departing for Halong",
+        "11:30 – 12:00: Arrive at Tuan Chau harbor",
+        "12:00 – 12:30: Get on Tender Boat to Verdure Lotus Cruise",
+        "13:00 – 13:15: Enjoy Vietnamese seafood lunch while cruising",
+        "15:00–15:30: Relax on the sundesk or explore the natural lagoon",
+        "17:30 –18:30: Come back to our Cruise and participate in Happy Hour & Cooking Class",
+        "19:00: Dinner is served. Overnight on boat."
+      ]
+    },
+    {
+      "day": "Day 3",
+      "title": "Ha Long back to Ha Noi – Ha Noi Departure – Da Nang Evening Arrival – Free leisure (Breakfast + Brunch)",
+      "details": [
+        "6:00-6:30: Taichi on the sundeck",
+        "6:15 -7:00: Have breakfast",
+        "7:00: Visitors Dark and Light Cave",
+        "9:30: Back to your cabin and prepare for check-out",
+        "10:00: Check-out from the private cabin and enjoy lunch",
+        "11:00: You take the Tender boat back to Tuan Chau port",
+        "Our bus will take you back to hotel in Ha Noi",
+        "Our driver will take you to the Noi Bai International Airport for your flight to Da Nang",
+        "Arrive in Da Nang City, our driver will take you to hotel for check-in",
+        "Free leisure and overnight in Da Nang City"
+      ]
+    },
+    {
+      "day": "Day 4",
+      "title": "Da Nang - Join Group Afternoon Tour to Son Tra Peninsula - Marble Mountain - Hoi An (Breakfast)",
+      "details": [
+        "Have breakfast at hotel and free leisure in the morning",
+        "13:45 - 14:20: Our driver and guide pick you up from your hotel",
+        "Visit Linh Ung Pagoda and Ngu Hanh Son (Marble Mountain)",
+        "18:00: Depart to Hoi An Ancient Town.",
+        "Visit Hoi An Ancient Town with Japanese Bridge and lantern-lit streets",
+        "21:00 Drop off at your hotel.",
+        "Overnight in Da Nang"
+      ]
+    },
+    {
+      "day": "Day 5",
+      "title": "Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge (Breakfast)",
+      "details": [
+        "Have breakfast at hotel",
+        "07:30 - 08:30: Our guide and driver will pick you up from your hotel",
+        "09:00: Arrive in Ba Na, experience the cable system",
+        "Visit Golden Bridge, French Village, Linh Ung Pagoda, and Fantasy Park",
+        "17:00 -17:30: Drop off at your hotel.",
+        "Free leisure and overnight in Da Nang City"
+      ]
+    },
+    {
+      "day": "Day 6",
+      "title": "Da Nang Departure – Ho Chi Minh Arrival – Join Group Cu Chi Tunnels Afternoon Tour (Breakfast)",
+      "details": [
+        "Have breakfast at hotel and do hotel check-out",
+        "Our driver will take you directly to the Da Nang International Airport for your flight to Ho Chi Minh",
+        "Arrive in Ho Chi Minh City, our driver will take you to hotel for baggage storage",
+        "12:30 – 13:00: Pick up at your hotel and depart to Cu Chi Tunnels",
+        "Explore the tunnel systems and learn about Vietnam's war history",
+        "19:30: Return to hotel in Saigon for check-in",
+        "Free leisure and overnight in Ho Chi Minh City"
+      ]
+    },
+    {
+      "day": "Day 7",
+      "title": "Ho Chi Minh – Join Group Day Tour to Mekong Delta (Breakfast)",
+      "details": [
+        "Have breakfast at hotel",
+        "7:30 – 8:00: Leaving Ho Chi Minh City and start your trip to depart for My Tho",
+        "Visit Vinh Trang pagoda and cruise down the river",
+        "Stop over at Unicorn Island, explore local villages",
+        "Visit fruit plantation and local businesses",
+        "17:30: Return to Ho Chi Minh City",
+        "Free leisure and overnight in Ho Chi Minh City"
+      ]
+    },
+    {
+      "day": "Day 8",
+      "title": "Ho Chi Minh Departure (Breakfast)",
+      "details": [
+        "Have breakfast at hotel",
+        "Do hotel check-out before 12:00 PM",
+        "Our driver will take you directly to the Tan Son Nhat International Airport",
+        "TOUR ENDS. Thank you for booking with us!"
+      ]
+    }
+  ],
+  "includes": [
+    "Roundtrip airport transfer by private 16-seat car without guide",
+    "Roundtrip transport Ha Noi - Ha Long by Shuttle Bus without guide",
+    "Meals mentioned in Itinerary: 7 Breakfast + 1 Lunch + 1 Dinner + 1 Brunch",
+    "06 nights accommodation at standard room in hotel and 01 night accommodation in Ha Long Bay cruise",
+    "Entrance fee mentioned in Itinerary",
+    "Ba Na Hills Cable Car",
+    "Mekong Boating",
+    "Water in tours: 1 bottle of 500ml/person/day tour",
+    "Tours and Transfer are on Sharing Basic with good condition coach and local guide speaking English"
+  ],
+  "excludes": [
+    "Domestic Flight",
+    "International Flights",
+    "Vietnam Single Entry e-VISA (Normal Process)",
+    "Wax Museum, Wine Cellar Debay, Alpine Coaster Entrance Ticket and Games with coins in Ba Na Hills",
+    "Drink on Cruise, during Meals and Surcharge for Beverages brought on Cruise",
+    "Cu Chi Tunnel Gun Shooting",
+    "Hoi An Lantern Boating",
+    "Other meals and services than mentioned",
+    "Laundry, telephone calls and expenditure of a personal nature",
+    "Tips for group tour (Optional)",
+    "Travel insurance (Compulsory)",
+    "Early check-in and late check-out at all hotels",
+    "Unforeseen expenses in the event of tour cancellation due to force majeure situations"
+  ],
+  "hotelPackages": [
+    {
+      "tier": "3-star Package",
+      "hotels": [
+        { "city": "Ha Noi", "property": "Bonne Nuite Hanoi Hotel (3-star)", "room": "Deluxe Double Room" },
+        { "city": "Ha Long Bay", "property": "Verdure Lotus Cruise (4-star)", "room": "Deluxe Double Room" },
+        { "city": "Da Nang", "property": "ANFADA Da Nang Hotel (3-star)", "room": "Deluxe Double Room" },
+        { "city": "Ho Chi Minh", "property": "Cape Town Hotel (3-star)", "room": "Deluxe Double Room" }
+      ]
+    },
+    {
+      "tier": "4-star Package",
+      "hotels": [
+        { "city": "Ha Noi", "property": "Grand Cititel Hanoi Hotel (4-star)", "room": "Deluxe Double Room" },
+        { "city": "Ha Long Bay", "property": "Verdure Lotus Cruise (4-star)", "room": "Deluxe Double Room" },
+        { "city": "Da Nang", "property": "Yarra Ocean Suites Da Nang Hotel (4-star)", "room": "Yarra Partial Ocean View Double Room" },
+        { "city": "Ho Chi Minh", "property": "Alagon Saigon Hotel & Spa (4-star)", "room": "Grand Premier Double Room" }
+      ]
+    }
+  ],
+  "policy": {
+    "notes": [
+      "Hotels are subject to availability. Check-in time: 14:00 PM and Check-out time: 12:00 PM",
+      "Flight fares are subject to change",
+      "Validity of the passport should be a minimum of 6 months from the intended date of return",
+      "Please print out the E Visa for smooth immigration process",
+      "We are not responsible for your lateness for the Joint in Tour",
+      "Meals inclusive during Joint in Tour will be served in local restaurant",
+      "Children from 10 years old are considered adults",
+      "Any transportation outside of the scheduled times may incur additional charges"
+    ],
+    "childrenPolicy": [],
+    "validity": "Rates are valid till 20th October 2025. Rooms and other services are not held or blocked till clients confirm.",
+    "deposit": [
+      "1st payment: 50% on total group booking upon confirmation",
+      "2nd payment: the remaining balance 50% will be paid 10 days before the arrival date."
+    ],
+    "cancellation": [
+      "Flights and VISA fee is non-refundable",
+      "Cancellation made within:",
+      "7 days prior to departure date: 100% of reservation cost (after deduction of flights and VISA fee)",
+      "8-14 days prior to departure date: 50% of reservation cost (after deduction of flights and VISA fee)",
+      "15-29 days prior to departure date: 25% of reservation cost (after deduction of flights and VISA fee)",
+      "30 or more days prior to departure date: 10% of reservation (after deduction of flights and VISA fee)"
+    ],
+    "terms": [
+      "Any overstay expenses due to delay or change or cancellation in flight will be on the guests own",
+      "The passengers must ensure on their own that they have a valid passport and other required documents",
+      "We do not accept any responsibility if the passenger cannot travel because of a passport or visa issue"
+    ],
+    "paymentMethods": []
+  }
+}

@@ -46,10 +46,22 @@ const footerSections: { title: string; links: FooterLink[] }[] = [
   {
     title: 'Quick Links',
     links: [
-      { label: 'About Us', href: '/about' },
-      { label: 'Our Services', href: '/services' },
+      { label: 'About Us', href: '/about-us' },
       { label: 'Packages', href: '/packages' },
       { label: 'Contact', href: '/contact' },
+      { label: 'FAQs', href: '/faqs' },
+    ],
+  },
+  {
+    title: 'Cities',
+    links: [
+      { label: 'Ha Noi', href: '/cities/hanoi' },
+      { label: 'Ha Long Bay', href: '/cities/ha-long-bay' },
+      { label: 'Da Nang', href: '/cities/da-nang' },
+      { label: 'Hoi An', href: '/cities/hoi-an' },
+      { label: 'Phu Quoc', href: '/cities/phu-quoc' },
+      { label: 'Ho Chi Minh City', href: '/cities/ho-chi-minh-city' },
+      
     ],
   },
 ];
@@ -72,10 +84,10 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-[#101820] text-white px-6 py-8">
+    <footer className="bg-[#101820] text-white px-4 sm:px-6 py-8">
       <div className="max-w-7xl mx-auto">
         {/* Top Section - Logo, Description, and Links */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           {/* Company Info */}
           <div className="text-left">
             <Link href="/" className="block mb-4">
@@ -125,18 +137,20 @@ const Footer = () => {
             ))}
           </div>
 
-          <div className="hidden md:block">
-            <h3 className="font-semibold text-lg mb-4">Quick Links</h3>
-            <ul className="space-y-2">
-              {footerSections[0].links.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-[#ffc42d] text-sm hover:underline">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          {footerSections.map((section) => (
+            <div key={section.title} className="hidden md:block text-left">
+              <h3 className="font-semibold text-lg mb-4">{section.title}</h3>
+              <ul className="space-y-2">
+                {section.links.map((link) => (
+                  <li key={link.label}>
+                    <Link href={link.href} className="text-[#ffc42d] text-sm hover:underline">
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
 
           {/* Contact Info */}
           <div className="text-left">
@@ -154,12 +168,7 @@ const Footer = () => {
                   +84 0325765379
                 </a>
               </div>
-              <div className="flex items-center gap-2">
-                <AiFillPhone className="text-[#ffc42d]" />
-                <a href="tel:+84987654321" className="text-[#ffc42d] hover:underline">
-                  +84 987654321
-                </a>
-              </div>
+              
               <div className="flex items-center gap-2">
                 <MdEmail className="text-[#ffc42d]" />
                 <a href="mailto:sales@vndmc.com" className="text-[#ffc42d] hover:underline">
@@ -195,14 +204,14 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-6 flex flex-col items-center text-xs text-gray-400">
           <p className="mb-2">© 2024 Vietnam DMC. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4">
-            <Link href="/#" className="hover:text-[#ffc42d] transition-colors">
+            <Link href="/privacy-policy" className="hover:text-[#ffc42d] transition-colors">
               Privacy Policy
             </Link>
-            <Link href="/#" className="hover:text-[#ffc42d] transition-colors">
-              Terms of Service
+            <Link href="/terms-conditions" className="hover:text-[#ffc42d] transition-colors">
+              Terms & Conditions
             </Link>
-            <Link href="/#" className="hover:text-[#ffc42d] transition-colors">
-              Cookie Policy
+            <Link href="/cancellation-policy" className="hover:text-[#ffc42d] transition-colors">
+              Cancellation Policy
             </Link>
           </div>
         </div>

@@ -15,7 +15,7 @@ const GoogleReviewsWidget: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    document.title = 'Tripstars - Best Travel Experience';
+    document.title = 'Vietnam DMC - Best Travel Experiences in Vietnam';
 
     if (!document.getElementById('trustindex-script')) {
       const script = document.createElement('script');

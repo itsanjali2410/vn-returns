@@ -173,12 +173,7 @@ export default function VNDMCContact() {
                 >
                   +84 0325765379
                 </a>
-                <a
-                  href="tel:+84987654321"
-                  className="text-[#198754] hover:text-[#147048] text-lg block"
-                >
-                  +84 987654321
-                </a>
+               
               </div>
               <div className="mt-6">
                 <h3 className="text-xl font-semibold text-gray-900 mb-4">Email Us</h3>

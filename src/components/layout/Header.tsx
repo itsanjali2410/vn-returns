@@ -10,6 +10,11 @@ import { usePathname } from 'next/navigation';
 const Header = () => {
   const pathname = usePathname();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [openSubmenu, setOpenSubmenu] = useState<string | null>(null);
+
+  const toggleSubmenu = (key: string) => {
+    setOpenSubmenu(openSubmenu === key ? null : key);
+  };
 
   return (
     <header className="fixed top-0 left-0 w-full z-[100] bg-black text-white font-[Montserrat] shadow-lg">
@@ -48,6 +53,8 @@ const Header = () => {
           pathname={pathname}
           isMobileMenuOpen={isMobileMenuOpen}
           setIsMobileMenuOpen={setIsMobileMenuOpen}
+          openSubmenu={openSubmenu}
+          toggleSubmenu={toggleSubmenu}
         />
       </div>
     </header>

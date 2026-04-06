@@ -26,7 +26,7 @@ const InquiryForm: React.FC<InquiryFormProps> = ({ defaultDestination = '', pack
   };
 
   return (
-    <div className=" relative w-full max-w-2xl mx-auto bg-[#111] rounded-lg  text-white">
+    <div className="relative w-full max-w-2xl mx-auto bg-[#111] rounded-lg text-white">
       {!showFeedback ? (
         <TripForm
           defaultDestination={defaultDestination}
