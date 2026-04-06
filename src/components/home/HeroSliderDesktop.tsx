@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import React, { memo, useCallback, useMemo } from 'react';
 import { useSwipeable } from 'react-swipeable';
@@ -7,11 +8,11 @@ import { useSlider } from '@/hooks/useSlider';
 const HeroSliderDesktop = memo(() => {
   const desktopImages = useMemo(
     () => [
-      '/hero/VietnamDayCruise.jpg',
-      '/hero/VietnamOverNightCruise.jpg',
-      '/hero/VietnamWithPuQuoc.jpg',
-      '/hero/VietnamWithPuQuoc 2.jpg',
-      '/hero/phu_quoc.jpg',
+      '/hero/VietnamDayCruise.webp',
+      '/hero/VietnamOverNightCruise.webp',
+      '/hero/VietnamWithPuQuoc.webp',
+      '/hero/VietnamWithPuQuoc 2.webp',
+      '/hero/phu_quoc.webp',
     ],
     []
   );
@@ -43,7 +44,7 @@ const HeroSliderDesktop = memo(() => {
             i === index ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
+          <ImgWithPlaceholder
             src={src}
             alt={`Slide ${i + 1}`}
             className="w-full h-auto"

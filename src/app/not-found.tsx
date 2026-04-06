@@ -7,7 +7,7 @@ export default function NotFound() {
       {/* Logo */}
       <div className="mb-8">
         <Link href="/">
-          <Image src="/logo.png" alt="Vietnam DMC" width={150} height={59} className="mx-auto" />
+          <Image src="/logo.webp" alt="Vietnam DMC" width={150} height={59} className="mx-auto" />
         </Link>
       </div>
 

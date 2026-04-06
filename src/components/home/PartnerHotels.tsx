@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
@@ -15,23 +16,23 @@ interface Hotel {
 }
 
 const hotels: Hotel[] = [
-  { name: 'Sofitel Legend Metropole', city: 'Hanoi', description: 'French colonial elegance with modern luxury', rating: 5, image: '/hotels/La_Siesta_Hotel_Spa.webp' },
-  { name: 'Hilton Hanoi Opera', city: 'Hanoi', description: 'World-class dining and spa in central Hanoi', rating: 5, image: '/hotels/Hilton_Hanoi_Opera.webp' },
+  { name: 'Sofitel Legend Metropole', city: 'Hanoi', description: 'French colonial elegance with modern luxury', rating: 4.8, image: '/hotels/La_Siesta_Hotel_Spa.webp' },
+  { name: 'Hilton Hanoi Opera', city: 'Hanoi', description: 'World-class dining and spa in central Hanoi', rating: 4.8, image: '/hotels/Hilton_Hanoi_Opera.webp' },
   { name: 'La Siesta Hotel & Spa', city: 'Hanoi', description: 'Charming boutique with traditional architecture', rating: 4.5, image: '/hotels/La_Siesta_Hotel_Spa.webp' },
-  { name: 'Stellar of the Seas', city: 'Ha Long Bay', description: 'Ultra-luxury cruise through emerald waters', rating: 5, image: '/hotels/Stellar_of_the_Seas.webp' },
+  { name: 'Stellar of the Seas', city: 'Ha Long Bay', description: 'Ultra-luxury cruise through emerald waters', rating: 4.8, image: '/hotels/Stellar_of_the_Seas.webp' },
   { name: 'Tuan Chau Island Resort', city: 'Ha Long Bay', description: 'Beach resort with water sports and spa', rating: 4.5, image: '/hotels/Tuan_Chau_Island_Resort.webp' },
   { name: 'Topas Ecolodge', city: 'Sapa', description: 'Eco-luxury with panoramic mountain views', rating: 4.5, image: '/hotels/Topas_Ecolodge.webp' },
   { name: 'Victoria Sapa Resort', city: 'Sapa', description: 'French colonial elegance overlooking valley', rating: 4.5, image: '/hotels/Victoria_Sapa_Resort_Spa.webp' },
-  { name: 'Sheraton Grand Da Nang', city: 'Da Nang', description: 'Beachfront luxury with golf course', rating: 5, image: '/hotels/Sheraton_Grand_DaNang_Resort.webp' },
-  { name: 'Fusion Maia Da Nang', city: 'Da Nang', description: 'All-inclusive beachfront resort', rating: 5, image: '/hotels/Fusion_Maia_DaNang.webp' },
-  { name: 'Anantara Hoi An', city: 'Hoi An', description: 'Riverside resort with lantern-inspired design', rating: 5, image: '/hotels/Anantara_HoiAn_Resort.webp' },
+  { name: 'Sheraton Grand Da Nang', city: 'Da Nang', description: 'Beachfront luxury with golf course', rating: 4.8, image: '/hotels/Sheraton_Grand_DaNang_Resort.webp' },
+  { name: 'Fusion Maia Da Nang', city: 'Da Nang', description: 'All-inclusive beachfront resort', rating: 4.8, image: '/hotels/Fusion_Maia_DaNang.webp' },
+  { name: 'Anantara Hoi An', city: 'Hoi An', description: 'Riverside resort with lantern-inspired design', rating: 4.8, image: '/hotels/Anantara_HoiAn_Resort.webp' },
   { name: 'Huong Giang Resort', city: 'Hue', description: 'Riverside resort on the Perfume River', rating: 4.5, image: '/hotels/Huong_Giang_Hotel_Resort_Spa.webp' },
-  { name: 'La Residence Hue', city: 'Hue', description: 'Historic colonial mansion turned hotel', rating: 5, image: '/hotels/La_Residence_Hue_Hotel_Spa.webp' },
-  { name: 'Melia Phu Quoc', city: 'Phu Quoc', description: 'Beachfront all-inclusive paradise', rating: 5, image: '/hotels/Melia_PhuQuoc.webp' },
-  { name: 'JW Marriott Phu Quoc', city: 'Phu Quoc', description: 'Ultra-luxury in scenic Emerald Bay', rating: 5, image: '/hotels/JW_Marriott_PhuQuoc_Emerald_Bay.webp' },
-  { name: 'The Reverie Saigon', city: 'Ho Chi Minh', description: 'Ultra-luxury with Michelin-starred dining', rating: 5, image: '/hotels/The_Reverie_Saigon.webp' },
-  { name: 'Caravelle Hotel', city: 'Ho Chi Minh', description: 'Historic hotel with legendary rooftop bar', rating: 5, image: '/hotels/Caravelle_Hotel.webp' },
-  { name: 'Park Hyatt Saigon', city: 'Ho Chi Minh', description: 'French colonial charm with rooftop pool', rating: 5, image: '/hotels/Park_Hyatt_Saigon.webp' },
+  { name: 'La Residence Hue', city: 'Hue', description: 'Historic colonial mansion turned hotel', rating: 4.8, image: '/hotels/La_Residence_Hue_Hotel_Spa.webp' },
+  { name: 'Melia Phu Quoc', city: 'Phu Quoc', description: 'Beachfront all-inclusive paradise', rating: 4.8, image: '/hotels/Melia_PhuQuoc.webp' },
+  { name: 'JW Marriott Phu Quoc', city: 'Phu Quoc', description: 'Ultra-luxury in scenic Emerald Bay', rating: 4.8, image: '/hotels/JW_Marriott_PhuQuoc_Emerald_Bay.webp' },
+  { name: 'The Reverie Saigon', city: 'Ho Chi Minh', description: 'Ultra-luxury with Michelin-starred dining', rating: 4.8, image: '/hotels/The_Reverie_Saigon.webp' },
+  { name: 'Caravelle Hotel', city: 'Ho Chi Minh', description: 'Historic hotel with legendary rooftop bar', rating: 4.8, image: '/hotels/Caravelle_Hotel.webp' },
+  { name: 'Park Hyatt Saigon', city: 'Ho Chi Minh', description: 'French colonial charm with rooftop pool', rating: 4.8, image: '/hotels/Park_Hyatt_Saigon.webp' },
 ];
 
 function Stars({ rating }: { rating: number }) {
@@ -90,7 +91,7 @@ export default function PartnerHotels() {
               <div className="group rounded-xl overflow-hidden border border-gray-100 bg-white hover:shadow-lg transition-all">
                 {/* Image */}
                 <div className="relative overflow-hidden">
-                  <img
+                  <ImgWithPlaceholder
                     src={hotel.image}
                     alt={hotel.name}
                     className="w-full h-auto group-hover:scale-105 transition-transform duration-500"

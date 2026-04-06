@@ -20,7 +20,7 @@ export const packagesSchema = {
       url: 'https://www.vndmc.com/packages/vietnam-7n8d-standard',
       name: '7N8D Vietnam Standard Package',
       description: 'Full Vietnam experience with Ha Long overnight cruise, Ba Na Hills, and Mekong Delta',
-      image: 'https://www.vndmc.com/hanoi-9D8N/danang.jpg',
+      image: 'https://www.vndmc.com/hanoi-9D8N/danang.webp',
       priceRange: 'From 405 USD',
     },
     {

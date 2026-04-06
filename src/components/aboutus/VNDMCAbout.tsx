@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import Link from 'next/link';
 
@@ -63,7 +64,7 @@ export default function VNDMCAbout() {
             <div className="space-y-4">
               <div className="rounded-2xl overflow-hidden">
                 <img
-                  src='/Happy_faces/3.jpg'
+                  src='/happy_faces/3.webp'
                   alt="Da Nang City"
                   className="w-full h-auto rounded-2xl hover:scale-105 transition-transform duration-500"
                 />

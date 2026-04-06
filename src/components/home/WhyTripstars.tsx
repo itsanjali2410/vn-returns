@@ -10,11 +10,11 @@ type DataItem = {
 };
 
 const data: DataItem[] = [
-  { title: 'With You on Every Trip', icon: '/USPS/VNDMC_Icons-01.png' },
-  { title: 'Professional & Committed Team', icon: '/USPS/VNDMC_Icons-02.png' },
-  { title: 'Comprehensive Services', icon: '/USPS/VNDMC_Icons-03.png' },
-  { title: 'Custom Travel Packages', icon: '/USPS/VNDMC_Icons-04.png' },
-  { title: 'Tailored Experiences', icon: '/USPS/VNDMC_Icons-05.png' },
+  { title: 'With You on Every Trip', icon: '/USPS/VNDMC_Icons-01.webp' },
+  { title: 'Professional & Committed Team', icon: '/USPS/VNDMC_Icons-02.webp' },
+  { title: 'Comprehensive Services', icon: '/USPS/VNDMC_Icons-03.webp' },
+  { title: 'Custom Travel Packages', icon: '/USPS/VNDMC_Icons-04.webp' },
+  { title: 'Tailored Experiences', icon: '/USPS/VNDMC_Icons-05.webp' },
 ];
 
 export default function WhyVietnamDMC() {

@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import { useRef } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -14,12 +15,12 @@ type Destination = {
 };
 
 const popularDestinationsData: Destination[] = [
-  { name: 'Hanoi', imgUrl: '/popular_cities/Hanoi.jpg', slug: 'hanoi' },
-  { name: 'Ha Long Bay', imgUrl: '/popular_cities/Halong Bay.jpg', slug: 'ha-long-bay' },
-  { name: 'Da Nang', imgUrl: '/popular_cities/Da Nang.jpg', slug: 'da-nang' },
-  { name: 'Hoi An', imgUrl: '/popular_cities/Hoi An.jpg', slug: 'hoi-an' },
-  { name: 'Phu Quoc', imgUrl: '/popular_cities/Phu Quoc.jpg', slug: 'phu-quoc' },
-  { name: 'Ho Chi Minh City', imgUrl: '/popular_cities/Ho Chi Minh City.jpg', slug: 'ho-chi-minh-city' },
+  { name: 'Hanoi', imgUrl: '/popular_cities/Hanoi.webp', slug: 'hanoi' },
+  { name: 'Ha Long Bay', imgUrl: '/popular_cities/Halong Bay.webp', slug: 'ha-long-bay' },
+  { name: 'Da Nang', imgUrl: '/popular_cities/Da Nang.webp', slug: 'da-nang' },
+  { name: 'Hoi An', imgUrl: '/popular_cities/Hoi An.webp', slug: 'hoi-an' },
+  { name: 'Phu Quoc', imgUrl: '/popular_cities/Phu Quoc.webp', slug: 'phu-quoc' },
+  { name: 'Ho Chi Minh City', imgUrl: '/popular_cities/Ho Chi Minh City.webp', slug: 'ho-chi-minh-city' },
   { name: 'Ninh Binh', imgUrl: '/destinations/Ninh_Binh.webp', slug: 'ninh-binh' },
   { name: 'Mekong Delta', imgUrl: '/destinations/Mekong_Delta.webp', slug: 'mekong-delta' },
 ];
@@ -70,7 +71,7 @@ export default function PopularDestinations() {
                 title={item.name}
               >
                 <div className="relative rounded-md overflow-hidden shadow-lg">
-                  <img
+                  <ImgWithPlaceholder
                     src={item.imgUrl}
                     alt={item.name}
                     title={item.name}

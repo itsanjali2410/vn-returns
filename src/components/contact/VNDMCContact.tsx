@@ -109,7 +109,7 @@ export default function VNDMCContact() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hanoi-9D8N/goldenbridge.png"
+            src="/hanoi-9D8N/goldenbridge.webp"
             alt="Vietnam Landscape"
             fill
             className="object-cover"

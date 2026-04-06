@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import React, { memo, useCallback, useMemo } from 'react';
 import { useSwipeable } from 'react-swipeable';
@@ -7,10 +8,10 @@ import { useSlider } from '@/hooks/useSlider';
 const HeroSliderMobile = memo(() => {
   const mobileImages = useMemo(
     () => [
-      '/hero/VietnamDayCruise.jpg',
-      '/hero/VietnamOverNightCruise.jpg',
-      '/hero/VietnamWithPuQuoc.jpg',
-      '/hero/VietnamWithPuQuoc 2.jpg',
+      '/hero/VietnamDayCruise.webp',
+      '/hero/VietnamOverNightCruise.webp',
+      '/hero/VietnamWithPuQuoc.webp',
+      '/hero/VietnamWithPuQuoc 2.webp',
     ],
     []
   );
@@ -42,7 +43,7 @@ const HeroSliderMobile = memo(() => {
             i === index ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <img
+          <ImgWithPlaceholder
             src={src}
             alt={`Mobile Slide ${i + 1}`}
             className="w-full h-auto"

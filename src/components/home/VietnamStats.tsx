@@ -15,7 +15,7 @@ export default function VietnamStats() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <Image
-          src="/hanoi-9D8N/danang.jpg"
+          src="/hanoi-9D8N/danang.webp"
           alt="Vietnam Destination"
           fill
           className="object-cover"

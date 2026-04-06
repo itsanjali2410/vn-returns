@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     type: 'website',
     images: [
       {
-        url: 'https://www.vndmc.com/logo.png',
+        url: 'https://www.vndmc.com/logo.webp',
         width: 150,
         height: 59,
         alt: 'Vietnam DMC',

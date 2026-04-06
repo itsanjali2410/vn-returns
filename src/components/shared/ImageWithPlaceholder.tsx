@@ -24,7 +24,7 @@ export default function ImageWithPlaceholder({
         }`}
       >
         <img
-          src="/logo.png"
+          src="/logo.webp"
           alt="Loading..."
           className="w-20 h-20 object-contain opacity-40 animate-pulse"
         />

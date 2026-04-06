@@ -92,7 +92,7 @@ const Footer = () => {
           <div className="text-left">
             <Link href="/" className="block mb-4">
               <Image
-                src="/logo.png"
+                src="/logo.webp"
                 alt="Vietnam DMC Logo"
                 width={200}
                 height={80}

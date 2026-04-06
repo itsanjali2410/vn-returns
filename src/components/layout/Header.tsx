@@ -23,7 +23,7 @@ const Header = () => {
         {/* Logo */}
         <Link href="/" aria-label="Go to homepage">
           <Image
-            src="/logo.png"
+            src="/logo.webp"
             alt="Logo"
             width={150}
             height={59}

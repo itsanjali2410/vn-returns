@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import React, { useRef, useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';

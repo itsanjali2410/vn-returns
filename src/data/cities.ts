@@ -286,6 +286,75 @@ export const citiesData: CityData[] = [
       'Located Just 70km from HCMC',
     ],
   },
+  {
+    slug: 'sapa',
+    name: 'SaPa',
+    region: 'Northern Highlands',
+    tagline: 'Mountain Paradise',
+    description:
+      'SaPa is a stunning mountain town in northwest Vietnam known for terraced rice fields, ethnic minority cultures, and trekking through misty valleys with breathtaking views of Fansipan — the highest peak in Indochina.',
+    image: '/destinations/Ninh_Binh.webp',
+    thingsToDo: [
+      { title: 'Fansipan Summit', description: 'Ride the cable car or trek to the top of the highest mountain in Indochina at 3,143m.' },
+      { title: 'Rice Terrace Trekking', description: 'Hike through stunning cascading rice terraces in Muong Hoa Valley.' },
+      { title: 'Ethnic Village Visits', description: 'Meet the Hmong, Dao, and Tay communities and learn about their traditions.' },
+      { title: 'Cat Cat Village', description: 'Walk through this picturesque Hmong village with waterfalls and traditional crafts.' },
+      { title: 'Ham Rong Mountain', description: 'Climb for panoramic views of SaPa town and the surrounding valleys.' },
+    ],
+    specialities: [
+      'Terraced Rice Fields (UNESCO candidate)',
+      'Fansipan — Roof of Indochina',
+      'Ethnic Minority Cultures',
+      'Thang Co (Traditional Horse Meat Soup)',
+      'Cool Mountain Climate Year-Round',
+    ],
+  },
+  {
+    slug: 'dalat',
+    name: 'Da Lat',
+    region: 'Central Highlands',
+    tagline: 'City of Eternal Spring',
+    description:
+      'Da Lat is a charming highland city known for its cool climate, French colonial architecture, flower gardens, and pine-covered hills. Often called the "City of Eternal Spring," it offers a romantic escape from Vietnam\'s tropical heat.',
+    image: '/destinations/Da_Nang_City_Tour.webp',
+    thingsToDo: [
+      { title: 'Crazy House', description: 'Explore the whimsical guesthouse designed like a giant tree with surreal architecture.' },
+      { title: 'Datanla Waterfall', description: 'Ride the alpine coaster down to the waterfall and enjoy the natural scenery.' },
+      { title: 'Xuan Huong Lake', description: 'Stroll or cycle around the central lake surrounded by pine trees and gardens.' },
+      { title: 'Flower Gardens', description: 'Visit the famous Da Lat Flower Park with hundreds of flower species in bloom.' },
+      { title: 'Night Market', description: 'Browse local crafts, try grilled corn, soy milk, and Da Lat pizza at the bustling night market.' },
+    ],
+    specialities: [
+      'Cool Climate (15-24°C Year-Round)',
+      'French Colonial Villas',
+      'Strawberry & Artichoke Farms',
+      'Da Lat Wine & Coffee',
+      'Flower Capital of Vietnam',
+    ],
+  },
+  {
+    slug: 'hue',
+    name: 'Hue',
+    region: 'Central Vietnam',
+    tagline: 'The Imperial City',
+    description:
+      'Hue is the former imperial capital of Vietnam, home to the magnificent Citadel, royal tombs, and pagodas along the Perfume River. A UNESCO World Heritage city rich in history, culture, and some of the best cuisine in Vietnam.',
+    image: '/destinations/Hoi_An_Ancient_Town.webp',
+    thingsToDo: [
+      { title: 'Imperial Citadel', description: 'Explore the vast walled fortress with palaces, temples, and the Forbidden Purple City.' },
+      { title: 'Thien Mu Pagoda', description: 'Visit the iconic 7-story pagoda overlooking the Perfume River — symbol of Hue.' },
+      { title: 'Royal Tombs', description: 'Tour the elaborate tombs of emperors Khai Dinh, Tu Duc, and Minh Mang.' },
+      { title: 'Perfume River Cruise', description: 'Take a sunset boat ride along the river passing pagodas and countryside.' },
+      { title: 'Hue Street Food Tour', description: 'Taste Bun Bo Hue, Banh Khoai, and Nem Lui — Hue is Vietnam\'s food capital.' },
+    ],
+    specialities: [
+      'UNESCO Imperial Citadel',
+      'Bun Bo Hue (Spicy Beef Noodle Soup)',
+      'Royal Cuisine Tradition',
+      'Perfume River',
+      'Ao Dai (Traditional Dress) Heritage',
+    ],
+  },
 ];
 
 export function getCityBySlug(slug: string): CityData | undefined {

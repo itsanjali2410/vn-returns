@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 interface TeamMember {
   name: string;
@@ -7,29 +8,29 @@ interface TeamMember {
 }
 
 const teamMembers: TeamMember[] = [
-  { name: 'Ms. Sam', title: 'Director', image: '/team/sam.png' },
-  { name: 'Kunal', title: 'Business Head', image: '/team/kunal.png' },
-  { name: 'Ms. Shu', title: 'Executive Assistant Director', image: '/team/shu.png' },
-  { name: 'Gaurav', title: 'Sales Head', image: '/team/gaurav.jpg' },
-  { name: 'Ms. April', title: 'Sales Manager', image: '/team/april.jpg' },
-  { name: 'Mr. Alex', title: 'Assistant Sales Manager', image: '/team/alex.jpg' },
-  { name: 'Ms. Lynn', title: 'Senior Sales Executive', image: '/team/lynn.jpg' },
-  { name: 'Ms. Sarah', title: 'Senior Sales Executive', image: '/team/sarah.png' },
-  { name: 'Mr. Mo', title: 'Senior Sales Executive', image: '/team/mo.jpg' },
-  { name: 'Ms. Anna', title: 'Sales Executive', image: '/team/anna.png' },
-  { name: 'Ms. Annie', title: 'Sales Executive', image: '/team/annie.png' },
-  { name: 'Ms. Daisy', title: 'Sales Executive', image: '/team/daisy.jpg' },
-  { name: 'Ms. Lina', title: 'Sales Executive', image: '/team/lina.jpg' },
-  { name: 'Ms. Lyly', title: 'Sales Executive', image: '/team/lyly.jpg' },
-  { name: 'Ms. Naomi', title: 'Sales Executive', image: '/team/naomi.jpg' },
-  { name: 'Ms. Nina', title: 'Sales Executive', image: '/team/nina.jpg' },
-  { name: 'Ms. Pink', title: 'Sales Executive', image: '/team/pink.jpg' },
-  { name: 'Mr. Mark', title: 'Sales Executive', image: '/team/mark.jpg' },
-  { name: 'Ms. My', title: 'Sales Admin', image: '/team/my.jpg' },
-  { name: 'Ms. Thao', title: 'Marketing', image: '/team/thao.png' },
-  { name: 'Ms. Ha', title: 'Accountant', image: '/team/ha.png' },
-  { name: 'Ms. Tung', title: 'Accountant', image: '/team/tung.jpg' },
-  { name: 'Ms. Dung', title: 'Data Entry', image: '/team/dung.jpg' },
+  { name: 'Ms. Sam', title: 'Director', image: '/team/sam.webp' },
+  { name: 'Kunal', title: 'Business Head', image: '/team/kunal.webp' },
+  { name: 'Ms. Shu', title: 'Executive Assistant Director', image: '/team/shu.webp' },
+  { name: 'Gaurav', title: 'Sales Head', image: '/team/gaurav.webp' },
+  { name: 'Ms. April', title: 'Sales Manager', image: '/team/april.webp' },
+  { name: 'Mr. Alex', title: 'Assistant Sales Manager', image: '/team/alex.webp' },
+  { name: 'Ms. Lynn', title: 'Senior Sales Executive', image: '/team/lynn.webp' },
+  { name: 'Ms. Sarah', title: 'Senior Sales Executive', image: '/team/sarah.webp' },
+  { name: 'Mr. Mo', title: 'Senior Sales Executive', image: '/team/mo.webp' },
+  { name: 'Ms. Anna', title: 'Sales Executive', image: '/team/anna.webp' },
+  { name: 'Ms. Annie', title: 'Sales Executive', image: '/team/annie.webp' },
+  { name: 'Ms. Daisy', title: 'Sales Executive', image: '/team/daisy.webp' },
+  { name: 'Ms. Lina', title: 'Sales Executive', image: '/team/lina.webp' },
+  { name: 'Ms. Lyly', title: 'Sales Executive', image: '/team/lyly.webp' },
+  { name: 'Ms. Naomi', title: 'Sales Executive', image: '/team/naomi.webp' },
+  { name: 'Ms. Nina', title: 'Sales Executive', image: '/team/nina.webp' },
+  { name: 'Ms. Pink', title: 'Sales Executive', image: '/team/pink.webp' },
+  { name: 'Mr. Mark', title: 'Sales Executive', image: '/team/mark.webp' },
+  { name: 'Ms. My', title: 'Sales Admin', image: '/team/my.webp' },
+  { name: 'Ms. Thao', title: 'Marketing', image: '/team/thao.webp' },
+  { name: 'Ms. Ha', title: 'Accountant', image: '/team/ha.webp' },
+  { name: 'Ms. Tung', title: 'Accountant', image: '/team/tung.webp' },
+  { name: 'Ms. Dung', title: 'Data Entry', image: '/team/dung.webp' },
 ];
 
 export default function TeamSection() {

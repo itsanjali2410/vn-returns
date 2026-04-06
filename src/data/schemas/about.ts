@@ -4,7 +4,7 @@ export const aboutSchema = {
   name: 'Vietnam DMC',
   description: 'Destination Management Company specializing in authentic Vietnam travel experiences',
   url: 'https://www.vndmc.com/about-us',
-  logo: 'https://www.vndmc.com/logo.png',
+  logo: 'https://www.vndmc.com/logo.webp',
   foundingDate: '2010',
   address: {
     '@type': 'PostalAddress',

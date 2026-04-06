@@ -89,15 +89,12 @@ export const THEMES = [
 // Vietnam DMC Cities/Places
 export const VIETNAM_CITIES = [
   { title: 'Hanoi', slug: 'hanoi' },
+  { title: 'SaPa', slug: 'sapa' },
   { title: 'Ha Long Bay', slug: 'ha-long-bay' },
-  { title: 'Ninh Binh', slug: 'ninh-binh' },
   { title: 'Da Nang', slug: 'da-nang' },
+  { title: 'Da Lat', slug: 'dalat' },
+  { title: 'Hue', slug: 'hue' },
   { title: 'Hoi An', slug: 'hoi-an' },
-  { title: 'Ba Na Hills', slug: 'ba-na-hills' },
-  { title: 'Ho Chi Minh City', slug: 'ho-chi-minh-city' },
+  { title: 'Ho Chi Minh', slug: 'ho-chi-minh-city' },
   { title: 'Phu Quoc', slug: 'phu-quoc' },
-  { title: 'Mekong Delta', slug: 'mekong-delta' },
-  { title: 'Marble Mountains', slug: 'marble-mountain' },
-  { title: 'Cu Chi Tunnels', slug: 'cu-chi-tunnels' },
-  { title: 'Monkey Mountain', slug: 'monkey-mountain' },
 ];

@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Navigation } from 'swiper/modules';
@@ -69,7 +70,7 @@ export default function ExploreCities() {
               >
                 {/* Image with overlay */}
                 <div className="relative">
-                  <img
+                  <ImgWithPlaceholder
                     src={dest.image}
                     alt={dest.name}
                     className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-500"

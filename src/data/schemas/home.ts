@@ -15,7 +15,7 @@ export const homeSchema = {
     addressCountry: 'VN',
   },
   priceRange: '$$$',
-  image: 'https://www.vndmc.com/logo.png',
+  image: 'https://www.vndmc.com/logo.webp',
   sameAs: [
     'https://www.facebook.com/vndmc',
     'https://www.instagram.com/vndmc',

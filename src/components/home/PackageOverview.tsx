@@ -1,4 +1,5 @@
 'use client';
+import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import { useRef, useMemo } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -37,7 +38,7 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
             onClick={() => handleCardClick(card.slug)}
           >
             {/* Full image - no crop */}
-            <img
+            <ImgWithPlaceholder
               src={card.image}
               alt={card.title}
               title={card.title}
