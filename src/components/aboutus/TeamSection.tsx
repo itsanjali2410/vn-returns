@@ -1,5 +1,5 @@
 'use client';
-import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
+import Image from 'next/image';
 
 interface TeamMember {
   name: string;
@@ -51,11 +51,13 @@ export default function TeamSection() {
               className="group bg-white rounded-2xl shadow-md hover:shadow-2xl transition-all duration-300 p-6 flex flex-col items-center transform hover:-translate-y-2 border border-gray-100 hover:border-[#198754]"
             >
               <div className="relative w-28 h-28 sm:w-32 sm:h-32 mb-4 rounded-full overflow-hidden ring-4 ring-gray-100 group-hover:ring-[#ffc42d] transition-all duration-300">
-                <img
+                <Image
                   src={member.image}
                   alt={member.name}
                   title={member.name}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-300"
+                  fill
+                  sizes="128px"
+                  className="object-cover group-hover:scale-110 transition-transform duration-300"
                 />
               </div>
               <h3 className="font-bold text-gray-900 mb-1 text-center text-sm sm:text-base">

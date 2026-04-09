@@ -1,7 +1,7 @@
 'use client';
-import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import React from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 
 interface InfoItem {
@@ -53,13 +53,14 @@ const TrendingPackagesMobile: React.FC<Props> = ({ packages, openFormModal, base
           onClick={() => handleCardClick(card)}
           className="cursor-pointer rounded-xl shadow-lg overflow-hidden transition-transform hover:scale-[1.01] bg-white"
         >
-          <div className="relative w-full">
-            <img
+          <div className="relative w-full aspect-[16/11]">
+            <Image
               src={card.image}
               alt={card.title}
               title={card.title}
-              className="w-full h-auto"
-              loading="lazy"
+              fill
+              sizes="100vw"
+              className="object-cover"
             />
             <div className="absolute top-2 right-2 bg-yellow-400 text-black font-bold px-3 py-1.5 rounded-full shadow-md text-sm z-10">
               {card.pricing}

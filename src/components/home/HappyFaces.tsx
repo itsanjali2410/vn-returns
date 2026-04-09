@@ -1,5 +1,7 @@
 'use client';
 
+import Image from 'next/image';
+
 const images = [
   '/happy_faces/IMG_8125.webp',
   '/happy_faces/IMG_8137.webp',
@@ -21,23 +23,25 @@ export default function HappyFaces() {
       {/* Masonry-style grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 sm:gap-4">
         {/* First large image spanning 2 rows */}
-        <div className="row-span-2 rounded-xl overflow-hidden">
-          <img
+        <div className="relative row-span-2 rounded-xl overflow-hidden aspect-[2/3]">
+          <Image
             src={images[0]}
             alt="Happy traveler"
-            className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
-            loading="lazy"
+            fill
+            sizes="(max-width: 768px) 50vw, 33vw"
+            className="object-cover rounded-xl hover:scale-105 transition-transform duration-500"
           />
         </div>
 
         {/* Remaining images */}
         {images.slice(1).map((src, idx) => (
-          <div key={idx} className="rounded-xl overflow-hidden">
-            <img
+          <div key={idx} className="relative rounded-xl overflow-hidden aspect-[4/3]">
+            <Image
               src={src}
               alt="Happy traveler"
-              className="w-full h-full object-cover rounded-xl hover:scale-105 transition-transform duration-500"
-              loading="lazy"
+              fill
+              sizes="(max-width: 768px) 50vw, 33vw"
+              className="object-cover rounded-xl hover:scale-105 transition-transform duration-500"
             />
           </div>
         ))}

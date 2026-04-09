@@ -34,7 +34,7 @@ const HeroSliderMobile = memo(() => {
   return (
     <section
       {...swipeHandlers}
-      className="relative md:hidden w-full overflow-hidden"
+      className="relative md:hidden w-full overflow-hidden aspect-[16/10]"
     >
       {mobileImages.map((src, i) => (
         <div
@@ -46,8 +46,9 @@ const HeroSliderMobile = memo(() => {
           <ImgWithPlaceholder
             src={src}
             alt={`Mobile Slide ${i + 1}`}
-            className="w-full h-auto"
-            loading={i === 0 ? 'eager' : 'lazy'}
+            className="object-cover"
+            sizes="100vw"
+            priority={i === 0}
           />
         </div>
       ))}

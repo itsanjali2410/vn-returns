@@ -1,9 +1,20 @@
 import { Metadata } from 'next';
+import Image from 'next/image';
 import Link from 'next/link';
+
 import pkg1 from '@/data/packages/ha-noi-da-nang-phu-quoc-9d8n.json';
 import pkg2 from '@/data/packages/phu-quoc-4-night-standard.json';
 import pkg3 from '@/data/packages/vietnam-6n7d-day-cruise.json';
 import pkg4 from '@/data/packages/vietnam-7n8d-standard.json';
+import pkg5 from '@/data/packages/phu-quoc-short-break.json';
+import pkg6 from '@/data/packages/phu-quoc-fully-loaded.json';
+import pkg7 from '@/data/packages/phu-quoc-with-1-day-leisure.json';
+import pkg8 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-day-with-day-cruise.json';
+import pkg9 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-with-over-night-cruise.json';
+import pkg10 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-day-cruise.json';
+import pkg11 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-over-night-cruise.json';
+import pkg12 from '@/data/packages/ha-noi-phu-quoc-da-nang-day-cruise.json';
+import pkg13 from '@/data/packages/ha-noi-da-nang-short-break.json';
 
 export const metadata: Metadata = {
   title: 'Vietnam Travel Packages | Vietnam DMC',
@@ -11,19 +22,48 @@ export const metadata: Metadata = {
   keywords: 'Vietnam packages, Vietnam tours, Vietnam travel, Vietnam holidays, Vietnam DMC packages',
 };
 
-function createSlug(id: string): string {
-  return id.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
-}
-
 const packageImages: Record<string, string> = {
   'ha-noi-da-nang-phu-quoc-9d8n': '/package/Hanoi_Danang_Phuquoc.webp',
   'phu-quoc-4-night-standard': '/package/Phuqoc_Standard_Package.webp',
   'vietnam-6n7d-day-cruise': '/package/Vietnam_Standard_Package_daycruise.webp',
   'vietnam-7n8d-standard': '/package/Vietnam_Standard_Package.webp',
+  'phu-quoc-short-break': '/destinations/Phu_Quoc_Island.webp',
+  'phu-quoc-fully-loaded': '/popular_cities/Phu Quoc.webp',
+  'phu-quoc-with-1-day-leisure': '/destinations/Monkey_Mountain.webp',
+  'ha-noi-da-nang-ho-chi-minh-day-with-day-cruise': '/destinations/Ho_Chi_Minh_City.webp',
+  'ha-noi-da-nang-ho-chi-minh-with-over-night-cruise': '/destinations/Halong_Bay.webp',
+  'ha-noi-da-nang-phu-quoc-with-day-cruise': '/destinations/Da_Nang_City_Tour.webp',
+  'ha-noi-da-nang-phu-quoc-with-over-night-cruise': '/destinations/Ba_Na_Hills_Golden_Bridge.webp',
+  'ha-noi-phu-quoc-da-nang-day-cruise': '/destinations/Hoi_An_Ancient_Town.webp',
+  'ha-noi-da-nang-short-break': '/destinations/Hanoi.webp',
 };
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getDays(pkg: any): { days: number; nights: number } {
+  if (pkg.days && pkg.nights) return { days: pkg.days, nights: pkg.nights };
+  const days = pkg.summaryItinerary?.length || 0;
+  return { days, nights: Math.max(0, days - 1) };
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getPrice(pkg: any): string {
+  const pr = pkg.pricing?.[0];
+  if (!pr) return pkg.note || 'Custom Quote';
+  const firstPrice = pr.prices?.[0];
+  if (firstPrice) {
+    // Extract just the USD amount if it's a long string
+    const match = firstPrice.match(/(\d+)\s*USD/);
+    if (match) return `From ${match[1]} USD`;
+    return firstPrice;
+  }
+  // Extract from tier string
+  const tierMatch = pr.tier?.match(/(\d+)\s*USD/);
+  if (tierMatch) return `From ${tierMatch[1]} USD`;
+  return pkg.note || 'Custom Quote';
+}
+
 export default function PackagesPage() {
-  const packages = [pkg1, pkg2, pkg3, pkg4];
+  const packages = [pkg1, pkg2, pkg3, pkg4, pkg5, pkg6, pkg7, pkg8, pkg9, pkg10, pkg11, pkg12, pkg13];
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -43,25 +83,21 @@ export default function PackagesPage() {
         {(() => {
           const pkg = packages[0];
           const image = packageImages[pkg.id] || '/destinations/Halong_Bay.webp';
-          const days = pkg.summaryItinerary?.length || 0;
-          const nights = days > 0 ? days - 1 : 0;
           return (
             <Link
-              href={`/packages/${createSlug(pkg.id)}`}
+              href={`/packages/${pkg.id}`}
               className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
             >
               <div className="flex flex-col md:flex-row">
-                <div className="relative w-full md:w-1/2 overflow-hidden">
-                  <img src={image} alt={pkg.packageName} className="w-full h-auto md:h-full md:object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-4 left-4 bg-[#ffc42d] text-gray-900 font-bold px-4 py-1.5 rounded-full text-sm shadow-md">Featured</div>
+                <div className="relative w-full md:w-1/2 overflow-hidden aspect-[16/10] md:aspect-auto md:min-h-[360px]">
+                  <Image src={image} alt={pkg.packageName} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-4 left-4 bg-[#ffc42d] text-gray-900 font-bold px-4 py-1.5 rounded-full text-sm shadow-md z-10">Featured</div>
                 </div>
                 <div className="p-6 sm:p-8 md:p-10 md:w-1/2 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-3">
-                    <span className="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">{nights}N / {days}D</span>
-                    <span className="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">{pkg.option}</span>
+                    <span className="bg-gray-100 text-gray-700 text-xs font-medium px-3 py-1 rounded-full">{getDays(pkg).nights}N / {getDays(pkg).days}D</span>
                   </div>
                   <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 group-hover:text-[#ffc42d] transition-colors">{pkg.packageName}</h2>
-                  <p className="text-[#e6b028] font-medium text-sm mb-4">{pkg.travelWindow}</p>
                   <ul className="space-y-2 mb-6 text-sm text-gray-600">
                     {pkg.summaryItinerary.slice(0, 4).map((item: string, idx: number) => (
                       <li key={idx} className="flex items-start gap-2">
@@ -73,7 +109,7 @@ export default function PackagesPage() {
                   <div className="flex items-center justify-between">
                     <div>
                       <p className="text-xs text-gray-400">Starting from</p>
-                      <p className="text-xl font-bold text-gray-900">{pkg.pricing?.[0]?.prices?.[0] || pkg.note || 'Custom Quote'}</p>
+                      <p className="text-xl font-bold text-gray-900">{getPrice(pkg)}</p>
                     </div>
                     <span className="bg-gray-900 text-white font-semibold px-6 py-2.5 rounded-lg text-sm group-hover:bg-[#ffc42d] group-hover:text-gray-900 transition-colors">View Details</span>
                   </div>
@@ -84,27 +120,23 @@ export default function PackagesPage() {
         })()}
       </section>
 
-      {/* Remaining Packages */}
+      {/* All Packages */}
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <h2 className="text-2xl font-bold text-gray-900 mb-8">All Packages</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {packages.slice(1).map((pkg) => {
             const image = packageImages[pkg.id] || '/destinations/Halong_Bay.webp';
-            const days = pkg.summaryItinerary?.length || 0;
-            const nights = days > 0 ? days - 1 : 0;
             return (
-              <Link key={pkg.id} href={`/packages/${createSlug(pkg.id)}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
-                <div className="relative w-full overflow-hidden">
-                  <img src={image} alt={pkg.packageName} className="w-full h-auto group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-gray-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm">
-                    {pkg.pricing?.[0]?.prices?.[0] || pkg.note || 'Custom'}
+              <Link key={pkg.id} href={`/packages/${pkg.id}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
+                <div className="relative w-full overflow-hidden aspect-[16/11]">
+                  <Image src={image} alt={pkg.packageName} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                  <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-gray-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm z-10">
+                    {getPrice(pkg)}
                   </div>
                 </div>
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-xs text-[#e6b028] font-semibold">{nights}N / {days}D</span>
-                    <span className="w-1 h-1 rounded-full bg-gray-300" />
-                    <span className="text-xs text-gray-500">{pkg.option}</span>
+                    <span className="text-xs text-[#e6b028] font-semibold">{getDays(pkg).nights}N / {getDays(pkg).days}D</span>
                   </div>
                   <h3 className="text-lg font-bold text-gray-900 mb-3 group-hover:text-[#ffc42d] transition-colors line-clamp-2">{pkg.packageName}</h3>
                   <ul className="space-y-1.5 mb-4">
@@ -115,9 +147,8 @@ export default function PackagesPage() {
                       </li>
                     ))}
                   </ul>
-                  <div className="flex items-center justify-between pt-3 border-t border-gray-100">
-                    <span className="text-xs text-gray-400">{pkg.travelWindow}</span>
-                    <span className="text-sm font-semibold text-[#ffc42d] group-hover:underline">Explore →</span>
+                  <div className="flex items-center justify-end pt-3 border-t border-gray-100">
+                    <span className="text-sm font-semibold text-[#ffc42d] group-hover:underline">Explore &rarr;</span>
                   </div>
                 </div>
               </Link>
@@ -130,7 +161,7 @@ export default function PackagesPage() {
       <section className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 pb-16">
         <div className="bg-gray-900 rounded-2xl p-8 sm:p-12 flex flex-col md:flex-row items-center justify-between gap-6">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Can't find your perfect package?</h2>
+            <h2 className="text-2xl sm:text-3xl font-bold text-white mb-2">Can&apos;t find your perfect package?</h2>
             <p className="text-gray-400">We specialize in custom itineraries tailored to your interests and budget.</p>
           </div>
           <Link href="/contact" className="bg-[#ffc42d] hover:bg-[#e6b028] text-gray-900 font-semibold px-8 py-3 rounded-lg transition-colors whitespace-nowrap flex-shrink-0">

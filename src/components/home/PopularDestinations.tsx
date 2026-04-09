@@ -70,13 +70,14 @@ export default function PopularDestinations() {
                 className="cursor-pointer"
                 title={item.name}
               >
-                <div className="relative rounded-md overflow-hidden shadow-lg">
+                <div className="relative rounded-md overflow-hidden shadow-lg aspect-[3/2]">
                   <ImgWithPlaceholder
                     src={item.imgUrl}
                     alt={item.name}
                     title={item.name}
                     loading={index === 0 ? 'eager' : 'lazy'}
-                    className="w-full h-auto rounded-md"
+                    className="object-cover rounded-md"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   {/* City Name on image */}
                   <div className="absolute bottom-0 left-0 w-full px-3 py-2 bg-gradient-to-t from-black/60 to-transparent rounded-b-md">

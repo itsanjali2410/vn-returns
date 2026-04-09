@@ -1,7 +1,7 @@
 'use client';
-import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import React, { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Grid } from 'swiper/modules';
@@ -93,13 +93,14 @@ const TrendingPackagesDesktop: React.FC<Props> = ({ packages, openFormModal, bas
                 onClick={() => handleCardClick(card)}
                 className="cursor-pointer rounded-xl shadow-lg overflow-hidden transition-transform bg-white"
               >
-                <div className="relative w-full">
-                  <img
+                <div className="relative w-full aspect-[16/11]">
+                  <Image
                     src={card.image}
                     alt={card.title}
                     title={card.title}
-                    className="w-full h-auto"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                    className="object-cover"
                   />
                   <div className="absolute top-2 right-2 bg-yellow-400 text-black font-bold px-3 py-1.5 rounded-full shadow-md text-sm z-10">
                     {card.pricing}

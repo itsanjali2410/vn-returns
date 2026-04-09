@@ -1,21 +1,13 @@
 {
   "id": "phu-quoc-with-1-day-leisure",
-  "packageName": "Phu Quoc - with 1 Day Leisure",
+  "packageName": "6D5N – Phu Quoc – with 1 Day Leisure",
   "slug": "phu-quoc-with-1-day-leisure",
   "days": 6,
   "nights": 5,
+  "option": "5N6D – Phu Quoc – with 1 Day Leisure",
   "places": [
     "Phu Quoc"
   ],
-  "images": [
-    "/package-images/phu-quoc-with-1-day-leisure/img-1.webp",
-    "/package-images/phu-quoc-with-1-day-leisure/img-2.webp",
-    "/package-images/phu-quoc-with-1-day-leisure/img-3.webp",
-    "/package-images/phu-quoc-with-1-day-leisure/img-4.webp",
-    "/package-images/phu-quoc-with-1-day-leisure/img-5.webp",
-    "/package-images/phu-quoc-with-1-day-leisure/img-6.webp"
-  ],
-  "heroImage": "/package-images/phu-quoc-with-1-day-leisure/img-1.webp",
   "summaryItinerary": [
     "Day 1 (4th June): Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide (No meal)",
     "Day 2 (5th June): Phu Quoc – Private Day Tour to Vin Pearl Safari – VinWonder without Guide (No meal)",
@@ -26,7 +18,7 @@
   ],
   "detailedItinerary": [
     {
-      "day": "Day 1: Phu Quoc Arrival – Private Afternoon Tour to Grand World without guide (No meal)",
+      "day": "Day 1",
       "title": "Phu Quoc Arrival – Private Afternoon Tour to Grand World without guide (No meal)",
       "details": [
         "Arrive in Phu Quoc City, our driver will take you to hotel for baggage storage",
@@ -38,7 +30,7 @@
       ]
     },
     {
-      "day": "Day 2: Phu Quoc – Private Day Tour to Vinpearl Safari + Vin Wonder without Guide (No meal)",
+      "day": "Day 2",
       "title": "Phu Quoc – Private Day Tour to Vinpearl Safari + Vin Wonder without Guide (No meal)",
       "details": [
         "08:30: Our driver will pick you up at the hotel and your private tour begins with a visit to Vinpearl Safari, Vietnam's first and only open zoo. Covering a vast area, the safari is home to a wide variety of wildlife from around the world, including endangered species. Enjoy a guided tour through the safari, where you can see animals in their natural habitats and learn about conservation efforts.",
@@ -48,7 +40,7 @@
       ]
     },
     {
-      "day": "Day 3: Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car (No meal)",
+      "day": "Day 3",
       "title": "Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car (No meal)",
       "details": [
         "08:00-08:30: Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm (approx. 30 minutes).",
@@ -56,7 +48,38 @@
         "Visit Coral Park – Sea Walker Experience (Optional activity - Pay by yourself): Walk under the sea and admire colorful marine life.",
         "Stop at Mong Tay Island: Take photos with SUP boards and Flycam.",
         "Continue to Gam Ghi/Buom Island: Go swimming and snorkeling at the coral reef.",
-        "Visit May Rut Island: Free time for swimming and relaxing."
+        "Visit May Rut Island: Free time for swimming and relaxing.",
+        "Note: Itinerary is subject to change depending on weather conditions.",
+        "15:20: Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
+        "17:00-17:30: Bus take you back to hotel",
+        "Free Leisure and overnight in Phu Quoc."
+      ]
+    },
+    {
+      "day": "Day 4",
+      "title": "Phu Quoc – Private Evening tour to Sunset Town – watch Kiss of the Sea Show (No meal)",
+      "details": [
+        "Free leisure at day time",
+        "17:00: The tour guide take you to visit Sunset Town – Check in and take photos.",
+        "21:00: Watch Kiss of the Sea Show.",
+        "After the show finish, our driver pick up and take you back to hotel.",
+        "Overnight in Phu Quoc"
+      ]
+    },
+    {
+      "day": "Day 5",
+      "title": "Phu Quoc – Free Leisure (No meal)",
+      "details": [
+        "Free Leisure Day",
+        "Overnight in Phu Quoc"
+      ]
+    },
+    {
+      "day": "Day 6",
+      "title": "Phu Quoc Departure (No meal)",
+      "details": [
+        "Do check out hotel before 12:00 PM",
+        "Our driver will take you to the Phu Quoc International as your departure flight."
       ]
     }
   ],
@@ -96,32 +119,18 @@
   "notes": [
     "Hotels are subject to availability. Check-in time: 15:00 PM and Check-out time: 12:00 PM",
     "Flight fares are subject to change",
-    "Note: All bank fee will be on customer’s own",
-    "Note: Itinerary is subject to change depending on weather conditions.",
-    "15:20: Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
-    "17:00-17:30: Bus take you back to hotel",
-    "Free Leisure and overnight in Phu Quoc.",
-    "Day 4: Phu Quoc – Private Evening tour to Sunset Town – watch Kiss of the Sea Show (No meal)",
-    "Free leisure at day time",
-    "17:00: The tour guide take you to visit Sunset Town – Check in and take photos.",
-    "21:00: Watch Kiss of the Sea Show.",
-    "After the show finish, our driver pick up and take you back to hotel.",
-    "Overnight in Phu Quoc",
-    "Day 5: Phu Quoc – Free Leisure (No meal)",
-    "Free Leisure Day",
-    "Overnight in Phu Quoc",
-    "Day 6: Phu Quoc Departure (No meal)",
-    "Do check out hotel before 12:00 PM",
-    "Our driver will take you to the Phu Quoc International as your departure flight.",
-    "TOUR ENDS.",
-    "Thank you for booking with us!"
+    "Validity of the passport should be a minimum of 6 months from the intended date of return",
+    "Please print out the E Visa for smooth immigration process",
+    "We are not responsible for your lateness for the Joint in Tour",
+    "Meals inclusive during Joint in Tour will be served in local restaurant",
+    "Children from 10 years old are considered adults",
+    "Any transportation outside of the scheduled times may incur additional charges"
   ],
   "validity": "VALIDITY: Rates are valid till 30th March 2026. Rooms and other services are not held or blocked till clients confirm.",
   "pricing": [
     {
-      "tier": "OPTION 1: 3-star hotel: Adult: 98 USD/person (Applied for min of 2 pax)",
-      "adultPrice": "108 USD/person",
-      "kidPrices": [],
+      "tier": "OPTION 1: 3-star hotel:\nAdult: 98 USD/person (Applied for min of 2 pax)",
+      "prices": [],
       "hotels": [
         {
           "city": "Phu Quoc",
@@ -131,9 +140,8 @@
       ]
     },
     {
-      "tier": "OPTION 2: 4-star hotel: Adult: 167 USD/person (Applied for min of 2 pax)",
-      "adultPrice": "177 USD/person",
-      "kidPrices": [],
+      "tier": "OPTION 2: 4-star hotel:\nAdult: 167 USD/person (Applied for min of 2 pax)",
+      "prices": [],
       "hotels": [
         {
           "city": "Phu Quoc",
@@ -178,5 +186,13 @@
     "Phone Number (+84) 935 555 135"
   ],
   "travelWindow": "VALIDITY: Rates are valid till 30th March 2026. Rooms and other services are not held or blocked till clients confirm.",
-  "option": "5N6D - Phu Quoc"
+  "bookingInfo": {
+    "agentName": "TRIPSTARS OPS",
+    "guestName": "Rahul",
+    "inquiryCode": "Option 2 – PMQ0604 – 2A",
+    "groupSize": "2 Adults",
+    "travelDate": "4th June, 2026",
+    "landPrice": "Adult: 272 USD/person (Applied for min of 2 pax)",
+    "salesInCharge": "Ms. Lyly"
+  }
 }

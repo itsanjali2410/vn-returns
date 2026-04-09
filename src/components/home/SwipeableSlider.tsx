@@ -51,12 +51,13 @@ export default function SwipeableSlider() {
               className="relative w-full flex-shrink-0 cursor-pointer rounded-xl overflow-hidden shadow-lg"
               title={slide.name}
             >
-              <div className="relative w-full">
+              <div className="relative w-full aspect-[16/9]">
                 <ImgWithPlaceholder
                   src={slide.image}
                   alt={slide.name}
                   title={slide.name}
-                  className="w-full h-auto rounded-xl"
+                  className="object-cover rounded-xl"
+                  sizes="100vw"
                   loading={index === 0 ? 'eager' : 'lazy'}
                 />
                 {/* Light gradient only at bottom for text */}

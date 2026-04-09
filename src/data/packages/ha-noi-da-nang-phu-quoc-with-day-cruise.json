@@ -1,32 +1,15 @@
 {
   "id": "ha-noi-da-nang-phu-quoc-with-day-cruise",
-  "packageName": "Ha Noi - Da Nang - Phu Quoc with Day Cruise",
+  "packageName": "8D7N – Ha Noi – Da Nang – Phu Quoc with Day Cruise",
   "slug": "ha-noi-da-nang-phu-quoc-with-day-cruise",
   "days": 8,
   "nights": 7,
+  "option": "7N8D – Ha Noi – Da Nang – Phu Quoc with Day Cruise",
   "places": [
     "Ha Noi",
-    "Ha Long",
     "Da Nang",
-    "Hoi An",
-    "Marble Mountain",
-    "Ba Na Hills",
     "Phu Quoc"
   ],
-  "images": [
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-1.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-2.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-3.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-4.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-5.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-6.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-7.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-8.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-9.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-10.webp",
-    "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-11.webp"
-  ],
-  "heroImage": "/package-images/ha-noi-da-nang-phu-quoc-with-day-cruise/img-1.webp",
   "summaryItinerary": [
     "Day 1 (13th May): Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
     "Day 2 (14th May): Ha Noi – Ha Long Bay Day Cruise (Local Lunch)",
@@ -39,25 +22,25 @@
   ],
   "detailedItinerary": [
     {
-      "day": "Day 1: Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
+      "day": "Day 1",
       "title": "Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour (No meal)",
       "details": [
         "Arrive in Ha Noi, our driver will take you to hotel for baggage storage",
         "13:30: Visit Tran Quoc Pagoda located on Golden Fish Island in West Lake. It is the oldest pagoda in Hanoi built in the 6th century.",
         "14:30: Continue to visit Temple of Literature – the first university of Vietnam, The Temple of Literature (Van Mieu Quoc Tu Giam) is one of the most attractive tourist spots in Northern Vietnam. The Temple of Literature was founded in 1070.",
-        "15:30: Keep going to visit Hoa Lo Prison, the prison was built by the French, from 1886 to 1901, when Vietnam was still a part of French Indochina. The French called the prison Maison Centrale. The prison was called “A Hell on Earth” and now the prison is like a war museum for those who want to understand more about the war against France of Vietnamese people.",
+        "15:30: Keep going to visit Hoa Lo Prison, the prison was built by the French, from 1886 to 1901, when Vietnam was still a part of French Indochina. The French called the prison Maison Centrale. The prison was called \"A Hell on Earth\" and now the prison is like a war museum for those who want to understand more about the war against France of Vietnamese people.",
         "16:30: Our bus will take you back to the hotel for check-in.",
         "Free leisure and overnight in Ha Noi City"
       ]
     },
     {
-      "day": "Day 2: Ha Noi – Ha Long Bay Day Cruise (No meal)",
+      "day": "Day 2",
       "title": "Ha Noi – Ha Long Bay Day Cruise (No meal)",
       "details": [
         "7:30-7:45: Our driver will pick you up at hotel to depart for Halong Bay",
         "Our journey follows the Hanoi – Haiphong - Tuan Chau Highway",
         "On the way, we stop for a short break for 30 minutes to relax",
-        "11:45: Arrive at Tuan Chau Harbor, get on Luxury Cruise with our crew’s warm welcome",
+        "11:45: Arrive at Tuan Chau Harbor, get on Luxury Cruise with our crew's warm welcome",
         "Enjoy the welcome drink then start the excursion to discover the beauty of the world heritage site",
         "12:30: Enjoy Vietnamese lunch on the boat. While having lunch, the boat will pass by the beautiful scenery on both sides with thousands of the limestone.",
         "14:00: Arrive at Bo Hon Island, and you will visit Sung Sot Cave – the most beautiful cave with a lot of stalagmites and stalactites",
@@ -70,7 +53,7 @@
       ]
     },
     {
-      "day": "Day 3: Ha Noi Departure – Da Nang Arrival – Join Group Afternoon Tour to Marble Mountain – Hoi An Ancient Town (No meal)",
+      "day": "Day 3",
       "title": "Ha Noi Departure – Da Nang Arrival – Join Group Afternoon Tour to Marble Mountain – Hoi An Ancient Town (No meal)",
       "details": [
         "Do hotel check-out",
@@ -86,14 +69,14 @@
       ]
     },
     {
-      "day": "Day 4: Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge (No meal)",
+      "day": "Day 4",
       "title": "Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge (No meal)",
       "details": [
         "07:30 - 08:30: Our guide and driver will pick you up from your hotel, depart for Ba Na Hill through one of the most beautiful seaside streets of Central Vietnam.",
         "09:00: Arrive in Ba Na, you will have a chance to experience the two – UNESCO - record cable system up to the top of the hill and enjoy the beautiful sight of Mo stream, Toc Tien waterfall with the impressive dazzling white spume.",
         "Sightseeing on Ba Na Hill to:",
-        "Hand of the gods hold Vietnam’s Golden Bridge.",
-        "L’Jardin Zone with French Architecture Building: Tinh Tâm Garden, French Stable, one hundred-year-old pomelo tree, Old Villas.",
+        "Hand of the gods hold Vietnam's Golden Bridge.",
+        "L'Jardin Zone with French Architecture Building: Tinh Tâm Garden, French Stable, one hundred-year-old pomelo tree, Old Villas.",
         "Linh Ung Pagoda, 27 meters Buddha Statue, Loc Uyen Garden.",
         "11:30: From Debay station, you will get on the second cable system to move to Nui Chua Peak – the rooftop of Da nang City.",
         "Continue the tour with Fantasy Park – one of the most modern indoor game centers of the Asia.",
@@ -104,7 +87,7 @@
       ]
     },
     {
-      "day": "Day 5: Da Nang Departure – Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide (No meal)",
+      "day": "Day 5",
       "title": "Da Nang Departure – Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide (No meal)",
       "details": [
         "Do hotel check-out before 12:00 PM",
@@ -118,7 +101,7 @@
       ]
     },
     {
-      "day": "Day 6: Phu Quoc – Private Day Tour to Vinpearl Safari – VinWonder without Guide (No meal)",
+      "day": "Day 6",
       "title": "Phu Quoc – Private Day Tour to Vinpearl Safari – VinWonder without Guide (No meal)",
       "details": [
         "8:30: Our driver will pick you up at the hotel and your private tour begins with a visit to Vinpearl Safari, Vietnam's first and only open zoo. Covering a vast area, the safari is home to a wide variety of wildlife from around the world, including endangered species. Enjoy a tour through the safari, where you can see animals in their natural habitats and learn about conservation efforts.",
@@ -128,7 +111,7 @@
       ]
     },
     {
-      "day": "Day 7: Phu Quoc – Join Group Day Tour to 3 Islands by Boat – Hon Thom Cable Car (No meal)",
+      "day": "Day 7",
       "title": "Phu Quoc – Join Group Day Tour to 3 Islands by Boat – Hon Thom Cable Car (No meal)",
       "details": [
         "08:00 – 08:30: Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm (approx. 30 minutes).",
@@ -136,7 +119,19 @@
         "Visit Coral Park – Sea Walker Experience (Optional activity - Pay by yourself): Walk under the sea and admire colorful marine life.",
         "Stop at Mong Tay Island: Take photos with SUP boards and Flycam.",
         "Continue to Gam Ghi/Buom Island: Go swimming and snorkeling at the coral reef.",
-        "Visit May Rut Island: Free time for swimming and relaxing."
+        "Visit May Rut Island: Free time for swimming and relaxing.",
+        "Note: Itinerary is subject to change depending on weather conditions.",
+        "15:20: Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
+        "17:30: Return to your hotel.",
+        "Overnight in Phu Quoc"
+      ]
+    },
+    {
+      "day": "Day 8",
+      "title": "Phu Quoc Departure (No meal)",
+      "details": [
+        "Do hotel check-out before 12:00 PM",
+        "Our driver will take you directly to the Phu Quoc International Airport as your departure flight"
       ]
     }
   ],
@@ -179,25 +174,21 @@
   "notes": [
     "Hotels are subject to availability. Check-in time: 15:00 PM and Check-out time: 12:00 PM",
     "Flight fares are subject to change",
-    "Note: All bank fee will be on customer’s own",
-    "Note: Itinerary is subject to change depending on weather conditions.",
-    "15:20: Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
-    "17:30: Return to your hotel.",
-    "Overnight in Phu Quoc",
-    "Day 8: Phu Quoc Departure (No meal)",
-    "Do hotel check-out before 12:00 PM",
-    "Our driver will take you directly to the Phu Quoc International Airport as your departure flight",
-    "TOUR ENDS.",
-    "Thank you for booking with us!"
+    "Validity of the passport should be a minimum of 6 months from the intended date of return",
+    "Please print out the E Visa for smooth immigration process",
+    "We are not responsible for your lateness for the Joint in Tour",
+    "Meals inclusive during Joint in Tour will be served in local restaurant",
+    "Children from 10 years old are considered adults",
+    "Any transportation outside of the scheduled times may incur additional charges"
   ],
   "validity": "VALIDITY: Rates are valid till 10th March 2026. Rooms and other services are not held or blocked till clients confirm.",
   "pricing": [
     {
       "tier": "3-star hotel",
-      "adultPrice": "175 USD/person",
-      "kidPrices": [
-        "9-year-old kid: 107 USD/kid",
-        "5-year-old kid: 48 USD/kid"
+      "prices": [
+        "Adult: 165 USD/person (Applied for min of 2 pax)",
+        "9-year-old kid: 107 USD/kid (Min of 1 Kid – With Extra Bed)",
+        "5-year-old kid: 48 USD/kid (Min of 1 Kid – No Extra Bed)"
       ],
       "hotels": [
         {
@@ -219,10 +210,10 @@
     },
     {
       "tier": "4-star hotel",
-      "adultPrice": "286 USD/person",
-      "kidPrices": [
-        "9-year-old kid: 187 USD/kid",
-        "5-year-old kid: 93 USD/kid"
+      "prices": [
+        "Adult: 276 USD/person (Applied for min of 2 pax)",
+        "9-year-old kid: 187 USD/kid (Min of 1 Kid – With Extra Bed)",
+        "5-year-old kid: 93 USD/kid (Min of 1 Kid – No Extra Bed)"
       ],
       "hotels": [
         {
@@ -278,5 +269,13 @@
     "Phone Number (+84) 935 555 135"
   ],
   "travelWindow": "VALIDITY: Rates are valid till 10th March 2026. Rooms and other services are not held or blocked till clients confirm.",
-  "option": "7N8D - Ha Noi | Ha Long | Da Nang"
+  "bookingInfo": {
+    "agentName": "TRIPSTARS OPS",
+    "guestName": "Maulik Shah",
+    "inquiryCode": "PMQ0513 – 2A2C",
+    "groupSize": "2 Adults – 2 Kids",
+    "travelDate": "13th May, 2026",
+    "landPrice": "5-year-old kid: 301 USD/kid (Min of 1 Kid)",
+    "salesInCharge": ""
+  }
 }

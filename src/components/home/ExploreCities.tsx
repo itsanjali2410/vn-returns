@@ -69,12 +69,12 @@ export default function ExploreCities() {
                 className="block relative rounded-xl overflow-hidden group cursor-pointer"
               >
                 {/* Image with overlay */}
-                <div className="relative">
+                <div className="relative aspect-[4/3]">
                   <ImgWithPlaceholder
                     src={dest.image}
                     alt={dest.name}
-                    className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   {/* Gradient overlay */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent rounded-xl" />

@@ -90,12 +90,12 @@ export default function PartnerHotels() {
             <SwiperSlide key={index}>
               <div className="group rounded-xl overflow-hidden border border-gray-100 bg-white hover:shadow-lg transition-all">
                 {/* Image */}
-                <div className="relative overflow-hidden">
+                <div className="relative overflow-hidden aspect-[4/3]">
                   <ImgWithPlaceholder
                     src={hotel.image}
                     alt={hotel.name}
-                    className="w-full h-auto group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
+                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
                   />
                   {/* City badge */}
                   <div className="absolute top-3 left-3 bg-black/60 backdrop-blur-sm text-white text-[10px] sm:text-xs font-medium px-2.5 py-1 rounded-full">

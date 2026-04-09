@@ -16,17 +16,19 @@ export default function ImageWithPlaceholder({
   const [loaded, setLoaded] = useState(false);
 
   return (
-    <div className={`relative ${wrapperClassName ?? ''}`}>
+    <div className={`relative h-full w-full ${wrapperClassName ?? ''}`}>
       {/* Logo placeholder */}
       <div
         className={`absolute inset-0 flex items-center justify-center bg-gray-100 transition-opacity duration-500 ${
           loaded ? 'opacity-0 pointer-events-none' : 'opacity-100'
         }`}
       >
-        <img
+        <Image
           src="/logo.webp"
-          alt="Loading..."
-          className="w-20 h-20 object-contain opacity-40 animate-pulse"
+          alt=""
+          width={80}
+          height={80}
+          className="w-auto h-auto object-contain opacity-40 animate-pulse"
         />
       </div>
 

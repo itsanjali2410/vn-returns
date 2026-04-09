@@ -37,14 +37,16 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
             className="relative rounded-xl overflow-hidden shadow-sm cursor-pointer group"
             onClick={() => handleCardClick(card.slug)}
           >
-            {/* Full image - no crop */}
-            <ImgWithPlaceholder
-              src={card.image}
-              alt={card.title}
-              title={card.title}
-              className="w-full h-auto rounded-xl group-hover:scale-105 transition-transform duration-500"
-              loading="lazy"
-            />
+            {/* Full image */}
+            <div className="relative w-full aspect-[16/11]">
+              <ImgWithPlaceholder
+                src={card.image}
+                alt={card.title}
+                title={card.title}
+                className="object-cover rounded-xl group-hover:scale-105 transition-transform duration-500"
+                sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              />
+            </div>
 
             {/* Price badge */}
             <div className="absolute top-3 right-3 bg-[#ffc42d] text-gray-900 font-bold px-3 py-1 rounded-full text-xs sm:text-sm shadow-md z-10">

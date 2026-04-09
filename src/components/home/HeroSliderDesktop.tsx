@@ -35,7 +35,7 @@ const HeroSliderDesktop = memo(() => {
   return (
     <section
       {...swipeHandlers}
-      className="relative hidden md:block w-full overflow-hidden"
+      className="relative hidden md:block w-full overflow-hidden aspect-[16/5]"
     >
       {desktopImages.map((src, i) => (
         <div
@@ -47,8 +47,9 @@ const HeroSliderDesktop = memo(() => {
           <ImgWithPlaceholder
             src={src}
             alt={`Slide ${i + 1}`}
-            className="w-full h-auto"
-            loading={i === 0 ? 'eager' : 'lazy'}
+            className="object-cover"
+            sizes="100vw"
+            priority={i === 0}
           />
         </div>
       ))}
