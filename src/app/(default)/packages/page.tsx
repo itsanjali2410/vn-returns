@@ -45,21 +45,48 @@ function getDays(pkg: any): { days: number; nights: number } {
   return { days, nights: Math.max(0, days - 1) };
 }
 
+// Domestic flight costs per package (USD per person, based on route)
+const flightCosts: Record<string, number> = {
+  'phu-quoc-short-break': 0,
+  'phu-quoc-fully-loaded': 0,
+  'phu-quoc-with-1-day-leisure': 0,
+  'phu-quoc-4-night-standard': 0,
+  'ha-noi-da-nang-short-break': 60,              // HN→DN
+  'vietnam-6n7d-day-cruise': 60,                  // HN→DN
+  'ha-noi-da-nang-ho-chi-minh-day-with-day-cruise': 120,    // HN→DN + DN→HCM
+  'ha-noi-da-nang-ho-chi-minh-with-over-night-cruise': 120, // HN→DN + DN→HCM
+  'vietnam-7n8d-standard': 120,                   // HN→DN + DN→HCM
+  'ha-noi-da-nang-phu-quoc-with-day-cruise': 120,           // HN→DN + DN→PQ
+  'ha-noi-da-nang-phu-quoc-with-over-night-cruise': 120,    // HN→DN + DN→PQ
+  'ha-noi-da-nang-phu-quoc-9d8n': 120,            // HN→DN + DN→PQ
+  'ha-noi-phu-quoc-da-nang-day-cruise': 120,      // HN→PQ + PQ→DN
+};
+
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getPrice(pkg: any): string {
-  const pr = pkg.pricing?.[0];
-  if (!pr) return pkg.note || 'Custom Quote';
-  const firstPrice = pr.prices?.[0];
-  if (firstPrice) {
-    // Extract just the USD amount if it's a long string
-    const match = firstPrice.match(/(\d+)\s*USD/);
-    if (match) return `From ${match[1]} USD`;
-    return firstPrice;
+  // Find 3-star adult price from pricing tiers
+  let base: number | null = null;
+  for (const tier of pkg.pricing || []) {
+    const combined = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`.toLowerCase();
+    if (combined.includes('3-star') || combined.includes('3 star') || combined.includes('option 1')) {
+      const full = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`;
+      const m = full.match(/(\d+)\s*USD/i);
+      if (m) { base = parseInt(m[1]); break; }
+    }
   }
-  // Extract from tier string
-  const tierMatch = pr.tier?.match(/(\d+)\s*USD/);
-  if (tierMatch) return `From ${tierMatch[1]} USD`;
-  return pkg.note || 'Custom Quote';
+  // Fallback: first tier with a USD price
+  if (base === null) {
+    for (const tier of pkg.pricing || []) {
+      const full = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`;
+      const m = full.match(/(\d+)\s*USD/i);
+      if (m) { base = parseInt(m[1]); break; }
+    }
+  }
+  if (base === null) return 'Custom Quote';
+
+  const flight = flightCosts[pkg.id] ?? 0;
+  const total = base + flight + 20;
+  return `From ${total} USD`;
 }
 
 export default function PackagesPage() {

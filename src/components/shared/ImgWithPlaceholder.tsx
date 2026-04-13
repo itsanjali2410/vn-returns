@@ -11,6 +11,7 @@ interface ImgWithPlaceholderProps {
   width?: number;
   height?: number;
   sizes?: string;
+  quality?: number;
   priority?: boolean;
   loading?: 'eager' | 'lazy';
   className?: string;
@@ -25,6 +26,7 @@ export default function ImgWithPlaceholder({
   width,
   height,
   sizes = '100vw',
+  quality,
   priority,
   loading,
   className,
@@ -53,6 +55,7 @@ export default function ImgWithPlaceholder({
         width={!fill ? width : undefined}
         height={!fill ? height : undefined}
         sizes={sizes}
+        quality={quality}
         priority={priority || loading === 'eager'}
         className={`${className ?? ''} transition-opacity duration-500 ${loaded ? 'opacity-100' : 'opacity-0'}`}
         onLoad={() => setLoaded(true)}

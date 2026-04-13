@@ -1,5 +1,4 @@
 'use client';
-import ImgWithPlaceholder from '@/components/shared/ImgWithPlaceholder';
 
 import React, { memo, useCallback, useMemo } from 'react';
 import { useSwipeable } from 'react-swipeable';
@@ -40,16 +39,17 @@ const HeroSliderDesktop = memo(() => {
       {desktopImages.map((src, i) => (
         <div
           key={src}
-          className={`${i === 0 ? 'relative' : 'absolute inset-0'} w-full transition-opacity duration-700 ${
+          className={`${i === 0 ? 'relative' : 'absolute inset-0'} w-full h-full transition-opacity duration-700 ${
             i === index ? 'opacity-100' : 'opacity-0'
           }`}
         >
-          <ImgWithPlaceholder
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
             src={src}
             alt={`Slide ${i + 1}`}
-            className="object-cover"
-            sizes="100vw"
-            priority={i === 0}
+            className="w-full h-full object-cover"
+            loading={i === 0 ? 'eager' : 'lazy'}
+            fetchPriority={i === 0 ? 'high' : 'auto'}
           />
         </div>
       ))}

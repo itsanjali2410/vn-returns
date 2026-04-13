@@ -1,10 +1,10 @@
 {
   "id": "phu-quoc-short-break",
-  "packageName": "5D4N – Phu Quoc – Short Break",
+  "packageName": "Short Break",
   "slug": "phu-quoc-short-break",
   "days": 5,
   "nights": 4,
-  "option": "4N5D – Phu Quoc – Short Break",
+  "option": "Short Break",
   "places": [
     "Phu Quoc"
   ],
