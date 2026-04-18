@@ -32,9 +32,9 @@ export default function PopularDestinations() {
     <div className="px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6">
       {/* Section Title */}
       <div className="flex justify-between items-center mb-3 sm:mb-6">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase text-[#376941]">
           Popular{' '}
-          <span className="font-cursive bg-gradient-to-r from-[#ffc42d]/90 to-[#e6b028] bg-clip-text text-transparent">
+          <span className="font-cursive">
             Cities
           </span>
         </h2>

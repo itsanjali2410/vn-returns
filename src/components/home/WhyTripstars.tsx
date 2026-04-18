@@ -1,12 +1,10 @@
-'use client';
-
 import Image from 'next/image';
 
 const data = [
-  { alt: '20k+ Customers Served', icon: '/USPS/20K_customers.webp' },
-  { alt: '6+ Years Of Experience', icon: '/USPS/6_Years.webp' },
-  { alt: '24/7 Customer Service', icon: '/USPS/Customer_Service.webp' },
-  { alt: 'Vietnam Based Headquarters', icon: '/USPS/Vietnam_Headquarters.webp' },
+  { alt: '20k+ Customers Served', icon: '/USPS/USPS/20K_customers.webp' },
+  { alt: '6+ Years Of Experience', icon: '/USPS/USPS/6_Years.webp' },
+  { alt: '24/7 Customer Service', icon: '/USPS/USPS/Customer_Service.webp' },
+  { alt: 'Vietnam Based Headquarters', icon: '/USPS/USPS/Vietnam_Headquarters.webp' },
 ];
 
 export default function WhyVietnamDMC() {
@@ -14,9 +12,9 @@ export default function WhyVietnamDMC() {
     <div className="px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6">
       {/* Section Title */}
       <div className="flex justify-between items-center pt-4 md:pt-2">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase text-[#376941]">
           <span>Why </span>
-          <span className="font-cursive bg-gradient-to-r from-[#ffc42d]/90 to-[#e6b028] bg-clip-text text-transparent">
+          <span className="font-cursive">
             Partner with us?
           </span>
         </h2>
@@ -32,7 +30,6 @@ export default function WhyVietnamDMC() {
             width={200}
             height={60}
             className="h-10 sm:h-12 md:h-14 w-auto object-contain flex-shrink-0"
-            unoptimized
           />
         ))}
       </div>

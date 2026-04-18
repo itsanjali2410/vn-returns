@@ -42,7 +42,7 @@ function VideoThumbnailComponent() {
   return (
     <div className="max-w-6xl mx-auto px-2 md:px-4 py-8">
       {/* Title */}
-      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase text-center text-gray-800 mb-8">
+      <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase text-center text-[#376941] mb-8">
         Unforgettable Journeys, Captured in Moments ❤️
       </h2>
 

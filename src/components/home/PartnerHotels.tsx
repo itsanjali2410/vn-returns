@@ -52,9 +52,9 @@ export default function PartnerHotels() {
   return (
     <div className="px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6">
       <div className="flex justify-between items-center mb-4 sm:mb-8">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase flex flex-row items-center gap-x-2">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase flex flex-row items-center gap-x-2 text-[#376941]">
           <span>Partner</span>
-          <span className="font-cursive bg-gradient-to-r from-[#ffc42d]/90 to-[#e6b028] bg-clip-text text-transparent">
+          <span className="font-cursive">
             Hotels
           </span>
         </h2>

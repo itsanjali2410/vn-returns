@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 
 export default function VietnamStats() {
@@ -18,6 +16,7 @@ export default function VietnamStats() {
           src="/hanoi-9D8N/danang.webp"
           alt="Vietnam Destination"
           fill
+          sizes="100vw"
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/70"></div>

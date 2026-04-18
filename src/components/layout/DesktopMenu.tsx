@@ -2,43 +2,60 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
-import { ChevronDown } from 'lucide-react';
 import { VIETNAM_CITIES } from '@/constant';
 
-export const DesktopMenu = ({ pathname }: { pathname: string }) => {
-  const [isDestOpen, setIsDestOpen] = useState(false);
+const GREEN = '#376941';
 
-  const isActive = (href: string) =>
-    pathname === href ? 'text-[#ffc42d] font-semibold' : 'text-white';
+export const DesktopMenu = ({ pathname }: { pathname: string }) => {
+  const [isServicesOpen, setIsServicesOpen] = useState(false);
+
+  const linkClass = (href: string) => {
+    const active = pathname === href;
+    return [
+      'relative pb-1 transition-colors',
+      active ? 'text-[#376941] font-semibold' : 'text-gray-800 hover:text-[#376941]',
+      active
+        ? 'after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-[2px] after:bg-[#376941]'
+        : '',
+    ].join(' ');
+  };
+
+  const servicesActive = pathname.startsWith('/cities');
 
   return (
     <nav className="hidden md:flex items-center space-x-8 text-base relative">
-      <Link href="/" className={`${isActive('/')} hover:text-[#ffc42d] transition`}>
+      <Link href="/" className={linkClass('/')}>
         Home
       </Link>
-      <Link
-        href="/about-us"
-        className={`${isActive('/about-us')} hover:text-[#ffc42d] transition`}
-      >
-        About Us
+      <Link href="/about-us" className={linkClass('/about-us')}>
+        About
       </Link>
 
-      {/* Cities Dropdown */}
+      {/* Services (Cities) Dropdown */}
       <div
-        className="relative group"
-        onMouseEnter={() => setIsDestOpen(true)}
-        onMouseLeave={() => setIsDestOpen(false)}
+        className="relative"
+        onMouseEnter={() => setIsServicesOpen(true)}
+        onMouseLeave={() => setIsServicesOpen(false)}
       >
-        <button className="flex items-center gap-1 text-white hover:text-[#ffc42d] transition">
-          Cities <ChevronDown size={16} />
+        <button
+          className={`relative pb-1 transition-colors ${
+            servicesActive
+              ? 'text-[#376941] font-semibold after:absolute after:left-0 after:right-0 after:-bottom-0.5 after:h-[2px] after:bg-[#376941]'
+              : 'text-gray-800 hover:text-[#376941]'
+          }`}
+        >
+          Services
         </button>
-        {isDestOpen && (
-          <div className="absolute top-full left-0 mt-2 w-[300px] bg-black/95 border border-white/10 rounded-lg shadow-2xl p-4 grid grid-cols-2 gap-3 z-[200]">
+        {isServicesOpen && (
+          <div
+            className="absolute top-full left-0 mt-2 w-[300px] bg-white border border-gray-100 rounded-lg shadow-xl p-4 grid grid-cols-2 gap-2 z-[200]"
+            style={{ borderTopColor: GREEN, borderTopWidth: 2 }}
+          >
             {VIETNAM_CITIES.map((city) => (
               <Link
                 key={city.slug}
                 href={`/cities/${city.slug}`}
-                className="text-gray-300 hover:text-[#ffc42d] text-sm py-2 px-3 rounded hover:bg-white/5 transition"
+                className="text-gray-700 hover:text-[#376941] hover:bg-gray-50 text-sm py-2 px-3 rounded transition"
               >
                 {city.title}
               </Link>
@@ -47,13 +64,10 @@ export const DesktopMenu = ({ pathname }: { pathname: string }) => {
         )}
       </div>
 
-      <Link
-        href="/packages"
-        className={`${isActive('/packages')} hover:text-[#ffc42d] transition`}
-      >
+      <Link href="/packages" className={linkClass('/packages')}>
         Packages
       </Link>
-      <Link href="/contact" className={`${isActive('/contact')} hover:text-[#ffc42d] transition`}>
+      <Link href="/contact" className={linkClass('/contact')}>
         Contact
       </Link>
     </nav>

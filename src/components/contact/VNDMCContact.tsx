@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaComments, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -15,11 +15,11 @@ const contactMethods = [
     subtitle: 'Available 24/7',
   },
   {
-    icon: <FaComments className="text-2xl" />,
-    title: 'Live Chat',
-    value: 'Available 24/7',
-    link: '#',
-    subtitle: 'Available 24/7',
+    icon: <FaWhatsapp className="text-2xl" />,
+    title: 'WhatsApp',
+    value: '+84 0325765379',
+    link: 'https://wa.me/84325765379?text=Hi%2C%20I%20would%20like%20to%20enquire%20about%20a%20Vietnam%20travel%20package.',
+    subtitle: 'Chat with us instantly',
   },
   {
     icon: <FaEnvelope className="text-2xl" />,
@@ -132,10 +132,14 @@ export default function VNDMCContact() {
       <section className="py-12 px-4 sm:px-6 lg:px-8 bg-white">
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            {contactMethods.map((method, index) => (
+            {contactMethods.map((method, index) => {
+              const isExternal = method.link.startsWith('http');
+              return (
               <a
                 key={index}
                 href={method.link}
+                target={isExternal ? '_blank' : undefined}
+                rel={isExternal ? 'noopener noreferrer' : undefined}
                 className="bg-gray-50 hover:bg-green-50 p-6 rounded-lg transition-colors text-center border border-gray-200 hover:border-[#198754]"
               >
                 <div className="flex justify-center text-[#198754] mb-3">{method.icon}</div>
@@ -143,7 +147,8 @@ export default function VNDMCContact() {
                 <p className="text-gray-700 text-sm mb-1">{method.value}</p>
                 <p className="text-gray-500 text-xs">{method.subtitle}</p>
               </a>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>

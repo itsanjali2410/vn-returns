@@ -81,9 +81,9 @@ export default function PackageOverview({ title, cards }: PackageOverviewProps) 
   return (
     <div className="relative overflow-hidden px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6">
       <div className="flex justify-between items-center mb-3 sm:mb-6">
-        <h2 className="flex flex-row items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase gap-x-2">
+        <h2 className="flex flex-row items-center text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold uppercase gap-x-2 text-[#376941]">
           <span>{firstWord}</span>
-          <span className="font-cursive bg-gradient-to-r from-yellow-400/90 to-yellow-600 bg-clip-text text-transparent">
+          <span className="font-cursive">
             {secondWord}
           </span>
         </h2>
