@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { Suspense, useState } from 'react';
 import Image from 'next/image';
 import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaCalendarAlt } from 'react-icons/fa';
 import B2BInquiryForm from '@/components/home/B2BInquiryForm';
@@ -121,7 +121,9 @@ export default function VNDMCContact() {
       </section>
 
       {/* Partnership Inquiry Form (shared with homepage) */}
-      <B2BInquiryForm />
+      <Suspense fallback={<div className="py-16 text-center text-gray-500">Loading form...</div>}>
+        <B2BInquiryForm />
+      </Suspense>
 
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
