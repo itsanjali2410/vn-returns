@@ -118,24 +118,24 @@ const TripFeedbackForm: React.FC<TripFeedbackFormProps> = ({
       animate={{ opacity: 1, y: 0 }}
       className={`${
         isModal
-          ? 'fixed inset-0 z-[9999] flex items-start sm:items-center justify-center bg-neutral-900 bg-opacity-70 p-0'
+          ? 'fixed inset-0 z-[9999] flex items-start sm:items-center justify-center bg-black bg-opacity-50 p-0'
           : ''
       }`}
     >
       <div
         className={`
           relative w-full h-full sm:h-auto sm:max-w-2xl
-          bg-neutral-900 sm:rounded-2xl
-          text-white overflow-hidden
+          bg-white sm:rounded-2xl
+          text-gray-900 overflow-hidden shadow-xl
         `}
       >
         {/* Top Bar: Close + Progress */}
         {isModal && (
-          <div className="sticky top-0 bg-neutral-900 z-20 flex items-center justify-between p-4 sm:rounded-t-2xl gap-1">
+          <div className="sticky top-0 bg-white z-20 flex items-center justify-between p-4 sm:rounded-t-2xl gap-1">
             {/* Progress Bar */}
-            <div className="flex-1 ml-0 h-2 bg-neutral-800 rounded-full overflow-hidden">
+            <div className="flex-1 ml-0 h-2 bg-gray-100 rounded-full overflow-hidden">
               <div
-                className="h-full bg-gradient-to-r from-yellow-500 to-yellow-300 transition-all duration-500"
+                className="h-full bg-gradient-to-r from-[#376941] to-[#2a5032] transition-all duration-500"
                 style={{ width: `${progressPercent}%` }}
               />
             </div>
@@ -206,15 +206,15 @@ const TripFeedbackForm: React.FC<TripFeedbackFormProps> = ({
         </form>
 
         {/* Submit Button Fixed at Bottom */}
-        <div className="sticky bottom-0 bg-neutral-900 p-4 sm:rounded-b-2xl z-20">
+        <div className="sticky bottom-0 bg-white p-4 sm:rounded-b-2xl z-20">
           <button
             type="submit"
             disabled={isSubmitting || !isValid}
             onClick={handleSubmit}
             className={`w-full py-3 rounded-lg font-semibold transition-all ${
               isSubmitting || !isValid
-                ? 'bg-gray-500 cursor-not-allowed'
-                : 'bg-[#ffc42d] text-white hover:bg-[#d97706] active:scale-[0.98]'
+                ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                : 'bg-[#376941] text-white hover:bg-[#2a5032] active:scale-[0.98]'
             }`}
           >
             {isSubmitting ? 'Submitting...' : 'Submit Feedback'}

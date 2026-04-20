@@ -39,18 +39,18 @@ export const MobileMenu = ({
         href="/about-us"
         className={`block transition ${isActive('/about-us')} py-5 px-8 border-b border-gray-100 hover:text-[#376941]`}
         onClick={() => setIsMobileMenuOpen(false)}
-        title="About"
+        title="About Us"
       >
-        About
+        About Us
       </Link>
 
-      {/* Services Accordion (Cities) */}
+      {/* Cities Accordion */}
       <div className="border-b border-gray-100">
         <button
           onClick={() => toggleSubmenu('cities')}
           className="flex justify-between items-center w-full py-5 px-8 text-gray-800 hover:text-[#376941] transition"
         >
-          Services {openSubmenu === 'cities' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
+          Cities {openSubmenu === 'cities' ? <ChevronUp size={18} /> : <ChevronDown size={18} />}
         </button>
         {openSubmenu === 'cities' && (
           <div className="bg-gray-50 px-8 pb-4">

@@ -2,9 +2,8 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaCalendarAlt, FaCheckCircle } from 'react-icons/fa';
-import { toast, ToastContainer } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { FaPhone, FaEnvelope, FaMapMarkerAlt, FaWhatsapp, FaCalendarAlt } from 'react-icons/fa';
+import B2BInquiryForm from '@/components/home/B2BInquiryForm';
 
 const contactMethods = [
   {
@@ -68,39 +67,7 @@ const faqs = [
 ];
 
 export default function VNDMCContact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    message: '',
-  });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [expandedFaq, setExpandedFaq] = useState<number | null>(null);
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    // Simple validation
-    if (!formData.name || !formData.email || !formData.message) {
-      toast.error('Please fill in all required fields');
-      setIsSubmitting(false);
-      return;
-    }
-
-    // Here you would typically send the form data to your API
-    // For now, just show success message
-    setTimeout(() => {
-      toast.success('Thank you! We will get back to you soon.');
-      setFormData({ name: '', email: '', phone: '', message: '' });
-      setIsSubmitting(false);
-    }, 1000);
-  };
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -153,117 +120,8 @@ export default function VNDMCContact() {
         </div>
       </section>
 
-      {/* Contact Info & Form Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
-        <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Information */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-3xl font-bold text-gray-900 mb-8">Visit Our Office</h2>
-              <div className="space-y-6">
-                <div className="flex items-start gap-4">
-                  <FaMapMarkerAlt className="text-[#198754] text-xl mt-1 flex-shrink-0" />
-                  <div>
-                    <p className="text-gray-700">
-                      5th Floor, 26 Duong Khue, My An, Ngu Hanh Son, Da Nang, Viet Nam
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-8">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Call Us</h3>
-                <a
-                  href="tel:+840325765379"
-                  className="text-[#198754] hover:text-[#147048] text-lg block mb-2"
-                >
-                  +84 0325765379
-                </a>
-               
-              </div>
-              <div className="mt-6">
-                <h3 className="text-xl font-semibold text-gray-900 mb-4">Email Us</h3>
-                <a
-                  href="mailto:sales@vndmc.com"
-                  className="text-[#198754] hover:text-[#147048] text-lg"
-                >
-                  sales@vndmc.com
-                </a>
-              </div>
-            </div>
-
-            {/* Contact Form */}
-            <div className="bg-white p-8 rounded-lg shadow-md">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Plan Your Vietnam Adventure</h2>
-              <form onSubmit={handleSubmit} className="space-y-4">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
-                    Your full name <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#198754] focus:border-[#198754]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
-                    Email <span className="text-red-500">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    placeholder="your@email.com"
-                    required
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#198754] focus:border-[#198754]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
-                    Your phone number
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#198754] focus:border-[#198754]"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
-                    Tell Us About Your Dream Trip <span className="text-red-500">*</span>
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    value={formData.message}
-                    onChange={handleChange}
-                    rows={5}
-                    required
-                    placeholder="Tell us about your travel preferences, interests, special requirements, or any specific destinations you'd like to visit..."
-                    className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-[#198754] focus:border-[#198754]"
-                  />
-                </div>
-                <button
-                  type="submit"
-                  disabled={isSubmitting}
-                  className="w-full bg-[#198754] hover:bg-[#147048] text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
-                >
-                  {isSubmitting ? 'Sending...' : 'Send Inquiry'}
-                </button>
-              </form>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Partnership Inquiry Form (shared with homepage) */}
+      <B2BInquiryForm />
 
       {/* FAQ Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white">
@@ -296,17 +154,6 @@ export default function VNDMCContact() {
           </div>
         </div>
       </section>
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        hideProgressBar={false}
-        newestOnTop={false}
-        closeOnClick
-        rtl={false}
-        pauseOnFocusLoss
-        draggable
-        pauseOnHover
-      />
     </div>
   );
 }

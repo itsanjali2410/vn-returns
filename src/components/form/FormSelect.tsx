@@ -12,7 +12,7 @@ export const FormSelect: React.FC<FormSelectProps> = ({
 }) => {
   return (
     <div className="mb-6">
-      <label htmlFor={name} className="block mb-2 font-medium text-gray-300">
+      <label htmlFor={name} className="block mb-2 font-medium text-gray-700">
         {label}
       </label>
 
@@ -22,8 +22,8 @@ export const FormSelect: React.FC<FormSelectProps> = ({
           name={name}
           required={required}
           onChange={onChange}
-          className="w-full p-3 pr-10 rounded-lg border border-yellow-500 bg-neutral-900 text-gray-100 text-base 
-                     appearance-none focus:outline-none focus:ring-2 focus:ring-yellow-400"
+          className="w-full p-3 pr-10 rounded-lg border border-gray-200 bg-white text-gray-900 text-base
+                     appearance-none focus:outline-none focus:border-[#376941] focus:ring-1 focus:ring-[#376941]"
         >
           <option value="">Select</option>
           {options.map((opt, idx) =>
@@ -40,7 +40,7 @@ export const FormSelect: React.FC<FormSelectProps> = ({
         </select>
 
         {/* Custom dropdown arrow */}
-        <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-yellow-400 pointer-events-none">
+        <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-gray-500 pointer-events-none text-xs">
           ▼
         </span>
       </div>

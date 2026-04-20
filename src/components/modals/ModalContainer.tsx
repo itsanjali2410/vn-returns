@@ -20,20 +20,20 @@ const ModalContainer: React.FC<ModalContainerProps> = ({
   if (!isOpen) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-70">
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
       <div
-        className={`relative w-full ${widthClass} bg-[#111] border-2 border-[#ffc42d] rounded-lg p-8 text-white sm:p-6`}
+        className={`relative w-full ${widthClass} bg-white border border-gray-200 rounded-lg p-8 text-gray-900 shadow-2xl sm:p-6`}
       >
         {/* Close Button */}
         <button
           onClick={onClose}
-          className="absolute top-2 right-2 text-white text-xl font-bold hover:text-gray-400"
+          className="absolute top-2 right-2 text-gray-500 hover:text-gray-900 text-xl font-bold"
         >
           &times;
         </button>
 
         {/* Title */}
-        {title && <h2 className="text-center mb-6 text-[#ffc42d] text-2xl font-bold">{title}</h2>}
+        {title && <h2 className="text-center mb-6 text-[#376941] text-2xl font-bold">{title}</h2>}
 
         {/* Content */}
         {children}

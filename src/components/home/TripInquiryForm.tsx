@@ -111,7 +111,7 @@ const TripInquiryForm: React.FC = () => {
   };
 
   return (
-    <div className="w-full bg-black flex items-center justify-center px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-3 sm:py-6 rounded-lg">
+    <div className="w-full bg-[#f8faf9] flex items-center justify-center px-3 sm:px-6 md:px-10 lg:px-20 xl:px-40 py-6 sm:py-10 rounded-lg">
       <InquiryForm />
     </div>
   );

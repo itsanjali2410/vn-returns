@@ -15,7 +15,7 @@ import PartnerHotels from '@/components/home/PartnerHotels';
 import ExploreCities from '@/components/home/ExploreCities';
 import VietnamTestimonials from '@/components/home/VietnamTestimonials';
 import HappyFaces from '@/components/home/HappyFaces';
-import TripInquiryForm from '@/components/home/TripInquiryForm';
+import B2BInquiryForm from '@/components/home/B2BInquiryForm';
 
 import { trendingPackages } from '@/data/packagesList';
 import { homeSchema } from '@/data/schemas/home';
@@ -63,7 +63,7 @@ export default function Page() {
       <HappyFaces />
 
       <Suspense fallback={<div>Loading form...</div>}>
-        <TripInquiryForm />
+        <B2BInquiryForm />
       </Suspense>
     </>
   );

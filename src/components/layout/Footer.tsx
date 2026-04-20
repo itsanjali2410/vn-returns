@@ -84,7 +84,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <footer className="bg-[#101820] text-white px-4 sm:px-6 py-8">
+    <footer className="bg-[#1e3a2a] text-white px-4 sm:px-6 py-8">
       <div className="max-w-7xl mx-auto">
         {/* Top Section - Logo, Description, and Links */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
@@ -100,7 +100,7 @@ const Footer = () => {
                 priority
               />
             </Link>
-            <p className="text-gray-300 text-sm leading-relaxed">
+            <p className="text-[#d1e7d8] text-sm leading-relaxed">
               Vietnam is your trusted destination management partner, dedicated to creating authentic
               and unforgettable experiences throughout Vietnam. With over 15 years of expertise, we
               specialize in personalized travel solutions that showcase the true essence of
@@ -132,7 +132,7 @@ const Footer = () => {
                     </li>
                   ))}
                 </ul>
-                <hr className="border-t border-gray-700 mt-2" />
+                <hr className="border-t border-[#2d5240] mt-2" />
               </div>
             ))}
           </div>
@@ -158,7 +158,7 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-start gap-2">
                 <span className="text-[#ffc42d] mt-1">📍</span>
-                <p className="text-gray-300">
+                <p className="text-[#d1e7d8]">
                   5th Floor, 26 Duong Khue, My An, Ngu Hanh Son, Da Nang, Viet Nam
                 </p>
               </div>
@@ -181,7 +181,7 @@ const Footer = () => {
 
         {/* Mobile Quick Links */}
         <div className="md:hidden mb-6">
-          <hr className="border-t border-gray-700 mb-4" />
+          <hr className="border-t border-[#2d5240] mb-4" />
         </div>
 
         {/* Social Links */}
@@ -201,7 +201,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom */}
-        <div className="border-t border-gray-700 pt-6 flex flex-col items-center text-xs text-gray-400">
+        <div className="border-t border-[#2d5240] pt-6 flex flex-col items-center text-xs text-[#a8c5b2]">
           <p className="mb-2">© 2024 Vietnam DMC. All rights reserved.</p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link href="/privacy-policy" className="hover:text-[#ffc42d] transition-colors">

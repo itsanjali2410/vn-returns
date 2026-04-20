@@ -134,31 +134,30 @@ const TripForm: React.FC<TripFormProps> = ({
       <div
         className={`${
           isModal
-            ? 'fixed inset-0 z-[9999] flex items-start sm:items-center justify-center bg-black bg-opacity-70 p-0'
+            ? 'fixed inset-0 z-[9999] flex items-start sm:items-center justify-center bg-black bg-opacity-50 p-0'
             : ''
         }`}
         role={isModal ? 'dialog' : undefined}
         aria-modal={isModal ? 'true' : undefined}
         aria-labelledby="trip-form-title"
       >
-        <div className="relative w-full h-full sm:h-auto sm:max-w-2xl bg-neutral-900 sm:rounded-2xl text-white overflow-hidden">
+        <div className="relative w-full h-full sm:h-auto sm:max-w-2xl bg-white sm:rounded-2xl text-gray-900 overflow-hidden shadow-xl">
           {/* Top Bar: Close + Title */}
           {isModal && (
-            <div className="sticky top-0 z-20 flex justify-between items-center p-4 bg-neutral-900 sm:rounded-t-2xl">
-              <h2 id="trip-form-title" className="text-[#ffc42d] text-xl font-bold">
+            <div className="sticky top-0 z-20 flex justify-between items-center p-4 bg-white sm:rounded-t-2xl border-b border-gray-100">
+              <h2 id="trip-form-title" className="text-[#376941] text-xl font-bold">
                 Plan Your Trip
               </h2>
 
-              {/* ✅ Accessible & Responsive Close Button */}
               <button
                 onClick={onClose}
                 aria-label="Close Trip Form"
                 title="Close Trip Form"
                 className="
-    text-gray-400 hover:text-white 
+    text-gray-400 hover:text-gray-900
     text-3xl sm:text-4xl
-    font-extrabold 
-    focus:outline-none focus:ring-2 focus:ring-yellow-400 
+    font-extrabold
+    focus:outline-none focus:ring-2 focus:ring-[#376941]
     transition-all duration-150 ease-in-out
   "
               >
@@ -181,8 +180,8 @@ const TripForm: React.FC<TripFormProps> = ({
                   {...register('guestName')}
                   placeholder="Your full name"
                   aria-label="Full name"
-                  className={`w-full p-3 border rounded bg-black text-white placeholder-gray-400 ${
-                    errors.guestName ? 'border-red-500' : 'border-[#ffc42d]'
+                  className={`w-full p-3 border rounded bg-white text-gray-900 placeholder-gray-400 ${
+                    errors.guestName ? 'border-red-500' : 'border-gray-200 focus:border-[#376941]'
                   }`}
                 />
                 {errors.guestName && (
@@ -202,8 +201,8 @@ const TripForm: React.FC<TripFormProps> = ({
                   onInput={(e) => {
                     e.currentTarget.value = e.currentTarget.value.replace(/\D/g, '').slice(0, 10);
                   }}
-                  className={`w-full p-3 border rounded bg-black text-white placeholder-gray-400 ${
-                    errors.guestMobile ? 'border-red-500' : 'border-[#ffc42d]'
+                  className={`w-full p-3 border rounded bg-white text-gray-900 placeholder-gray-400 ${
+                    errors.guestMobile ? 'border-red-500' : 'border-gray-200 focus:border-[#376941]'
                   }`}
                 />
                 {errors.guestMobile && (
@@ -219,8 +218,8 @@ const TripForm: React.FC<TripFormProps> = ({
                   disabled={!!mappedDestination}
                   placeholder="Where do you want to go?"
                   aria-label="Destination"
-                  className={`w-full p-3 border rounded bg-black text-white placeholder-gray-400 disabled:bg-gray-800 disabled:text-gray-500 ${
-                    errors.destinations ? 'border-red-500' : 'border-[#ffc42d]'
+                  className={`w-full p-3 border rounded bg-white text-gray-900 placeholder-gray-400 disabled:bg-gray-100 disabled:text-gray-500 ${
+                    errors.destinations ? 'border-red-500' : 'border-gray-200 focus:border-[#376941]'
                   }`}
                 />
                 {errors.destinations && (
@@ -237,7 +236,7 @@ const TripForm: React.FC<TripFormProps> = ({
                     disabled={!!packageName}
                     placeholder="Package Name"
                     aria-label="Package name"
-                    className="w-full p-3 border border-[#ffc42d] rounded bg-black text-white placeholder-gray-400 disabled:bg-gray-800 disabled:text-gray-500"
+                    className="w-full p-3 border border-gray-200 focus:border-[#376941] rounded bg-black text-white placeholder-gray-400 disabled:bg-gray-100 disabled:text-gray-500"
                   />
                 </div>
               )}
@@ -263,7 +262,7 @@ const TripForm: React.FC<TripFormProps> = ({
           {/* Bottom Sticky Button for Modal or Mobile */}
           <div
             className={`sticky bottom-0 p-4 z-20 ${
-              isModal ? 'bg-neutral-900 sm:rounded-b-2xl' : 'bg-transparent'
+              isModal ? 'bg-white sm:rounded-b-2xl border-t border-gray-100' : 'bg-transparent'
             }`}
           >
             <button
@@ -272,8 +271,8 @@ const TripForm: React.FC<TripFormProps> = ({
               onClick={handleSubmit(onSubmit)}
               className={`w-full py-3 rounded-lg font-semibold transition-all ${
                 isSubmitting || !isValid
-                  ? 'bg-gray-500 cursor-not-allowed'
-                  : 'bg-[#ffc42d] text-white hover:bg-[#d97706] active:scale-[0.98]'
+                  ? 'bg-gray-300 text-gray-500 cursor-not-allowed'
+                  : 'bg-[#376941] text-white hover:bg-[#2a5032] active:scale-[0.98]'
               }`}
             >
               {isSubmitting ? 'Sending...' : 'Next'}
