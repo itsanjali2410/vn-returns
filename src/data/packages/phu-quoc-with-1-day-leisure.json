@@ -9,66 +9,66 @@
     "Phu Quoc"
   ],
   "summaryItinerary": [
-    "Day 1 (4th June): Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide (No meal)",
-    "Day 2 (5th June): Phu Quoc – Private Day Tour to Vin Pearl Safari – VinWonder without Guide (No meal)",
-    "Day 3 (6th June): Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car (No meal)",
-    "Day 4 (7th June): Phu Quoc – Private Evening Tour to Sunset Town – Kiss of the Sea Show (No meal)",
-    "Day 5 (8th June): Phu Quoc – Free Leisure (No meal)",
-    "Day 6 (9th June): Phu Quoc Departure (No meal)"
+    "Day 1 (4th June): Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide",
+    "Day 2 (5th June): Phu Quoc – Private Day Tour to Vin Pearl Safari – VinWonder without Guide",
+    "Day 3 (6th June): Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
+    "Day 4 (7th June): Phu Quoc – Private Evening Tour to Sunset Town – Kiss of the Sea Show",
+    "Day 5 (8th June): Phu Quoc – Free Leisure",
+    "Day 6 (9th June): Phu Quoc Departure"
   ],
   "detailedItinerary": [
     {
       "day": "Day 1",
-      "title": "Phu Quoc Arrival – Private Afternoon Tour to Grand World without guide (No meal)",
+      "title": "Phu Quoc Arrival – Private Afternoon Tour to Grand World without guide",
       "details": [
         "Arrive in Phu Quoc City, our driver will take you to hotel for baggage storage",
         "Check in time at 15:00 PM",
-        "15:30: Our driver will pick you up at the hotel and embark on a private afternoon tour to Grand World, a vibrant entertainment complex known as the \"Sleepless City.\"",
+        "Our driver will pick you up at the hotel and embark on a private afternoon tour to Grand World, a vibrant entertainment complex known as the \"Sleepless City.\"",
         "Explore the various attractions at Grand World, including cultural shows, shopping streets, and unique architectural structures. The complex offers a blend of traditional and modern experiences, providing a lively atmosphere for visitors.",
-        "20:30: Our driver will take you back to hotel for relax",
+        "Our driver will take you back to hotel for relax",
         "Free leisure and overnight in Phu Quoc"
       ]
     },
     {
       "day": "Day 2",
-      "title": "Phu Quoc – Private Day Tour to Vinpearl Safari + Vin Wonder without Guide (No meal)",
+      "title": "Phu Quoc – Private Day Tour to Vinpearl Safari + Vin Wonder without Guide",
       "details": [
-        "08:30: Our driver will pick you up at the hotel and your private tour begins with a visit to Vinpearl Safari, Vietnam's first and only open zoo. Covering a vast area, the safari is home to a wide variety of wildlife from around the world, including endangered species. Enjoy a guided tour through the safari, where you can see animals in their natural habitats and learn about conservation efforts.",
+        "Our driver will pick you up at the hotel and your private tour begins with a visit to Vinpearl Safari, Vietnam's first and only open zoo. Covering a vast area, the safari is home to a wide variety of wildlife from around the world, including endangered species. Enjoy a guided tour through the safari, where you can see animals in their natural habitats and learn about conservation efforts.",
         "Head to Vin Wonders, a world-class amusement park. Vin Wonders offers a range of activities, including thrilling rides, water slides, and themed zones that cater to all ages. Spend the afternoon experiencing the excitement and fun of this extensive amusement park.",
-        "19:00: Our driver will take you back to hotel for relax",
+        "Our driver will take you back to hotel for relax",
         "Free leisure and overnight in Phu Quoc"
       ]
     },
     {
       "day": "Day 3",
-      "title": "Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car (No meal)",
+      "title": "Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
       "details": [
-        "08:00-08:30: Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm (approx. 30 minutes).",
-        "09:40 – 09:50: Arrive at An Thoi Harbor, board the speedboat.",
+        "Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm (approx. 30 minutes).",
+        "Arrive at An Thoi Harbor, board the speedboat.",
         "Visit Coral Park – Sea Walker Experience (Optional activity - Pay by yourself): Walk under the sea and admire colorful marine life.",
         "Stop at Mong Tay Island: Take photos with SUP boards and Flycam.",
         "Continue to Gam Ghi/Buom Island: Go swimming and snorkeling at the coral reef.",
         "Visit May Rut Island: Free time for swimming and relaxing.",
         "Note: Itinerary is subject to change depending on weather conditions.",
-        "15:20: Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
-        "17:00-17:30: Bus take you back to hotel",
+        "Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
+        "Bus take you back to hotel",
         "Free Leisure and overnight in Phu Quoc."
       ]
     },
     {
       "day": "Day 4",
-      "title": "Phu Quoc – Private Evening tour to Sunset Town – watch Kiss of the Sea Show (No meal)",
+      "title": "Phu Quoc – Private Evening tour to Sunset Town – watch Kiss of the Sea Show",
       "details": [
         "Free leisure at day time",
-        "17:00: The tour guide take you to visit Sunset Town – Check in and take photos.",
-        "21:00: Watch Kiss of the Sea Show.",
+        "The tour guide take you to visit Sunset Town – Check in and take photos.",
+        "Watch Kiss of the Sea Show.",
         "After the show finish, our driver pick up and take you back to hotel.",
         "Overnight in Phu Quoc"
       ]
     },
     {
       "day": "Day 5",
-      "title": "Phu Quoc – Free Leisure (No meal)",
+      "title": "Phu Quoc – Free Leisure",
       "details": [
         "Free Leisure Day",
         "Overnight in Phu Quoc"
@@ -76,7 +76,7 @@
     },
     {
       "day": "Day 6",
-      "title": "Phu Quoc Departure (No meal)",
+      "title": "Phu Quoc Departure",
       "details": [
         "Do check out hotel before 12:00 PM",
         "Our driver will take you to the Phu Quoc International as your departure flight."

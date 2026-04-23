@@ -2,21 +2,17 @@ import { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import PackageDetailWrapper from '@/components/clientWrapper/PackageDetailWrapper';
 
-import pkg1 from '@/data/packages/ha-noi-da-nang-phu-quoc-9d8n.json';
-import pkg2 from '@/data/packages/phu-quoc-4-night-standard.json';
-import pkg3 from '@/data/packages/vietnam-6n7d-day-cruise.json';
-import pkg4 from '@/data/packages/vietnam-7n8d-standard.json';
-import pkg5 from '@/data/packages/phu-quoc-short-break.json';
-import pkg6 from '@/data/packages/phu-quoc-fully-loaded.json';
-import pkg7 from '@/data/packages/phu-quoc-with-1-day-leisure.json';
-import pkg8 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-day-with-day-cruise.json';
-import pkg9 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-with-over-night-cruise.json';
-import pkg10 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-day-cruise.json';
-import pkg11 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-over-night-cruise.json';
-import pkg12 from '@/data/packages/ha-noi-phu-quoc-da-nang-day-cruise.json';
-import pkg13 from '@/data/packages/ha-noi-da-nang-short-break.json';
+import pkg1 from '@/data/packages/phu-quoc-short-break.json';
+import pkg2 from '@/data/packages/phu-quoc-fully-loaded.json';
+import pkg3 from '@/data/packages/phu-quoc-with-1-day-leisure.json';
+import pkg4 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-day-with-day-cruise.json';
+import pkg5 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-with-over-night-cruise.json';
+import pkg6 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-day-cruise.json';
+import pkg7 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-over-night-cruise.json';
+import pkg8 from '@/data/packages/ha-noi-phu-quoc-da-nang-day-cruise.json';
+import pkg9 from '@/data/packages/ha-noi-da-nang-short-break.json';
 
-const allPackages = [pkg1, pkg2, pkg3, pkg4, pkg5, pkg6, pkg7, pkg8, pkg9, pkg10, pkg11, pkg12, pkg13];
+const allPackages = [pkg1, pkg2, pkg3, pkg4, pkg5, pkg6, pkg7, pkg8, pkg9];
 
 interface PackagePageProps {
   params: Promise<{ slug: string }>;

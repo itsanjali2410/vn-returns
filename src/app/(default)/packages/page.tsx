@@ -2,19 +2,15 @@ import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
 
-import pkg1 from '@/data/packages/ha-noi-da-nang-phu-quoc-9d8n.json';
-import pkg2 from '@/data/packages/phu-quoc-4-night-standard.json';
-import pkg3 from '@/data/packages/vietnam-6n7d-day-cruise.json';
-import pkg4 from '@/data/packages/vietnam-7n8d-standard.json';
-import pkg5 from '@/data/packages/phu-quoc-short-break.json';
-import pkg6 from '@/data/packages/phu-quoc-fully-loaded.json';
-import pkg7 from '@/data/packages/phu-quoc-with-1-day-leisure.json';
-import pkg8 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-day-with-day-cruise.json';
-import pkg9 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-with-over-night-cruise.json';
-import pkg10 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-day-cruise.json';
-import pkg11 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-over-night-cruise.json';
-import pkg12 from '@/data/packages/ha-noi-phu-quoc-da-nang-day-cruise.json';
-import pkg13 from '@/data/packages/ha-noi-da-nang-short-break.json';
+import pkg1 from '@/data/packages/phu-quoc-short-break.json';
+import pkg2 from '@/data/packages/phu-quoc-fully-loaded.json';
+import pkg3 from '@/data/packages/phu-quoc-with-1-day-leisure.json';
+import pkg4 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-day-with-day-cruise.json';
+import pkg5 from '@/data/packages/ha-noi-da-nang-ho-chi-minh-with-over-night-cruise.json';
+import pkg6 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-day-cruise.json';
+import pkg7 from '@/data/packages/ha-noi-da-nang-phu-quoc-with-over-night-cruise.json';
+import pkg8 from '@/data/packages/ha-noi-phu-quoc-da-nang-day-cruise.json';
+import pkg9 from '@/data/packages/ha-noi-da-nang-short-break.json';
 
 export const metadata: Metadata = {
   title: 'Vietnam Travel Packages | Vietnam DMC',
@@ -23,10 +19,6 @@ export const metadata: Metadata = {
 };
 
 const packageImages: Record<string, string> = {
-  'ha-noi-da-nang-phu-quoc-9d8n': '/package/Hanoi_Danang_Phuquoc.webp',
-  'phu-quoc-4-night-standard': '/package/Phuqoc_Standard_Package.webp',
-  'vietnam-6n7d-day-cruise': '/package/Vietnam_Standard_Package_daycruise.webp',
-  'vietnam-7n8d-standard': '/package/Vietnam_Standard_Package.webp',
   'phu-quoc-short-break': '/destinations/Phu_Quoc_Island.webp',
   'phu-quoc-fully-loaded': '/popular_cities/Phu Quoc.webp',
   'phu-quoc-with-1-day-leisure': '/destinations/Monkey_Mountain.webp',
@@ -45,52 +37,38 @@ function getDays(pkg: any): { days: number; nights: number } {
   return { days, nights: Math.max(0, days - 1) };
 }
 
-// Domestic flight costs per package (USD per person, based on route)
-const flightCosts: Record<string, number> = {
-  'phu-quoc-short-break': 0,
-  'phu-quoc-fully-loaded': 0,
-  'phu-quoc-with-1-day-leisure': 0,
-  'phu-quoc-4-night-standard': 0,
-  'ha-noi-da-nang-short-break': 60,              // HN→DN
-  'vietnam-6n7d-day-cruise': 60,                  // HN→DN
-  'ha-noi-da-nang-ho-chi-minh-day-with-day-cruise': 120,    // HN→DN + DN→HCM
-  'ha-noi-da-nang-ho-chi-minh-with-over-night-cruise': 120, // HN→DN + DN→HCM
-  'vietnam-7n8d-standard': 120,                   // HN→DN + DN→HCM
-  'ha-noi-da-nang-phu-quoc-with-day-cruise': 120,           // HN→DN + DN→PQ
-  'ha-noi-da-nang-phu-quoc-with-over-night-cruise': 120,    // HN→DN + DN→PQ
-  'ha-noi-da-nang-phu-quoc-9d8n': 120,            // HN→DN + DN→PQ
-  'ha-noi-phu-quoc-da-nang-day-cruise': 120,      // HN→PQ + PQ→DN
-};
-
+// Pricing formula: land price + 3-star hotel price + $20 markup
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function getPrice(pkg: any): string {
-  // Find 3-star adult price from pricing tiers
-  let base: number | null = null;
+  // 3-star hotel tier
+  let hotel = 0;
   for (const tier of pkg.pricing || []) {
     const combined = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`.toLowerCase();
     if (combined.includes('3-star') || combined.includes('3 star') || combined.includes('option 1')) {
       const full = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`;
       const m = full.match(/(\d+)\s*USD/i);
-      if (m) { base = parseInt(m[1]); break; }
+      if (m) { hotel = parseInt(m[1]); break; }
     }
   }
-  // Fallback: first tier with a USD price
-  if (base === null) {
+  if (hotel === 0) {
     for (const tier of pkg.pricing || []) {
       const full = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`;
       const m = full.match(/(\d+)\s*USD/i);
-      if (m) { base = parseInt(m[1]); break; }
+      if (m) { hotel = parseInt(m[1]); break; }
     }
   }
-  if (base === null) return 'Custom Quote';
+  // Land price from bookingInfo
+  const lp = pkg.bookingInfo?.landPrice || '';
+  const lpMatch = String(lp).match(/(\d+)\s*USD/i);
+  const land = lpMatch ? parseInt(lpMatch[1]) : 0;
 
-  const flight = flightCosts[pkg.id] ?? 0;
-  const total = base + flight + 20;
+  const total = land + hotel + 20;
+  if (total <= 20) return 'Custom Quote';
   return `From ${total} USD`;
 }
 
 export default function PackagesPage() {
-  const packages = [pkg1, pkg2, pkg3, pkg4, pkg5, pkg6, pkg7, pkg8, pkg9, pkg10, pkg11, pkg12, pkg13];
+  const packages = [pkg1, pkg2, pkg3, pkg4, pkg5, pkg6, pkg7, pkg8, pkg9];
 
   return (
     <div className="min-h-screen bg-gray-50">

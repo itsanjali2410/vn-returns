@@ -79,6 +79,11 @@ const TourCard: React.FC<TourDetails> = ({
         <div id="itinerary" className="mt-3">
           <Itinerary
             itinerary={itinerary.map((item: any) => {
+              // New shape: { day, title, activities }
+              if (item && typeof item === 'object' && 'activities' in item) {
+                return { day: item.day, title: item.title, activities: item.activities };
+              }
+              // Legacy shape: { "Day 1": ["activity1", ...] }
               const dayKey = Object.keys(item)[0];
               return { day: dayKey, activities: item[dayKey] };
             })}

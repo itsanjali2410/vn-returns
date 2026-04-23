@@ -13,10 +13,10 @@ interface Slide {
 }
 
 const slides: Slide[] = [
-  { image: '/swipeable_slider/hanoi.webp', slug: '/packages/ha-noi-da-nang-phu-quoc-9d8n', name: 'Hanoi - Da Nang - Phu Quoc', tagline: '9 Days 8 Nights Package' },
-  { image: '/swipeable_slider/da-nang.webp', slug: '/packages/vietnam-6n7d-day-cruise', name: 'Vietnam Day Cruise', tagline: '6 Nights 7 Days with Day Cruise' },
-  { image: '/swipeable_slider/hoi-an.webp', slug: '/packages/vietnam-7n8d-standard', name: 'Vietnam Hoi an', tagline: '7 Nights 8 Days Package' },
-  { image: '/swipeable_slider/phu-quoc.webp', slug: '/packages/phu-quoc-4-night-standard', name: 'Phu Quoc Island', tagline: '4 Nights Standard Package' },
+  { image: '/swipeable_slider/hanoi.webp', slug: '/packages/ha-noi-da-nang-phu-quoc-with-day-cruise', name: 'Coastal Journey', tagline: 'Hanoi, Da Nang & Phu Quoc — 7N/8D' },
+  { image: '/swipeable_slider/da-nang.webp', slug: '/packages/ha-noi-phu-quoc-da-nang-day-cruise', name: 'Tropical Discovery', tagline: 'Hanoi, Phu Quoc & Da Nang — 8N/9D' },
+  { image: '/swipeable_slider/hoi-an.webp', slug: '/packages/ha-noi-da-nang-ho-chi-minh-day-with-day-cruise', name: 'Classic Discovery', tagline: 'Hanoi, Da Nang & Ho Chi Minh — 7N/8D' },
+  { image: '/swipeable_slider/phu-quoc.webp', slug: '/packages/phu-quoc-fully-loaded', name: 'Fully Loaded', tagline: 'Phu Quoc Island — 5N/6D' },
 ];
 
 export default function SwipeableSlider() {

@@ -68,7 +68,19 @@ const B2BInquiryForm: React.FC = () => {
     setError('');
 
     const payload = sanitizeData({
-      ...form,
+      // CRM-expected fields (mapped from B2B fields)
+      guestName: form.contactPerson,
+      guestMobile: form.phone,
+      guestEmail: form.email,
+      destinations: 'Vietnam',
+      adults: 1,
+      plannedTravelDate: '',
+      // B2B-specific fields (stored as custom fields / notes)
+      companyName: form.companyName,
+      country: form.country,
+      inquiryType: form.inquiryType,
+      message: form.message,
+      notes: `B2B Inquiry — Company: ${form.companyName} | Country: ${form.country || 'N/A'} | Type: ${form.inquiryType} | Message: ${form.message || 'N/A'}`,
       source: 'B2B_Homepage_Form',
       source_domain: typeof window !== 'undefined' ? window.location.hostname : '',
       ...firstUTM,

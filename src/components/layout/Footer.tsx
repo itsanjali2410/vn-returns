@@ -17,7 +17,7 @@ const socialMediaLinks = [
     className: 'bg-[#1877f2]',
   },
   {
-    href: '#',
+    href: 'https://www.instagram.com/vn.dmc',
     icon: <FaInstagram />,
     alt: 'Instagram',
     className: 'bg-gradient-to-br from-[#f09433] via-[#dc2743] to-[#bc1888]',

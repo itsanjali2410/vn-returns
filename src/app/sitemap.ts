@@ -23,10 +23,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
   }));
 
   const packageRoutes = [
-    'ha-noi-da-nang-phu-quoc-9d8n',
-    'phu-quoc-4-night-standard',
-    'vietnam-6n7d-day-cruise',
-    'vietnam-7n8d-standard',
+    'phu-quoc-short-break',
+    'phu-quoc-fully-loaded',
+    'phu-quoc-with-1-day-leisure',
+    'ha-noi-da-nang-ho-chi-minh-day-with-day-cruise',
+    'ha-noi-da-nang-ho-chi-minh-with-over-night-cruise',
+    'ha-noi-da-nang-phu-quoc-with-day-cruise',
+    'ha-noi-da-nang-phu-quoc-with-over-night-cruise',
+    'ha-noi-phu-quoc-da-nang-day-cruise',
+    'ha-noi-da-nang-short-break',
   ].map((slug) => ({
     url: `${baseUrl}/packages/${slug}`,
     lastModified,

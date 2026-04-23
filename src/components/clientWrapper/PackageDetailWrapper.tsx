@@ -15,10 +15,6 @@ import TripFormModal from '../modals/TripFormModal';
 interface PackageDetailWrapperProps { packageData: any }
 
 const packageImages: Record<string, string> = {
-  'ha-noi-da-nang-phu-quoc-9d8n': '/package/Hanoi_Danang_Phuquoc.webp',
-  'phu-quoc-4-night-standard': '/package/Phuqoc_Standard_Package.webp',
-  'vietnam-6n7d-day-cruise': '/package/Vietnam_Standard_Package_daycruise.webp',
-  'vietnam-7n8d-standard': '/package/Vietnam_Standard_Package.webp',
   'phu-quoc-short-break': '/destinations/Phu_Quoc_Island.webp',
   'phu-quoc-fully-loaded': '/popular_cities/Phu Quoc.webp',
   'phu-quoc-with-1-day-leisure': '/destinations/Monkey_Mountain.webp',
@@ -30,24 +26,9 @@ const packageImages: Record<string, string> = {
   'ha-noi-da-nang-short-break': '/destinations/Hanoi.webp',
 };
 
-const flightCosts: Record<string, number> = {
-  'phu-quoc-short-break': 0,
-  'phu-quoc-fully-loaded': 0,
-  'phu-quoc-with-1-day-leisure': 0,
-  'phu-quoc-4-night-standard': 0,
-  'ha-noi-da-nang-short-break': 60,
-  'vietnam-6n7d-day-cruise': 60,
-  'ha-noi-da-nang-ho-chi-minh-day-with-day-cruise': 120,
-  'ha-noi-da-nang-ho-chi-minh-with-over-night-cruise': 120,
-  'vietnam-7n8d-standard': 120,
-  'ha-noi-da-nang-phu-quoc-with-day-cruise': 120,
-  'ha-noi-da-nang-phu-quoc-with-over-night-cruise': 120,
-  'ha-noi-da-nang-phu-quoc-9d8n': 120,
-  'ha-noi-phu-quoc-da-nang-day-cruise': 120,
-};
-
+// Extract 3-star hotel tier price (in USD)
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function getBasePrice(pkg: any): number {
+function get3StarPrice(pkg: any): number {
   for (const tier of pkg.pricing || []) {
     const combined = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`.toLowerCase();
     if (combined.includes('3-star') || combined.includes('3 star') || combined.includes('option 1')) {
@@ -56,12 +37,21 @@ function getBasePrice(pkg: any): number {
       if (m) return parseInt(m[1]);
     }
   }
+  // Fallback: first tier that has a USD amount
   for (const tier of pkg.pricing || []) {
     const full = `${tier.tier || ''} ${(tier.prices || []).join(' ')}`;
     const m = full.match(/(\d+)\s*USD/i);
     if (m) return parseInt(m[1]);
   }
   return 0;
+}
+
+// Extract land price from bookingInfo.landPrice (in USD per person)
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+function getLandPrice(pkg: any): number {
+  const lp = pkg.bookingInfo?.landPrice || '';
+  const m = String(lp).match(/(\d+)\s*USD/i);
+  return m ? parseInt(m[1]) : 0;
 }
 
 export default function PackageDetailWrapper({ packageData: pkg }: PackageDetailWrapperProps) {
@@ -91,23 +81,48 @@ export default function PackageDetailWrapper({ packageData: pkg }: PackageDetail
   const places = pkg.places || [];
   const destinationCovered = places.join(' -- ') || pkg.packageName;
 
-  // Build itinerary in the format TourDetails expects: [{ "Day 1": ["activity1", ...] }]
+  // Build itinerary — carry day, title, and details through to Itinerary component
   const itinerary = (pkg.detailedItinerary || []).map(
     (day: { day: string; title: string; details: string[] }) => ({
-      [day.day || day.title]: day.details,
+      day: day.day,
+      title: day.title,
+      activities: day.details,
     })
   );
 
-  // Calculate total price: 3-star base + flights + $20
-  const base = getBasePrice(pkg);
-  const flight = flightCosts[pkg.id] ?? 0;
-  const totalPrice = base + flight + 20;
+  // Pricing formula: land price + 3-star hotel price + $20 markup
+  const landPrice = getLandPrice(pkg);
+  const hotelPrice = get3StarPrice(pkg);
+  const totalPrice = landPrice + hotelPrice + 20;
   const priceLabel = totalPrice > 20 ? `USD ${totalPrice} /-` : '';
 
-  // Overview text from summary
-  const overviewContent = pkg.summaryItinerary
-    ? pkg.summaryItinerary.slice(0, 3).join('. ') + '.'
+  // Overview: places + sightseeing extracted from detailed itinerary
+  const sightseeingSet = new Set<string>();
+  const sightPatterns = [
+    /Grand World/gi, /Vinpearl Safari/gi, /Vin Wonders?/gi, /VinWonder/gi, /Hon Thom/gi,
+    /Sunset Town/gi, /Kiss of the Sea/gi, /Ha Long Bay/gi, /Halong Bay/gi, /Ninh Binh/gi,
+    /Ba Na Hills/gi, /Golden Bridge/gi, /Marble Mountains?/gi, /Hoi An/gi, /Hanoi Old Quarter/gi,
+    /Cu Chi Tunnels/gi, /Mekong Delta/gi, /Notre Dame Cathedral/gi, /War Remnants Museum/gi,
+    /Independence Palace/gi, /Dragon Bridge/gi, /Lady Buddha/gi, /My Son Sanctuary/gi,
+    /Temple of Literature/gi, /Hoan Kiem Lake/gi, /Thien Mu Pagoda/gi, /Perfume River/gi,
+    /Bai Tu Long/gi, /Lan Ha Bay/gi, /Tra Que Village/gi, /An Bang Beach/gi, /Cable Car/gi,
+    /Pearl Farm/gi, /Mong Tay Island/gi, /May Rut Island/gi, /Coral Park/gi, /4 Islands/gi,
+  ];
+  const allDetailsText = (pkg.detailedItinerary || [])
+    .flatMap((d: { details: string[] }) => d.details || [])
+    .join(' ');
+  for (const pattern of sightPatterns) {
+    const matches = allDetailsText.match(pattern);
+    if (matches) matches.forEach((m) => sightseeingSet.add(m.trim()));
+  }
+  const sightseeing = Array.from(sightseeingSet);
+  const placesText = places.length > 0 ? `Covering ${places.join(', ')}.` : '';
+  const sightsText =
+    sightseeing.length > 0 ? ` Highlights include ${sightseeing.slice(0, 8).join(', ')}.` : '';
+  const summaryText = pkg.summaryItinerary
+    ? ' ' + pkg.summaryItinerary.slice(0, 2).join('. ') + '.'
     : '';
+  const overviewContent = (placesText + sightsText + summaryText).trim();
 
   return (
     <div className="flex flex-col lg:flex-row w-full gap-6 px-4 lg:py-10 py-5 max-w-7xl mx-auto">

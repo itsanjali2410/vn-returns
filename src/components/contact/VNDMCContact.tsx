@@ -31,14 +31,14 @@ const contactMethods = [
     icon: <FaCalendarAlt className="text-2xl" />,
     title: 'Book Meeting',
     value: 'Free Consultation',
-    link: '#',
+    link: 'mailto:sales@vndmc.com?subject=Meeting%20Request%20-%20Free%20Consultation',
     subtitle: 'Free Consultation',
   },
   {
     icon: <FaMapMarkerAlt className="text-2xl" />,
     title: 'Visit Our Office',
     value: '5th Floor, 26 Duong Khue',
-    link: '#',
+    link: 'https://www.google.com/maps/search/?api=1&query=26+Duong+Khue+My+An+Ngu+Hanh+Son+Da+Nang+Vietnam',
     subtitle: 'Da Nang, Viet Nam',
   },
 ];

@@ -1,10 +1,10 @@
 import Image from 'next/image';
 
 const data = [
+  { alt: 'Vietnam Based Headquarters', icon: '/USPS/USPS/Vietnam_Headquarters.png' },
   { alt: '20k+ Customers Served', icon: '/USPS/USPS/20K_customers.webp' },
   { alt: '6+ Years Of Experience', icon: '/USPS/USPS/6_Years.webp' },
   { alt: '24/7 Customer Service', icon: '/USPS/USPS/Customer_Service.webp' },
-  { alt: 'Vietnam Based Headquarters', icon: '/USPS/USPS/Vietnam_Headquarters.webp' },
 ];
 
 export default function WhyVietnamDMC() {
