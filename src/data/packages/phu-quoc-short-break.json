@@ -9,11 +9,11 @@
     "Phu Quoc"
   ],
   "summaryItinerary": [
-    "Day 1 (4th June): Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide",
-    "Day 2 (5th June): Phu Quoc – Private Day Tour to Vin Pearl Safari – VinWonder without Guide",
-    "Day 3 (6th June): Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
-    "Day 4 (7th June): Phu Quoc – Private Evening Tour to Sunset Town – Kiss of the Sea Show",
-    "Day 5 (8th June): Phu Quoc Departure"
+    "Day 1: Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide",
+    "Day 2: Phu Quoc – Private Day Tour to Vin Pearl Safari – VinWonder without Guide",
+    "Day 3: Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
+    "Day 4: Phu Quoc – Private Evening Tour to Sunset Town – Kiss of the Sea Show",
+    "Day 5: Phu Quoc Departure"
   ],
   "detailedItinerary": [
     {
@@ -21,7 +21,7 @@
       "title": "Phu Quoc Arrival – Private Afternoon Tour to Grand World without guide",
       "details": [
         "Arrive in Phu Quoc City, our driver will take you to hotel for baggage storage",
-        "Check in time at 15:00 PM",
+        "Check in time",
         "Our driver will pick you up at the hotel and embark on a private afternoon tour to Grand World, a vibrant entertainment complex known as the \"Sleepless City.\"",
         "Explore the various attractions at Grand World, including cultural shows, shopping streets, and unique architectural structures. The complex offers a blend of traditional and modern experiences, providing a lively atmosphere for visitors.",
         "Our driver will take you back to hotel for relax",
@@ -42,14 +42,14 @@
       "day": "Day 3",
       "title": "Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
       "details": [
-        "Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm (approx. 30 minutes).",
+        "Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm.",
         "Arrive at An Thoi Harbor, board the speedboat.",
         "Visit Coral Park – Sea Walker Experience (Optional activity - Pay by yourself): Walk under the sea and admire colorful marine life.",
         "Stop at Mong Tay Island: Take photos with SUP boards and Flycam.",
         "Continue to Gam Ghi/Buom Island: Go swimming and snorkeling at the coral reef.",
         "Visit May Rut Island: Free time for swimming and relaxing.",
         "Note: Itinerary is subject to change depending on weather conditions.",
-        "Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
+        "Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride.",
         "Bus take you back to hotel",
         "Free Leisure and overnight in Phu Quoc."
       ]
@@ -69,7 +69,7 @@
       "day": "Day 5",
       "title": "Phu Quoc Departure",
       "details": [
-        "Do check out hotel before 12:00 PM",
+        "Do check out hotel",
         "Our driver will take you to the Phu Quoc International as your departure flight."
       ]
     }
@@ -87,7 +87,7 @@
     "Tours and Transfer are on Sharing Basic with good condition coach and local guide speaking English on Day 3."
   ],
   "excludes": [
-    "04 nights accommodation at standard room in hotel with Daily Breakfast:",
+    "04 nights accommodation at standard room in hotel with Daily Breakfast",
     "Accommodation in Phu Quoc.",
     "Surcharge for transportation and SIC Tours if hotel is not located in Phu Quoc Duong Dong Town.",
     "Domestic Flight",
@@ -95,7 +95,7 @@
     "Vietnam Single Entry e-VISA",
     "Electric Car (Zoo Tram Bus – Buggy) in Vin Safari – Vin Wonder – Grand World.",
     "Sea walking/Scuba Diving during Islands Tour",
-    "Grand World Entrance Ticket:",
+    "Grand World Entrance Ticket",
     "Teddy Bear Museum: 8 USD/person",
     "The Quintessence Vietnam Show: 12 USD/person",
     "Gondola Boating: 8 USD/person",
@@ -105,10 +105,10 @@
     "Tip for group tour (Optional)",
     "Early check-in and late check-out at all hotels",
     "Unforeseen expenses in the event of tour cancellation due to force majeure situations such as natural disasters, adverse weather conditions, or strikes...",
-    "Surcharge for peak season: Hung Kings' Festival (26th April, 2026), Vietnam's Reunification Day and International Labor Day Holidays (30th April - 01st May, 2026), Independence Day (01st – 02nd Sep, 2026), Christmas Holidays (24th– 25th Dec, 2026), Da Nang's International Firework Festival 2026 (29 – 30 May, 05 – 06 Jun, 12 – 13 Jun, 19 – 20 Jun, 26 – 27 Jun, 10 - 11 July, 2026)"
+    "Surcharge for peak season: Hung Kings' Festival, Vietnam's Reunification Day and International Labor Day Holidays, Independence Day, Christmas Holidays, Da Nang's International Firework Festival 2026"
   ],
   "notes": [
-    "Hotels are subject to availability. Check-in time: 15:00 PM and Check-out time: 12:00 PM",
+    "Hotels are subject to availability. Check-in time: and Check-out time",
     "Flight fares are subject to change",
     "Validity of the passport should be a minimum of 6 months from the intended date of return",
     "Please print out the E Visa for smooth immigration process",
@@ -117,7 +117,7 @@
     "Children from 10 years old are considered adults",
     "Any transportation outside of the scheduled times may incur additional charges"
   ],
-  "validity": "VALIDITY: Rates are valid till 30th March 2026. Rooms and other services are not held or blocked till clients confirm.",
+  "validity": "Rates and rooms are subject to availability at the time of booking. Please contact us to confirm current pricing.",
   "pricing": [
     {
       "tier": "OPTION 1: 3-star hotel:\nAdult: 81 USD/person (Applied for min of 2 pax)",
@@ -176,7 +176,7 @@
     "ID Identification: 046179011822",
     "Phone Number (+84) 935 555 135"
   ],
-  "travelWindow": "VALIDITY: Rates are valid till 30th March 2026. Rooms and other services are not held or blocked till clients confirm.",
+  "travelWindow": "Rates and rooms are subject to availability at the time of booking.",
   "bookingInfo": {
     "agentName": "TRIPSTARS OPS",
     "guestName": "Anis malik",

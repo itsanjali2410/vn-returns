@@ -11,15 +11,15 @@
     "Phu Quoc"
   ],
   "summaryItinerary": [
-    "Day 1 (1st May): Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour",
-    "Day 2 (2nd May): Ha Noi – Ha Long Bay Day Cruise (Local Lunch)",
-    "Day 3 (3rd May): Ha Noi Departure – Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide",
-    "Day 4 (4th May): Phu Quoc – Private Day Tour to Vinpearl Safari – VinWonder without Guide",
-    "Day 5 (5th May): Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
-    "Day 6 (6th May): Phu Quoc Departure – Da Nang Arrival – Free Leisure",
-    "Day 7 (7th May): Da Nang – Join Group Afternoon Tour to Marble Mountain – Coconut Forest – Hoi An Ancient Town",
-    "Day 8 (8th May): Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge",
-    "Day 9 (9th May): Phu Quoc Departure"
+    "Day 1: Ha Noi Arrival – Join Group Ha Noi Afternoon City Tour",
+    "Day 2: Ha Noi – Ha Long Bay Day Cruise (Local Lunch)",
+    "Day 3: Ha Noi Departure – Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide",
+    "Day 4: Phu Quoc – Private Day Tour to Vinpearl Safari – VinWonder without Guide",
+    "Day 5: Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
+    "Day 6: Phu Quoc Departure – Da Nang Arrival – Free Leisure",
+    "Day 7: Da Nang – Join Group Afternoon Tour to Marble Mountain – Coconut Forest – Hoi An Ancient Town",
+    "Day 8: Da Nang – Join Group Day Tour to Ba Na Hills with Golden Bridge",
+    "Day 9: Phu Quoc Departure"
   ],
   "detailedItinerary": [
     {
@@ -57,10 +57,10 @@
       "day": "Day 3",
       "title": "Ha Noi Departure – Phu Quoc Arrival – Private Afternoon Tour to Grand World without Guide",
       "details": [
-        "Do hotel check-out before 12:00 PM",
+        "Do hotel check-out",
         "Our driver will take you directly to the Noi Bai International Airport as your departure flight to Phu Quoc City",
         "Arrive in Phu Quoc City, our driver will take you to hotel for baggage storage",
-        "Do hotel check-in at 15:00 PM",
+        "Do hotel check-in",
         "Our driver will pick you up at the hotel and embark on a private afternoon tour to Grand World, a vibrant entertainment complex known as the \"Sleepless City.\"",
         "Explore the various attractions at Grand World, including cultural shows, shopping streets, and unique architectural structures. The complex offers a blend of traditional and modern experiences, providing a lively atmosphere for visitors.",
         "Our driver will take you back to hotel for relax",
@@ -81,14 +81,14 @@
       "day": "Day 5",
       "title": "Phu Quoc – Join Group Day Tour to 4 Islands by Boat – Hon Thom Cable Car",
       "details": [
-        "Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm (approx. 30 minutes).",
+        "Pick up from your hotel in Duong Dong ward. Visit the Pearl Farm.",
         "Arrive at An Thoi Harbor, board the speedboat.",
         "Visit Coral Park – Sea Walker Experience (Optional activity - Pay by yourself): Walk under the sea and admire colorful marine life.",
         "Stop at Mong Tay Island: Take photos with SUP boards and Flycam.",
         "Continue to Gam Ghi/Buom Island: Go swimming and snorkeling at the coral reef.",
         "Visit May Rut Island: Free time for swimming and relaxing.",
         "Note: Itinerary is subject to change depending on weather conditions.",
-        "Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride (~25 minutes).",
+        "Arrive at Thom Island: Enjoy the thrilling Aquatopia Water Park, then return via the scenic cable car ride.",
         "Return to your hotel.",
         "Overnight in Phu Quoc"
       ]
@@ -100,7 +100,7 @@
         "Do hotel check-out",
         "Our driver will take you to the Phu Quoc International Airport as your departure flight to Da Nang City",
         "Arrive in Da Nang City, our driver will take you to hotel for baggage storage",
-        "Do hotel check-in at 14:00 PM",
+        "Do hotel check-in",
         "Overnight in Da Nang"
       ]
     },
@@ -126,7 +126,7 @@
       "details": [
         "Our guide and driver will pick you up from your hotel, depart for Ba Na Hill through one of the most beautiful seaside streets of Central Vietnam.",
         "Arrive in Ba Na, you will have a chance to experience the two – UNESCO - record cable system up to the top of the hill and enjoy the beautiful sight of Mo stream, Toc Tien waterfall with the impressive dazzling white spume.",
-        "Sightseeing on Ba Na Hill to:",
+        "Sightseeing on Ba Na Hill to",
         "Hand of the gods hold Vietnam's Golden Bridge.",
         "L'Jardin Zone with French Architecture Building: Tinh Tâm Garden, French Stable, one hundred-year-old pomelo tree, Old Villas.",
         "Linh Ung Pagoda, 27 meters Buddha Statue, Loc Uyen Garden.",
@@ -142,7 +142,7 @@
       "day": "Day 9",
       "title": "Da Nang Departure",
       "details": [
-        "Do hotel check-out before 12:00 PM",
+        "Do hotel check-out",
         "Our driver will take you directly to the Da Nang International Airport as your departure flight"
       ]
     }
@@ -162,7 +162,7 @@
     "Water in tours: 1 bottle of 500ml/person/day tour",
     "Tours and Transfer are on Sharing Basic with good condition coach and local guide speaking English on Day 1, 5, 7, and Day 8",
     "Tours and Transfer are on Private Basic with good condition 7-seat car without Guide on Day 3, and Day 4",
-    "Surcharge for peak season: Vietnam's Reunification Day and International Labor Day Holidays (30th April - 01st May, 2026)"
+    "Surcharge for peak season: Vietnam's Reunification Day and International Labor Day Holidays"
   ],
   "excludes": [
     "08 nights accommodation at standard room in hotel with daily breakfast",
@@ -185,7 +185,7 @@
     "Unforeseen expenses in the event of tour cancellation due to force majeure situations such as natural disasters, adverse weather conditions, or strikes..."
   ],
   "notes": [
-    "Hotels are subject to availability. Check-in time: 14:00 PM and Check-out time: 12:00 PM",
+    "Hotels are subject to availability. Check-in time: and Check-out time",
     "Flight fares are subject to change",
     "Validity of the passport should be a minimum of 6 months from the intended date of return",
     "Please print out the E Visa for smooth immigration process",
@@ -194,7 +194,7 @@
     "Children from 10 years old are considered adults",
     "Any transportation outside of the scheduled times may incur additional charges"
   ],
-  "validity": "VALIDITY: Rates are valid till 10th April 2026. Rooms and other services are not held or blocked till clients confirm.",
+  "validity": "Rates and rooms are subject to availability at the time of booking. Please contact us to confirm current pricing.",
   "pricing": [
     {
       "tier": "3-star package",
@@ -281,7 +281,7 @@
     "ID Identification: 046179011822",
     "Phone Number (+84) 935 555 135"
   ],
-  "travelWindow": "VALIDITY: Rates are valid till 10th April 2026. Rooms and other services are not held or blocked till clients confirm.",
+  "travelWindow": "Rates and rooms are subject to availability at the time of booking.",
   "bookingInfo": {
     "agentName": "TRIPSTARS OPS",
     "guestName": "Bhavin Shah",
