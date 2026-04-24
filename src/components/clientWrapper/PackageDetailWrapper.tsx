@@ -113,7 +113,7 @@ export default function PackageDetailWrapper({ packageData: pkg }: PackageDetail
     .join(' ');
   for (const pattern of sightPatterns) {
     const matches = allDetailsText.match(pattern);
-    if (matches) matches.forEach((m) => sightseeingSet.add(m.trim()));
+    if (matches) matches.forEach((m: string) => sightseeingSet.add(m.trim()));
   }
   const sightseeing = Array.from(sightseeingSet);
   const placesText = places.length > 0 ? `Covering ${places.join(', ')}.` : '';
