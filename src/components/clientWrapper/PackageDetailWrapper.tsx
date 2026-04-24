@@ -119,10 +119,7 @@ export default function PackageDetailWrapper({ packageData: pkg }: PackageDetail
   const placesText = places.length > 0 ? `Covering ${places.join(', ')}.` : '';
   const sightsText =
     sightseeing.length > 0 ? ` Highlights include ${sightseeing.slice(0, 8).join(', ')}.` : '';
-  const summaryText = pkg.summaryItinerary
-    ? ' ' + pkg.summaryItinerary.slice(0, 2).join('. ') + '.'
-    : '';
-  const overviewContent = (placesText + sightsText + summaryText).trim();
+  const overviewContent = (placesText + sightsText).trim();
 
   return (
     <div className="flex flex-col lg:flex-row w-full gap-6 px-4 lg:py-10 py-5 max-w-7xl mx-auto">
