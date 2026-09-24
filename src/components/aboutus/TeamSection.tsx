@@ -27,7 +27,7 @@ const teamMembers: TeamMember[] = [
   { name: 'Ms. Pink', title: 'Sales Executive', image: '/team/pink.webp' },
   { name: 'Mr. Mark', title: 'Sales Executive', image: '/team/mark.webp' },
   { name: 'Ms. My', title: 'Sales Admin', image: '/team/my.webp' },
-  { name: 'Mr. Shiddhesh', title: 'Sales Rep, India', image: '/team/shiddhesh.webp' },
+  { name: 'Mr. Siddhesh', title: 'Sales Rep, India', image: '/team/siddhesh.webp' },
   { name: 'Ms. Thao', title: 'Marketing', image: '/team/thao.webp' },
   { name: 'Ms. Ha', title: 'Accountant', image: '/team/ha.webp' },
   { name: 'Ms. Tung', title: 'Accountant', image: '/team/tung.webp' },
