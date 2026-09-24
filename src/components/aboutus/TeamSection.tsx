@@ -9,9 +9,9 @@ interface TeamMember {
 
 const teamMembers: TeamMember[] = [
   { name: 'Ms. Sam', title: 'Director', image: '/team/sam.webp' },
-  { name: 'Kunal', title: 'Business Head', image: '/team/kunal.webp' },
   { name: 'Ms. Shu', title: 'Executive Assistant Director', image: '/team/shu.webp' },
-  { name: 'Gaurav', title: 'Sales Head', image: '/team/gaurav.webp' },
+  { name: 'Mr. Gaurav', title: 'Business Head', image: '/team/gaurav.webp' },
+  { name: 'Ms. Sidhikka', title: 'Business Relationship Manager', image: '/team/sidhikka.webp' },
   { name: 'Ms. April', title: 'Sales Manager', image: '/team/april.webp' },
   { name: 'Mr. Alex', title: 'Assistant Sales Manager', image: '/team/alex.webp' },
   { name: 'Ms. Lynn', title: 'Senior Sales Executive', image: '/team/lynn.webp' },
@@ -27,6 +27,7 @@ const teamMembers: TeamMember[] = [
   { name: 'Ms. Pink', title: 'Sales Executive', image: '/team/pink.webp' },
   { name: 'Mr. Mark', title: 'Sales Executive', image: '/team/mark.webp' },
   { name: 'Ms. My', title: 'Sales Admin', image: '/team/my.webp' },
+  { name: 'Mr. Shiddhesh', title: 'Sales Rep, India', image: '/team/shiddhesh.webp' },
   { name: 'Ms. Thao', title: 'Marketing', image: '/team/thao.webp' },
   { name: 'Ms. Ha', title: 'Accountant', image: '/team/ha.webp' },
   { name: 'Ms. Tung', title: 'Accountant', image: '/team/tung.webp' },
