@@ -7,6 +7,7 @@ import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import Link from 'next/link'; // ✅ Correct import
+import PhotoCredit from '@/components/shared/PhotoCredit';
 
 type Destination = {
   name: string;
@@ -85,6 +86,8 @@ export default function PopularDestinations() {
                   </div>
                 </div>
               </Link>
+              {/* Photo credit (only renders for credited images) */}
+              <PhotoCredit src={item.imgUrl} className="mt-1 px-1" />
             </SwiperSlide>
           ))}
         </Swiper>

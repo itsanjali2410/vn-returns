@@ -1,6 +1,7 @@
 import { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
+import PhotoCredit from '@/components/shared/PhotoCredit';
 
 import pkg1 from '@/data/packages/phu-quoc-short-break.json';
 import pkg2 from '@/data/packages/phu-quoc-fully-loaded.json';
@@ -89,14 +90,16 @@ export default function PackagesPage() {
           const pkg = packages[0];
           const image = packageImages[pkg.id] || '/destinations/Halong_Bay.webp';
           return (
-            <Link
-              href={`/packages/${pkg.id}`}
-              className="group block bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all"
-            >
+            <div className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+              {/* Stretched link: covers the whole card so the photo credit below can be its own link */}
+              <Link href={`/packages/${pkg.id}`} aria-label={pkg.packageName} className="absolute inset-0 z-10" />
               <div className="flex flex-col md:flex-row">
-                <div className="relative w-full md:w-1/2 overflow-hidden aspect-[16/10] md:aspect-auto md:min-h-[360px]">
-                  <Image src={image} alt={pkg.packageName} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
-                  <div className="absolute top-4 left-4 bg-[#ffc42d] text-gray-900 font-bold px-4 py-1.5 rounded-full text-sm shadow-md z-10">Featured</div>
+                <div className="w-full md:w-1/2 flex flex-col">
+                  <div className="relative w-full flex-1 overflow-hidden aspect-[16/10] md:aspect-auto md:min-h-[360px]">
+                    <Image src={image} alt={pkg.packageName} fill priority sizes="(max-width: 768px) 100vw, 50vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute top-4 left-4 bg-[#ffc42d] text-gray-900 font-bold px-4 py-1.5 rounded-full text-sm shadow-md z-10">Featured</div>
+                  </div>
+                  <PhotoCredit src={image} className="relative z-20 px-4 py-1.5" />
                 </div>
                 <div className="p-6 sm:p-8 md:p-10 md:w-1/2 flex flex-col justify-center">
                   <div className="flex items-center gap-3 mb-3">
@@ -120,7 +123,7 @@ export default function PackagesPage() {
                   </div>
                 </div>
               </div>
-            </Link>
+            </div>
           );
         })()}
       </section>
@@ -132,13 +135,16 @@ export default function PackagesPage() {
           {packages.slice(1).map((pkg) => {
             const image = packageImages[pkg.id] || '/destinations/Halong_Bay.webp';
             return (
-              <Link key={pkg.id} href={`/packages/${pkg.id}`} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
+              <div key={pkg.id} className="group relative bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-gray-100">
+                {/* Stretched link: covers the whole card so the photo credit below can be its own link */}
+                <Link href={`/packages/${pkg.id}`} aria-label={pkg.packageName} className="absolute inset-0 z-10" />
                 <div className="relative w-full overflow-hidden aspect-[16/11]">
                   <Image src={image} alt={pkg.packageName} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                   <div className="absolute top-3 right-3 bg-white/90 backdrop-blur-sm text-gray-900 font-bold px-3 py-1 rounded-full text-xs shadow-sm z-10">
                     {getPrice(pkg)}
                   </div>
                 </div>
+                <PhotoCredit src={image} className="relative z-20 px-5 pt-2" />
                 <div className="p-5">
                   <div className="flex items-center gap-2 mb-2">
                     <span className="text-xs text-[#e6b028] font-semibold">{getDays(pkg).nights}N / {getDays(pkg).days}D</span>
@@ -156,7 +162,7 @@ export default function PackagesPage() {
                     <span className="text-sm font-semibold text-[#ffc42d] group-hover:underline">Explore &rarr;</span>
                   </div>
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>

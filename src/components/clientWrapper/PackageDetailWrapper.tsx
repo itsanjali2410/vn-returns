@@ -10,6 +10,7 @@ import Itinerary from '@/components/package/Itinerary';
 import InclusionsExclusions from '@/components/package/InclusionsExclusions';
 import TermsAndConditions from '@/components/package/TermsAndConditions';
 import TripFormModal from '../modals/TripFormModal';
+import PhotoCredit from '@/components/shared/PhotoCredit';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 interface PackageDetailWrapperProps { packageData: any }
@@ -127,14 +128,17 @@ export default function PackageDetailWrapper({ packageData: pkg }: PackageDetail
       <div className="lg:w-2/3 w-full space-y-6">
         <h1 className="text-3xl font-bold text-[#ffc42d] m-0">{pkg.packageName}</h1>
 
-        <Image
-          src={image}
-          alt={pkg.packageName}
-          title={pkg.packageName}
-          width={900}
-          height={500}
-          className="rounded-2xl shadow-lg object-cover w-full m-0"
-        />
+        <div className="space-y-1">
+          <Image
+            src={image}
+            alt={pkg.packageName}
+            title={pkg.packageName}
+            width={900}
+            height={500}
+            className="rounded-2xl shadow-lg object-cover w-full m-0"
+          />
+          <PhotoCredit src={image} className="px-1" />
+        </div>
 
         {/* Package Overview */}
         <Overview title="Package Overview" content={overviewContent} />
